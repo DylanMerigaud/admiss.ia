@@ -2,9 +2,9 @@
 ```json
 {
   "lesson_id": "",
-  "title": "Understanding Tooth Anatomy",
+  "title": "",
   "target_concepts": ["tooth_anatomy"],
-  "difficulty_level": "intermediate",
+  "difficulty_level": "beginner|intermediate|advanced",
   "learning_objectives": [
     "Identify parts of a tooth",
     "Differentiate between enamel and dentin"
