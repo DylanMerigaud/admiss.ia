@@ -1,0 +1,363 @@
+[
+  {
+    "semester": 1,
+    "category": "UE 1 - Biochemistry",
+    "subcategories": [
+      {
+        "name": "General Chemistry",
+        "topics": [
+          "The Atom",
+          "Covalent Bonds and Non-Covalent Bonds",
+          "Molecular Orbitals",
+          "Thermodynamics",
+          "Chemical Equilibrium"
+        ]
+      },
+      {
+        "name": "Organic Chemistry",
+        "topics": [
+          "Representation of Organic Molecules",
+          "Isomerism",
+          "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids"
+        ]
+      },
+      {
+        "name": "Structure, Function and Diversity of Biomolecules",
+        "topics": [
+          "Amino Acids",
+          "Peptides and Proteins",
+          "Enzymes",
+          "Carbohydrates and Lipids"
+        ]
+      },
+      {
+        "name": "Human Genome Organization",
+        "topics": [
+          "Chromatin and DNA",
+          "Replication and Repair Mechanisms",
+          "Genetic Code",
+          "Genome Translation"
+        ]
+      },
+      {
+        "name": "Metabolism Overview",
+        "topics": ["Fatty Acid Oxidation", "Glycolysis, Krebs Cycle"]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 2 - Cell Biology",
+    "subcategories": [
+      {
+        "name": "Introduction to Cell Biology",
+        "topics": ["Protein Composition and Structure", "Cell Membranes"]
+      },
+      {
+        "name": "General Cell Structure",
+        "topics": [
+          "Cytoskeleton Composition, Structure and Function",
+          "Filaments",
+          "Adhesion Molecules"
+        ]
+      },
+      {
+        "name": "Organelles and Cellular Compartments",
+        "topics": ["Cell Nucleus", "Mitochondria", "Lysosomes"]
+      },
+      {
+        "name": "Cellular Life",
+        "topics": [
+          "Origin of Life",
+          "Cell Cycle",
+          "Intracellular Traffic",
+          "Cell Communication",
+          "Cell Death"
+        ]
+      },
+      {
+        "name": "Methods for Studying Cells and Tissues",
+        "topics": [
+          "Cellular and Tissue Fractionation",
+          "Cell Culture",
+          "Optical Microscope",
+          "Stem Cells and Cell Therapy"
+        ]
+      },
+      {
+        "name": "Reproductive Biology",
+        "topics": ["Gametogenesis", "Fertilization", "Embryology"]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 3 - Biophysics",
+    "subcategories": [
+      {
+        "name": "Electrostatics and Electrophysiology",
+        "topics": [
+          "Representation of Organic Molecules, Isomerism",
+          "Forces, Potential Energy",
+          "Measurement Techniques"
+        ]
+      },
+      {
+        "name": "Electromagnetic Spectrum and Focus on Very Low Frequencies",
+        "topics": [
+          "Maxwell's Equations",
+          "Wave and Polarization",
+          "Wave-Particle Duality, Spin",
+          "NMR Principle (Nuclear Magnetic Resonance)"
+        ]
+      },
+      {
+        "name": "Geometric Optics",
+        "topics": [
+          "Diffraction and Interference",
+          "Laser Stimulated Emission",
+          "Molecular Spectroscopy"
+        ]
+      },
+      {
+        "name": "States of Matter and Characterization",
+        "topics": [
+          "Gaseous State, Internal Energy, Pressure",
+          "Liquid State, Brownian Motion, Fluid Mechanics",
+          "Solid State, Crystal Lattice",
+          "Heat Exchange and Heat Capacity",
+          "pH and Acid-Base Equilibrium"
+        ]
+      },
+      {
+        "name": "Ionizing Radiation",
+        "topics": [
+          "Fermions, Bosons",
+          "Accelerators, Fission and Fusion, Radioactivity",
+          "Fluorescence and Auger Effect",
+          "X-ray Tube",
+          "Radiation Interactions with Matter",
+          "Dosimetry and Radiation Protection"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 4 - Mathematics and Statistics",
+    "subcategories": [
+      {
+        "name": "Descriptive Statistics",
+        "topics": [
+          "Mean, Median and Dispersion",
+          "Standard Deviation, Quantiles and Variance",
+          "Binomial Distribution, Normal Distribution"
+        ]
+      },
+      {
+        "name": "Differential Equations",
+        "topics": [
+          "Differential Equation Systems",
+          "Applications in Pharmacology, Bacteriology and Physics"
+        ]
+      },
+      {
+        "name": "Probability and Statistics",
+        "topics": [
+          "Events, Random Experiment",
+          "Sampling Fluctuations, Confidence Interval",
+          "Chi-square Test, Student's t-test, Wilcoxon Test, Correlation and Regression",
+          "Conducting a Clinical Trial",
+          "Survival and Protocols",
+          "Statistical Analysis of Results"
+        ]
+      },
+      {
+        "name": "Statistics for Epidemiology",
+        "topics": [
+          "Disease Prevalence",
+          "Descriptive Epidemiology",
+          "Cohort Studies, Disease Incidence Rate",
+          "Relative Risks, Odds Ratio"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 5 - Anatomy",
+    "subcategories": [
+      {
+        "name": "General Anatomy",
+        "topics": [
+          "Comparative and Evolutionary Morphology",
+          "Osteology",
+          "Arthrology",
+          "Myology",
+          "Spine and Vertebral Column",
+          "Bony Pelvis",
+          "Skull Osteology"
+        ]
+      },
+      {
+        "name": "Nervous System",
+        "topics": ["Central Nervous System", "Peripheral Nervous System"]
+      },
+      {
+        "name": "Limbs",
+        "topics": ["Upper and Lower Limbs"]
+      },
+      {
+        "name": "Systems and Apparatus",
+        "topics": [
+          "Digestive System",
+          "Cardiovascular System",
+          "Respiratory System",
+          "Urinary and Genital Systems",
+          "Sensory Organs"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 6 - Introduction to Drug Knowledge",
+    "subcategories": [
+      {
+        "name": "Drug Fundamentals",
+        "topics": [
+          "History of Medicine",
+          "Evaluation of Marketed Drugs",
+          "Law and Legal Framework for Pharmaceutical Products",
+          "Benefit-Risk Concept",
+          "Prescription Rules",
+          "Responsibility"
+        ]
+      },
+      {
+        "name": "Economics and Life Cycle",
+        "topics": ["Drug and Health Product Economics", "Drug Life Cycle"]
+      },
+      {
+        "name": "Use and Safety",
+        "topics": [
+          "Proper Drug Use",
+          "Drug-Induced Iatrogenesis",
+          "Pharmacodynamics and Pharmacokinetics",
+          "Pharmacovigilance"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 7 - Human and Social Sciences",
+    "subcategories": [
+      {
+        "name": "Humans: Evolution and Environment",
+        "topics": [
+          "Anthropology and Human Evolution",
+          "Humans in Their Environment",
+          "Work Environment Related Risks",
+          "Addictology"
+        ]
+      },
+      {
+        "name": "Humans and Health",
+        "topics": [
+          "Health Standards Concept",
+          "Health and Violence",
+          "Care Relationship",
+          "Disability"
+        ]
+      },
+      {
+        "name": "Ethics and Deontology",
+        "topics": [
+          "Health Profession Regulations",
+          "Ethics and Deontology of Health Professionals",
+          "History of Patient Rights and Health System Users"
+        ]
+      },
+      {
+        "name": "Health and Social",
+        "topics": [
+          "French Health System",
+          "Public Health Indicators",
+          "Ambulatory and Hospital Care Provision",
+          "Microeconomic and Macroeconomic Aspects of Health Expenditure",
+          "Population Health in France",
+          "Care Networks and Pathways"
+        ]
+      },
+      {
+        "name": "Psychology",
+        "topics": [
+          "Developmental Psychology",
+          "Psychometrics and Measurement Tools",
+          "Personality",
+          "Cognitive Development",
+          "Body Schema and Body Image"
+        ]
+      },
+      {
+        "name": "History and Epistemology of Health Sciences",
+        "topics": [
+          "History of Medicine",
+          "History of Pharmacy",
+          "History of Surgery",
+          "History of Anatomy",
+          "History of Pain",
+          "History of Traumatology and Orthopedics",
+          "History of Gynecology and Obstetrics",
+          "History of Epidemics",
+          "History of Tuberculosis",
+          "History of Pneumology",
+          "History of Cancer",
+          "History of Blood in West and East"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 2,
+    "category": "UE 8 - Specific Subject",
+    "subcategories": [
+      {
+        "name": "Medicine Specialty",
+        "topics": [
+          "Head and Neck Anatomy",
+          "Histology of Reproductive System and Breast",
+          "Pelvic and Reproductive System Anatomy",
+          "Genome Study and Analysis Methods"
+        ]
+      },
+      {
+        "name": "Midwifery Specialty",
+        "topics": [
+          "Histology of Reproductive System and Breast",
+          "Pelvic and Reproductive System Anatomy",
+          "Genome Study and Analysis Methods",
+          "Feto-Placental Unit"
+        ]
+      },
+      {
+        "name": "Dentistry Specialty",
+        "topics": [
+          "Head and Neck Anatomy",
+          "Cranio-Facial Morphogenesis and Odontogenesis",
+          "Genome Study and Analysis Methods",
+          "Drugs and Other Health Products"
+        ]
+      },
+      {
+        "name": "Pharmacy Specialty",
+        "topics": [
+          "Chemical Basis of Drugs",
+          "Current and Future Sources of Drugs",
+          "Drugs and Other Health Products"
+        ]
+      }
+    ]
+  }
+]

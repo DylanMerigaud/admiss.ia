@@ -35,7 +35,7 @@ export default function RootLayout({
       <head></head>
       <body className={cn(GeistSans.className, "antialiased dark")}>
         <Toaster position="top-center" richColors />
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>
