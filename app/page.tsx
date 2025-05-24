@@ -171,7 +171,6 @@ export default function HomePage() {
 
             for (let i = 0; i < topicCount; i++) {
               const yPosition =
-                subcategoryCenterY +
                 startOffset +
                 (i + 1) * nodeDimensions.topic.height +
                 i * verticalGap -
@@ -186,7 +185,7 @@ export default function HomePage() {
               const topicPosition = {
                 x:
                   subcategoryPosition.x +
-                  nodeDimensions.subcategory.width +
+                  nodeDimensions.subcategory.width -
                   horizontalGap,
                 y: topicY,
               };
