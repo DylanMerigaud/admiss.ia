@@ -213,7 +213,7 @@
 
 /* React Flow viewport smooth transitions */
 .react-flow__viewport {
-  transition: transform 0.2s ease-out !important;
+  /* transition: transform 0.2s ease-out !important; */
 }
 
 /* Disable global transitions for better performance */

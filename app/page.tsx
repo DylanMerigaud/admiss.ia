@@ -101,7 +101,7 @@ export default function HomePage() {
         const totalSpaceNeeded =
           (subcategoryCount - 1) * verticalGap +
           subcategoryCount * nodeDimensions.subcategory.height;
-        const startOffset = -(totalSpaceNeeded / 2) - 22;
+        const startOffset = -(totalSpaceNeeded / 2);
 
         for (let i = 0; i < subcategoryCount; i++) {
           const yPosition =

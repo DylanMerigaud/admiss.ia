@@ -495,9 +495,9 @@ export default function ExercisePage() {
               {currentQuestion.options.map((option, index) => (
                 <motion.button
                   key={option.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
                   onClick={() => handleAnswerSelect(option.id)}
                   className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
                     selectedAnswer === option.id
