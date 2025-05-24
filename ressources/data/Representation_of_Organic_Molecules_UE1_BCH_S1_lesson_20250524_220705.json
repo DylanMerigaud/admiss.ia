@@ -1,0 +1,189 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:07:05.601541",
+    "topic": "Representation of Organic Molecules",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_6243",
+    "topic": "Representation of Organic Molecules",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "lesson_content": "Detailed educational content covering Representation of Organic Molecules. This lesson will include definitions, clinical relevance, practical applications, and connections to Organic Chemistry. It will address weak areas such as general concepts, ensuring a comprehensive understanding of the topic. The lesson will cover the fundamental principles of representing organic molecules, including structural formulas, condensed formulas, and skeletal structures. It will also delve into the importance of these representations in understanding isomerism and the properties of various organic compounds such as alkanes, alkenes, alcohols, amines, aldehydes, ketones, and acids. Practical examples and exercises will be provided to reinforce learning.",
+    "learning_objectives": [
+      "Understand the fundamental principles of representing organic molecules.",
+      "Apply knowledge of structural formulas, condensed formulas, and skeletal structures to various organic compounds.",
+      "Analyze the significance of isomerism in organic chemistry.",
+      "Evaluate the properties and reactivity of alkanes, alkenes, alcohols, amines, aldehydes, ketones, and acids based on their molecular representations."
+    ],
+    "exercise_id": "ex_92475",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:07:05.599732"
+  },
+  "exercise": {
+    "exercise_id": "ex_92475",
+    "lesson_id": "lesson_6243",
+    "topic": "Representation of Organic Molecules",
+    "question_ids": [
+      "q1_Representation_of_Organic_Molecules",
+      "q2_Isomerism",
+      "q3_Alkanes",
+      "q4_Alkenes",
+      "q5_Alcohols"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Representation of Organic Molecules",
+      "Isomerism",
+      "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids"
+    ],
+    "created_at": "2025-05-24T22:07:05.599824"
+  },
+  "questions": [
+    {
+      "question_id": "q1_Representation_of_Organic_Molecules",
+      "text": "Which of the following is the correct condensed formula for butane (C4H10)?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Representation of Organic Molecules",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "CH3-CH2-CH2-CH3"
+        },
+        {
+          "id": "b",
+          "text": "CH3-CH2-CH3"
+        },
+        {
+          "id": "c",
+          "text": "CH3-CH=CH-CH3"
+        },
+        {
+          "id": "d",
+          "text": "CH3-C(CH3)3"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "The correct condensed formula for butane is CH3-CH2-CH2-CH3. This representation shows the four carbon atoms in a linear arrangement, each bonded to the appropriate number of hydrogen atoms. Understanding condensed formulas is crucial for representing organic molecules accurately and efficiently."
+    },
+    {
+      "question_id": "q2_Isomerism",
+      "text": "Which of the following pairs of molecules are structural isomers?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Isomerism",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ethane and Ethene"
+        },
+        {
+          "id": "b",
+          "text": "Butane and Isobutane"
+        },
+        {
+          "id": "c",
+          "text": "Methane and Ethane"
+        },
+        {
+          "id": "d",
+          "text": "Propane and Propyne"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Butane and Isobutane are structural isomers. They have the same molecular formula (C4H10) but different structural arrangements. Understanding isomerism is essential for grasping the diversity of organic compounds and their unique properties."
+    },
+    {
+      "question_id": "q3_Alkanes",
+      "text": "What is the general formula for alkanes?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Alkanes",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "CnH2n+2"
+        },
+        {
+          "id": "b",
+          "text": "CnH2n"
+        },
+        {
+          "id": "c",
+          "text": "CnH2n-2"
+        },
+        {
+          "id": "d",
+          "text": "CnH2n-6"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "The general formula for alkanes is CnH2n+2. This formula helps in identifying and naming alkanes, which are saturated hydrocarbons with single bonds between carbon atoms."
+    },
+    {
+      "question_id": "q4_Alkenes",
+      "text": "Which of the following is an example of an alkene?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Alkenes",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ethane"
+        },
+        {
+          "id": "b",
+          "text": "Ethene"
+        },
+        {
+          "id": "c",
+          "text": "Methane"
+        },
+        {
+          "id": "d",
+          "text": "Propane"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Ethene (C2H4) is an example of an alkene. Alkenes contain at least one carbon-carbon double bond, which makes them unsaturated hydrocarbons."
+    },
+    {
+      "question_id": "q5_Alcohols",
+      "text": "What functional group is characteristic of alcohols?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Alcohols",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "-COOH"
+        },
+        {
+          "id": "b",
+          "text": "-OH"
+        },
+        {
+          "id": "c",
+          "text": "-CHO"
+        },
+        {
+          "id": "d",
+          "text": "-NH2"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "The characteristic functional group of alcohols is the hydroxyl group (-OH). This group determines the chemical properties and reactivity of alcohols."
+    }
+  ]
+}

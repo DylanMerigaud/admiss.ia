@@ -1,0 +1,132 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:07:55.159883",
+    "topic": "Amino Acids",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Structure, Function and Diversity of Biomolecules",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_67344",
+    "topic": "Amino Acids",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Structure, Function and Diversity of Biomolecules",
+    "lesson_content": "Detailed educational content covering Amino Acids. Amino acids are the building blocks of proteins and play crucial roles in various biological processes. This lesson will cover the structure, classification, properties, and functions of amino acids. We will also explore their clinical relevance and practical applications, such as their role in metabolism, enzyme function, and protein synthesis. Connections will be made to related biomolecules like peptides, proteins, carbohydrates, and lipids. The lesson will address weak areas in general concepts to ensure a solid foundation in the topic. Key points include the 20 standard amino acids, their side chains, and how they contribute to the diversity of protein functions. The lesson will also cover the biochemical pathways involving amino acids and their significance in medical contexts, such as genetic disorders and metabolic diseases.",
+    "learning_objectives": [
+      "Understand the structure and classification of amino acids",
+      "Apply knowledge of amino acid properties to biological processes",
+      "Analyze the role of amino acids in protein synthesis and enzyme function",
+      "Evaluate the clinical relevance of amino acids in metabolic diseases and genetic disorders"
+    ],
+    "exercise_id": "ex_94654",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:07:55.156905"
+  },
+  "exercise": {
+    "exercise_id": "ex_94654",
+    "lesson_id": "lesson_67344",
+    "topic": "Amino Acids",
+    "question_ids": [
+      "q1_Amino_Acids",
+      "q2_Amino_Acids",
+      "q3_Amino_Acids"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Amino Acids",
+      "Peptides and Proteins",
+      "Enzymes",
+      "Carbohydrates and Lipids"
+    ],
+    "created_at": "2025-05-24T22:07:55.157117"
+  },
+  "questions": [
+    {
+      "question_id": "q1_Amino_Acids",
+      "text": "Which of the following is a non-essential amino acid?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Amino Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Leucine"
+        },
+        {
+          "id": "b",
+          "text": "Alanine"
+        },
+        {
+          "id": "c",
+          "text": "Lysine"
+        },
+        {
+          "id": "d",
+          "text": "Valine"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Alanine is a non-essential amino acid, meaning it can be synthesized by the human body. Leucine, lysine, and valine are essential amino acids, which must be obtained through diet."
+    },
+    {
+      "question_id": "q2_Amino_Acids",
+      "text": "What is the primary function of amino acids in the body?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Amino Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Energy storage"
+        },
+        {
+          "id": "b",
+          "text": "Protein synthesis"
+        },
+        {
+          "id": "c",
+          "text": "Hormone regulation"
+        },
+        {
+          "id": "d",
+          "text": "DNA replication"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "The primary function of amino acids is to serve as the building blocks for protein synthesis. While they also play roles in energy production, hormone regulation, and other processes, their fundamental role is in protein synthesis."
+    },
+    {
+      "question_id": "q3_Amino_Acids",
+      "text": "Which amino acid is involved in the synthesis of neurotransmitters?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Amino Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Glutamate"
+        },
+        {
+          "id": "b",
+          "text": "Glycine"
+        },
+        {
+          "id": "c",
+          "text": "Tryptophan"
+        },
+        {
+          "id": "d",
+          "text": "All of the above"
+        }
+      ],
+      "correct_answer": "d",
+      "explanation": "Glutamate, glycine, and tryptophan are all involved in the synthesis of neurotransmitters. Glutamate is a precursor to GABA, glycine is a neurotransmitter itself, and tryptophan is a precursor to serotonin."
+    }
+  ]
+}

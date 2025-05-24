@@ -1,0 +1,133 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:06:21.152677",
+    "topic": "Thermodynamics",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_89054",
+    "topic": "Thermodynamics",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "Detailed educational content covering Thermodynamics. Thermodynamics is the branch of chemistry that deals with the relationships between heat, work, temperature, and energy. In the context of General Chemistry, understanding thermodynamics is crucial for grasping how chemical reactions occur and how energy is transferred and transformed. This lesson will cover fundamental concepts such as the laws of thermodynamics, enthalpy, entropy, and Gibbs free energy. We will also explore the clinical relevance of thermodynamics, including its role in metabolic processes and drug interactions. Practical applications will be discussed, such as how thermodynamics principles are applied in medical diagnostics and treatments. Connections to related topics such as The Atom, Covalent Bonds and Non-Covalent Bonds, Molecular Orbitals, and Chemical Equilibrium will be made to provide a comprehensive understanding. Address weak areas: ['general concepts'] by providing clear definitions, examples, and step-by-step explanations.",
+    "learning_objectives": [
+      "Understand the fundamental principles of thermodynamics and their applications in General Chemistry.",
+      "Apply thermodynamics concepts to analyze chemical reactions and biological processes.",
+      "Analyze the role of thermodynamics in metabolic pathways and drug interactions.",
+      "Evaluate the clinical relevance of thermodynamics in medical diagnostics and treatments."
+    ],
+    "exercise_id": "ex_1808",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:06:21.150666"
+  },
+  "exercise": {
+    "exercise_id": "ex_1808",
+    "lesson_id": "lesson_89054",
+    "topic": "Thermodynamics",
+    "question_ids": [
+      "q1_Thermodynamics",
+      "q2_Thermodynamics",
+      "q3_Thermodynamics"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Thermodynamics",
+      "The Atom",
+      "Covalent Bonds and Non-Covalent Bonds",
+      "Molecular Orbitals",
+      "Chemical Equilibrium"
+    ],
+    "created_at": "2025-05-24T22:06:21.150757"
+  },
+  "questions": [
+    {
+      "question_id": "q1_Thermodynamics",
+      "text": "Which of the following best describes the first law of thermodynamics?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Thermodynamics",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Energy cannot be created or destroyed, only transformed from one form to another."
+        },
+        {
+          "id": "b",
+          "text": "The total entropy of an isolated system can never decrease over time."
+        },
+        {
+          "id": "c",
+          "text": "The entropy of a system approaches a constant value as temperature approaches absolute zero."
+        },
+        {
+          "id": "d",
+          "text": "The energy of a system is maximized when the system is in equilibrium."
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "The first law of thermodynamics, also known as the law of conservation of energy, states that energy cannot be created or destroyed, only transformed from one form to another. This principle is fundamental in understanding energy transfer in chemical reactions and biological processes."
+    },
+    {
+      "question_id": "q2_Thermodynamics",
+      "text": "What is the significance of Gibbs free energy in chemical reactions?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Thermodynamics",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "It measures the total energy of a system."
+        },
+        {
+          "id": "b",
+          "text": "It determines the spontaneity of a reaction."
+        },
+        {
+          "id": "c",
+          "text": "It indicates the amount of heat released or absorbed."
+        },
+        {
+          "id": "d",
+          "text": "It represents the disorder or randomness in a system."
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Gibbs free energy (ΔG) is a crucial concept in thermodynamics that helps determine the spontaneity of a chemical reaction. A reaction is spontaneous if ΔG is negative, indicating that the reaction will proceed without external energy input. This is particularly relevant in biochemical processes where energy efficiency is critical."
+    },
+    {
+      "question_id": "q3_Thermodynamics",
+      "text": "How does the concept of entropy relate to the second law of thermodynamics?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Thermodynamics",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Entropy decreases in all natural processes."
+        },
+        {
+          "id": "b",
+          "text": "Entropy remains constant in isolated systems."
+        },
+        {
+          "id": "c",
+          "text": "Entropy increases in all natural processes."
+        },
+        {
+          "id": "d",
+          "text": "Entropy is not related to the second law of thermodynamics."
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "The second law of thermodynamics states that the total entropy of an isolated system can never decrease over time. This means that natural processes tend to move towards a state of greater disorder or randomness. Understanding entropy is essential for analyzing the feasibility of chemical reactions and biological processes."
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:05:48.086038",
+    "topic": "The Atom",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_72437",
+    "topic": "The Atom",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "Detailed educational content covering The Atom. The lesson will include the fundamental structure of atoms, atomic theory, electron configurations, and the periodic table. It will also cover the clinical relevance of atomic properties in medical contexts, such as the role of atoms in biochemical reactions and drug interactions. Practical applications will be discussed, including how atomic principles are applied in diagnostic imaging and radiotherapy. Connections to General Chemistry will be made through discussions on covalent and non-covalent bonds, molecular orbitals, thermodynamics, and chemical equilibrium. This lesson will address weak areas in general concepts by providing clear, foundational explanations and examples. The content will be presented in a mixed learning style, incorporating visual aids, textual explanations, and interactive elements to cater to the student's learning preferences.",
+    "learning_objectives": [
+      "Understand the fundamental structure and properties of atoms",
+      "Apply atomic principles to biochemical reactions and medical contexts",
+      "Analyze the role of covalent and non-covalent bonds in molecular stability",
+      "Evaluate the impact of thermodynamics and chemical equilibrium on biochemical processes"
+    ],
+    "exercise_id": "ex_96171",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:05:48.084787"
+  },
+  "exercise": {
+    "exercise_id": "ex_96171",
+    "lesson_id": "lesson_72437",
+    "topic": "The Atom",
+    "question_ids": [
+      "q1_The_Atom",
+      "q2_Covalent_Bonds",
+      "q3_Molecular_Orbitals",
+      "q4_Thermodynamics",
+      "q5_Chemical_Equilibrium"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "The Atom",
+      "Covalent Bonds and Non-Covalent Bonds",
+      "Molecular Orbitals",
+      "Thermodynamics",
+      "Chemical Equilibrium"
+    ],
+    "created_at": "2025-05-24T22:05:48.084862"
+  },
+  "questions": [
+    {
+      "question_id": "q1_The_Atom",
+      "text": "Which of the following best describes the atomic number of an element?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "The Atom",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "The number of neutrons in the nucleus"
+        },
+        {
+          "id": "b",
+          "text": "The number of protons in the nucleus"
+        },
+        {
+          "id": "c",
+          "text": "The number of electrons in the outermost shell"
+        },
+        {
+          "id": "d",
+          "text": "The total number of protons and neutrons"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "The atomic number of an element is defined as the number of protons in the nucleus. This is a fundamental concept in understanding the periodic table and the properties of elements."
+    },
+    {
+      "question_id": "q2_Covalent_Bonds",
+      "text": "What type of bond is formed when atoms share electrons?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Covalent Bonds and Non-Covalent Bonds",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ionic bond"
+        },
+        {
+          "id": "b",
+          "text": "Metallic bond"
+        },
+        {
+          "id": "c",
+          "text": "Covalent bond"
+        },
+        {
+          "id": "d",
+          "text": "Hydrogen bond"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "A covalent bond is formed when atoms share electrons, which allows them to achieve a more stable electron configuration. This type of bond is crucial in many biochemical reactions and molecular structures."
+    },
+    {
+      "question_id": "q3_Molecular_Orbitals",
+      "text": "Which of the following is a characteristic of molecular orbitals?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Molecular Orbitals",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "They are always lower in energy than atomic orbitals"
+        },
+        {
+          "id": "b",
+          "text": "They can be bonding or antibonding"
+        },
+        {
+          "id": "c",
+          "text": "They only exist in ionic compounds"
+        },
+        {
+          "id": "d",
+          "text": "They are always spherical in shape"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Molecular orbitals can be bonding or antibonding. Bonding orbitals are lower in energy and contribute to the stability of the molecule, while antibonding orbitals are higher in energy and can lead to the destabilization of the molecule."
+    },
+    {
+      "question_id": "q4_Thermodynamics",
+      "text": "What does the term 'enthalpy' refer to in thermodynamics?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Thermodynamics",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "The total energy of a system"
+        },
+        {
+          "id": "b",
+          "text": "The heat content of a system at constant pressure"
+        },
+        {
+          "id": "c",
+          "text": "The entropy of a system"
+        },
+        {
+          "id": "d",
+          "text": "The temperature of a system"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Enthalpy refers to the heat content of a system at constant pressure. It is a crucial concept in understanding energy changes in chemical reactions and biological processes."
+    },
+    {
+      "question_id": "q5_Chemical_Equilibrium",
+      "text": "What does the equilibrium constant (K) indicate in a chemical reaction?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Chemical Equilibrium",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "The rate of the forward reaction"
+        },
+        {
+          "id": "b",
+          "text": "The rate of the reverse reaction"
+        },
+        {
+          "id": "c",
+          "text": "The ratio of the concentrations of products to reactants at equilibrium"
+        },
+        {
+          "id": "d",
+          "text": "The temperature at which the reaction occurs"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "The equilibrium constant (K) indicates the ratio of the concentrations of products to reactants at equilibrium. It provides insight into the extent of a reaction and whether it favors products or reactants."
+    }
+  ]
+}

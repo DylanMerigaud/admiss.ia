@@ -1,0 +1,133 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:06:08.906585",
+    "topic": "Molecular Orbitals",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_69143",
+    "topic": "Molecular Orbitals",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "Detailed educational content covering Molecular Orbitals. Molecular orbitals are mathematical functions that describe the wave-like behavior of electrons in molecules. They are essential for understanding the electronic structure and bonding in molecules. This lesson will cover the formation of molecular orbitals from atomic orbitals, the concept of bonding and antibonding orbitals, and their significance in chemical reactions. We will also explore how molecular orbitals relate to the stability and reactivity of molecules. This content will address weak areas in general concepts by providing a solid foundation in the fundamental principles of molecular orbitals. Clinical relevance will be highlighted through examples of how molecular orbitals influence drug interactions and biochemical processes. Practical applications will include problem-solving exercises and case studies to reinforce understanding. Connections to General Chemistry will be made through discussions on the atom, covalent and non-covalent bonds, thermodynamics, and chemical equilibrium.",
+    "learning_objectives": [
+      "Understand the formation and significance of molecular orbitals.",
+      "Apply the concept of bonding and antibonding orbitals to predict molecular stability.",
+      "Analyze the role of molecular orbitals in chemical reactions and equilibrium.",
+      "Evaluate the clinical relevance of molecular orbitals in biochemical processes."
+    ],
+    "exercise_id": "ex_46130",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:06:08.905046"
+  },
+  "exercise": {
+    "exercise_id": "ex_46130",
+    "lesson_id": "lesson_69143",
+    "topic": "Molecular Orbitals",
+    "question_ids": [
+      "q1_Molecular_Orbitals",
+      "q2_Molecular_Orbitals",
+      "q3_Molecular_Orbitals"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Molecular Orbitals",
+      "Atomic Orbitals",
+      "Bonding and Antibonding Orbitals",
+      "Thermodynamics",
+      "Chemical Equilibrium"
+    ],
+    "created_at": "2025-05-24T22:06:08.905138"
+  },
+  "questions": [
+    {
+      "question_id": "q1_Molecular_Orbitals",
+      "text": "Which of the following statements best describes the formation of molecular orbitals from atomic orbitals?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Molecular Orbitals",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Molecular orbitals are formed by the linear combination of atomic orbitals."
+        },
+        {
+          "id": "b",
+          "text": "Molecular orbitals are independent of atomic orbitals."
+        },
+        {
+          "id": "c",
+          "text": "Molecular orbitals are only formed in ionic compounds."
+        },
+        {
+          "id": "d",
+          "text": "Molecular orbitals are always higher in energy than atomic orbitals."
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Molecular orbitals are formed by the linear combination of atomic orbitals (LCAO), which allows for the description of the electronic structure of molecules. This is a fundamental concept in understanding molecular bonding and reactivity."
+    },
+    {
+      "question_id": "q2_Molecular_Orbitals",
+      "text": "What is the significance of bonding and antibonding orbitals in molecular orbitals theory?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Molecular Orbitals",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bonding orbitals are lower in energy and promote stability, while antibonding orbitals are higher in energy and destabilize the molecule."
+        },
+        {
+          "id": "b",
+          "text": "Bonding and antibonding orbitals have the same energy."
+        },
+        {
+          "id": "c",
+          "text": "Antibonding orbitals always lead to stronger bonds."
+        },
+        {
+          "id": "d",
+          "text": "Bonding orbitals are only found in non-covalent bonds."
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Bonding orbitals are lower in energy and contribute to the stability of the molecule, while antibonding orbitals are higher in energy and can destabilize the molecule. This concept is crucial for understanding the strength and nature of chemical bonds."
+    },
+    {
+      "question_id": "q3_Molecular_Orbitals",
+      "text": "How do molecular orbitals relate to the concept of chemical equilibrium?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Molecular Orbitals",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Molecular orbitals influence the energy levels of reactants and products, affecting the position of equilibrium."
+        },
+        {
+          "id": "b",
+          "text": "Molecular orbitals have no impact on chemical equilibrium."
+        },
+        {
+          "id": "c",
+          "text": "Chemical equilibrium is only determined by temperature."
+        },
+        {
+          "id": "d",
+          "text": "Molecular orbitals affect only the rate of reaction, not the equilibrium."
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "The energy levels of molecular orbitals in reactants and products influence the position of chemical equilibrium. Understanding molecular orbitals helps in predicting the stability and reactivity of molecules in chemical reactions."
+    }
+  ]
+}

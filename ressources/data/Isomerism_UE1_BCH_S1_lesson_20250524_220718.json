@@ -1,0 +1,141 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:07:18.634834",
+    "topic": "Isomerism",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_8165",
+    "topic": "Isomerism",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "lesson_content": "Detailed educational content covering Isomerism. Isomerism is a fundamental concept in organic chemistry where molecules have the same molecular formula but different structures and properties. This lesson will cover the types of isomerism, including structural (constitutional) isomerism and stereoisomerism (geometric and optical isomerism). We will explore how isomerism affects the properties and reactivity of organic compounds, with a focus on alkanes, alkenes, alcohols, amines, aldehydes, ketones, and acids. The lesson will also include practical examples and clinical relevance, ensuring a comprehensive understanding of the general concepts related to isomerism. We will connect these concepts to the representation of organic molecules and their applications in biochemistry.",
+    "learning_objectives": [
+      "Understand the basic concepts of isomerism in organic chemistry.",
+      "Identify and differentiate between structural and stereoisomerism.",
+      "Apply knowledge of isomerism to various organic compounds, including alkanes, alkenes, alcohols, amines, aldehydes, ketones, and acids.",
+      "Analyze the impact of isomerism on the properties and reactivity of organic molecules.",
+      "Evaluate the clinical relevance of isomerism in biochemistry."
+    ],
+    "exercise_id": "ex_2391",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:07:18.633790"
+  },
+  "exercise": {
+    "exercise_id": "ex_2391",
+    "lesson_id": "lesson_8165",
+    "topic": "Isomerism",
+    "question_ids": [
+      "q1_Isomerism",
+      "q2_Isomerism",
+      "q3_Isomerism"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Isomerism",
+      "Structural Isomerism",
+      "Stereoisomerism",
+      "Geometric Isomerism",
+      "Optical Isomerism",
+      "Alkanes",
+      "Alkenes",
+      "Alcohols",
+      "Amines",
+      "Aldehydes",
+      "Ketones",
+      "Acids"
+    ],
+    "created_at": "2025-05-24T22:07:18.633830"
+  },
+  "questions": [
+    {
+      "question_id": "q1_Isomerism",
+      "text": "Which of the following is an example of structural isomerism?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Isomerism",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cis-2-butene and Trans-2-butene"
+        },
+        {
+          "id": "b",
+          "text": "Butane and Isobutane"
+        },
+        {
+          "id": "c",
+          "text": "D-Glucose and L-Glucose"
+        },
+        {
+          "id": "d",
+          "text": "Ethanol and Methanol"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Structural isomerism occurs when molecules have the same molecular formula but different structural arrangements. Butane and Isobutane are structural isomers, while the other options represent different types of isomerism."
+    },
+    {
+      "question_id": "q2_Isomerism",
+      "text": "What type of isomerism is exhibited by cis-2-butene and trans-2-butene?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Isomerism",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Structural Isomerism"
+        },
+        {
+          "id": "b",
+          "text": "Geometric Isomerism"
+        },
+        {
+          "id": "c",
+          "text": "Optical Isomerism"
+        },
+        {
+          "id": "d",
+          "text": "Conformational Isomerism"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Geometric isomerism occurs due to the restricted rotation around a double bond, leading to different spatial arrangements of atoms. Cis-2-butene and trans-2-butene are examples of geometric isomers."
+    },
+    {
+      "question_id": "q3_Isomerism",
+      "text": "Which of the following pairs of molecules are enantiomers?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Isomerism",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Butane and Isobutane"
+        },
+        {
+          "id": "b",
+          "text": "Cis-2-butene and Trans-2-butene"
+        },
+        {
+          "id": "c",
+          "text": "D-Glucose and L-Glucose"
+        },
+        {
+          "id": "d",
+          "text": "Ethanol and Methanol"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Enantiomers are a type of optical isomerism where molecules are mirror images of each other and cannot be superimposed. D-Glucose and L-Glucose are enantiomers."
+    }
+  ]
+}
