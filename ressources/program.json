@@ -1,255 +1,249 @@
 [
   {
     "semester": 1,
-    "category": "UE 1 - Biochimie",
+    "category": "UE 1 - Biochemistry",
     "subcategories": [
       {
-        "name": "Chimie générale",
+        "name": "General Chemistry",
         "topics": [
-          "L'atome",
-          "La liaison covalente et les liaisons non covalentes",
-          "Les orbitales moléculaires",
-          "La thermodynamique",
-          "L'équilibre chimique"
+          "The Atom",
+          "Covalent Bonds and Non-Covalent Bonds",
+          "Molecular Orbitals",
+          "Thermodynamics",
+          "Chemical Equilibrium"
         ]
       },
       {
-        "name": "Chimie organique",
+        "name": "Organic Chemistry",
         "topics": [
-          "Représentation des molécules organiques",
-          "Isomérie",
-          "Alcanes, alcènes, alcools, amines, aldéhydes, cétones, acides"
+          "Representation of Organic Molecules",
+          "Isomerism",
+          "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids"
         ]
       },
       {
-        "name": "Structure, fonction et diversité des biomolécules",
+        "name": "Structure, Function and Diversity of Biomolecules",
         "topics": [
-          "Acides aminés",
-          "Peptides et protéines",
+          "Amino Acids",
+          "Peptides and Proteins",
           "Enzymes",
-          "Glucides et lipides"
+          "Carbohydrates and Lipids"
         ]
       },
       {
-        "name": "Organisation du génome humain",
+        "name": "Human Genome Organization",
         "topics": [
-          "Chromatine et ADN",
-          "Réplication et mécanisme de réparation",
-          "Code génétique",
-          "Traduction du génome"
+          "Chromatin and DNA",
+          "Replication and Repair Mechanisms",
+          "Genetic Code",
+          "Genome Translation"
         ]
       },
       {
-        "name": "Vue d'ensemble du métabolisme",
-        "topics": ["Oxydation des acides gras", "Glycolyse, cycle de Krebs"]
+        "name": "Metabolism Overview",
+        "topics": ["Fatty Acid Oxidation", "Glycolysis, Krebs Cycle"]
       }
     ]
   },
   {
     "semester": 1,
-    "category": "UE 2 - Biologie cellulaire",
+    "category": "UE 2 - Cell Biology",
     "subcategories": [
       {
-        "name": "Introduction à la biologie cellulaire",
-        "topics": [
-          "Composition et structure des protéines",
-          "Membranes cellulaires"
-        ]
+        "name": "Introduction to Cell Biology",
+        "topics": ["Protein Composition and Structure", "Cell Membranes"]
       },
       {
-        "name": "Structure générale de la cellule",
+        "name": "General Cell Structure",
         "topics": [
-          "Composition, structure et fonction du cytosquelette",
+          "Cytoskeleton Composition, Structure and Function",
           "Filaments",
-          "Molécules d'adhérence"
+          "Adhesion Molecules"
         ]
       },
       {
-        "name": "Organites et compartiments cellulaires",
-        "topics": ["Noyau cellulaire", "Mitochondries", "Lysosomes"]
+        "name": "Organelles and Cellular Compartments",
+        "topics": ["Cell Nucleus", "Mitochondria", "Lysosomes"]
       },
       {
-        "name": "Vie cellulaire",
+        "name": "Cellular Life",
         "topics": [
-          "Origine de la vie",
-          "Cycle cellulaire",
-          "Trafic intracellulaire",
-          "Communication entre cellules",
-          "Mort cellulaire"
+          "Origin of Life",
+          "Cell Cycle",
+          "Intracellular Traffic",
+          "Cell Communication",
+          "Cell Death"
         ]
       },
       {
-        "name": "Méthodes d'étude des cellules et tissus",
+        "name": "Methods for Studying Cells and Tissues",
         "topics": [
-          "Fractionnement cellulaire et tissulaire",
-          "Culture cellulaire",
-          "Microscope optique",
-          "Cellules souches et thérapie cellulaire"
+          "Cellular and Tissue Fractionation",
+          "Cell Culture",
+          "Optical Microscope",
+          "Stem Cells and Cell Therapy"
         ]
       },
       {
-        "name": "Biologie de la reproduction",
-        "topics": ["Gamétogénèse", "Fécondation", "Embryologie"]
+        "name": "Reproductive Biology",
+        "topics": ["Gametogenesis", "Fertilization", "Embryology"]
       }
     ]
   },
   {
     "semester": 1,
-    "category": "UE 3 - Biophysique",
+    "category": "UE 3 - Biophysics",
     "subcategories": [
       {
-        "name": "Électrostatique et électrophysiologie",
+        "name": "Electrostatics and Electrophysiology",
         "topics": [
-          "Représentation des molécules organiques, isomérie",
-          "Forces, énergie potentiel",
-          "Techniques de mesure"
+          "Representation of Organic Molecules, Isomerism",
+          "Forces, Potential Energy",
+          "Measurement Techniques"
         ]
       },
       {
-        "name": "Spectre électromagnétique et focus sur les très basses fréquences",
+        "name": "Electromagnetic Spectrum and Focus on Very Low Frequencies",
         "topics": [
-          "Équations de Maxwell",
-          "Onde et polarisation",
-          "Dualité onde corpuscule, spin",
-          "Principe de la RMN (Résonance magnétique nucléaire)"
+          "Maxwell's Equations",
+          "Wave and Polarization",
+          "Wave-Particle Duality, Spin",
+          "NMR Principle (Nuclear Magnetic Resonance)"
         ]
       },
       {
-        "name": "Optique géométrique",
+        "name": "Geometric Optics",
         "topics": [
-          "Diffraction et interférence",
-          "Laser émission stimulée",
-          "Spectroscopie moléculaire"
+          "Diffraction and Interference",
+          "Laser Stimulated Emission",
+          "Molecular Spectroscopy"
         ]
       },
       {
-        "name": "États de la matière et caractérisation",
+        "name": "States of Matter and Characterization",
         "topics": [
-          "L'état gazeux, énergie interne, pression",
-          "L'état liquide, mouvement Brownien, mécanique des fluides",
-          "L'état solide, le réseau cristallin",
-          "Échanges de chaleur et capacité calorifique",
-          "pH et équilibre acido-basique"
+          "Gaseous State, Internal Energy, Pressure",
+          "Liquid State, Brownian Motion, Fluid Mechanics",
+          "Solid State, Crystal Lattice",
+          "Heat Exchange and Heat Capacity",
+          "pH and Acid-Base Equilibrium"
         ]
       },
       {
-        "name": "Rayonnements ionisants",
+        "name": "Ionizing Radiation",
         "topics": [
-          "Fermions, bosons",
-          "Accélérateurs, fission et fusion, radioactivité",
-          "Fluorescence et effet Auger",
-          "Tube à rayons X",
-          "Interactions des rayonnements avec la matière",
-          "Dosimétrie et radioprotection"
-        ]
-      }
-    ]
-  },
-  {
-    "semester": 1,
-    "category": "UE 4 - Mathématiques et Statistiques",
-    "subcategories": [
-      {
-        "name": "Statistique descriptive",
-        "topics": [
-          "Moyenne, médiane et dispersion",
-          "Ecart-type, quantiles et variance",
-          "Loi binomiale, loi normale"
-        ]
-      },
-      {
-        "name": "Équations différentielles",
-        "topics": [
-          "Système d'équation différentielles",
-          "Applications en pharmacologie, bactériologie et physique"
-        ]
-      },
-      {
-        "name": "Probabilités et statistiques",
-        "topics": [
-          "Événements, expérience aléatoire",
-          "Fluctuations d'échantillonnage, intervalle de confiance",
-          "Test du Chi-deux, loi de Student, test de Wilcoxon, corrélation et régression",
-          "Conduite d'un essai clinique",
-          "Survie et protocoles",
-          "Analyse statistique des résultats"
-        ]
-      },
-      {
-        "name": "Statistiques pour l'épidémiologie",
-        "topics": [
-          "Prévalence d'une maladie",
-          "Épidémiologie descriptive",
-          "Études des cohortes, taux d'incidence d'une maladie",
-          "Risques relatifs, ration d'Odds"
+          "Fermions, Bosons",
+          "Accelerators, Fission and Fusion, Radioactivity",
+          "Fluorescence and Auger Effect",
+          "X-ray Tube",
+          "Radiation Interactions with Matter",
+          "Dosimetry and Radiation Protection"
         ]
       }
     ]
   },
   {
     "semester": 1,
-    "category": "UE 5 - Anatomie",
+    "category": "UE 4 - Mathematics and Statistics",
     "subcategories": [
       {
-        "name": "Anatomie générale",
+        "name": "Descriptive Statistics",
         "topics": [
-          "Morphologie comparée et évolutive",
-          "Ostéologie",
-          "Arthrologie",
-          "Myologie",
-          "Rachis et Colonne vertébrale",
-          "Pelvis Osseux",
-          "Ostéologie du crâne"
+          "Mean, Median and Dispersion",
+          "Standard Deviation, Quantiles and Variance",
+          "Binomial Distribution, Normal Distribution"
         ]
       },
       {
-        "name": "Système nerveux",
-        "topics": ["Système nerveux central", "Système nerveux périphérique"]
-      },
-      {
-        "name": "Membres",
-        "topics": ["Membres supérieurs et inférieurs"]
-      },
-      {
-        "name": "Appareils et systèmes",
+        "name": "Differential Equations",
         "topics": [
-          "Appareil digestif",
-          "Appareil cardio vasculaire",
-          "Appareil respiratoire",
-          "Appareils urinaires et génitaux",
-          "Organes sensoriels"
+          "Differential Equation Systems",
+          "Applications in Pharmacology, Bacteriology and Physics"
+        ]
+      },
+      {
+        "name": "Probability and Statistics",
+        "topics": [
+          "Events, Random Experiment",
+          "Sampling Fluctuations, Confidence Interval",
+          "Chi-square Test, Student's t-test, Wilcoxon Test, Correlation and Regression",
+          "Conducting a Clinical Trial",
+          "Survival and Protocols",
+          "Statistical Analysis of Results"
+        ]
+      },
+      {
+        "name": "Statistics for Epidemiology",
+        "topics": [
+          "Disease Prevalence",
+          "Descriptive Epidemiology",
+          "Cohort Studies, Disease Incidence Rate",
+          "Relative Risks, Odds Ratio"
         ]
       }
     ]
   },
   {
     "semester": 1,
-    "category": "UE 6 - Initiation à la connaissance du médicament",
+    "category": "UE 5 - Anatomy",
     "subcategories": [
       {
-        "name": "Fondamentaux du médicament",
+        "name": "General Anatomy",
         "topics": [
-          "Histoire du médicament",
-          "Évaluation des médicaments commercialisés",
-          "Droit et cadre juridique autour des produits pharmaceutiques",
-          "Notion de bénéfice – risque",
-          "Règles de prescription",
-          "Responsabilité"
+          "Comparative and Evolutionary Morphology",
+          "Osteology",
+          "Arthrology",
+          "Myology",
+          "Spine and Vertebral Column",
+          "Bony Pelvis",
+          "Skull Osteology"
         ]
       },
       {
-        "name": "Économie et cycle de vie",
+        "name": "Nervous System",
+        "topics": ["Central Nervous System", "Peripheral Nervous System"]
+      },
+      {
+        "name": "Limbs",
+        "topics": ["Upper and Lower Limbs"]
+      },
+      {
+        "name": "Systems and Apparatus",
         "topics": [
-          "Économie du médicament et des produits de santé",
-          "Cycle de vie du médicament"
+          "Digestive System",
+          "Cardiovascular System",
+          "Respiratory System",
+          "Urinary and Genital Systems",
+          "Sensory Organs"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 6 - Introduction to Drug Knowledge",
+    "subcategories": [
+      {
+        "name": "Drug Fundamentals",
+        "topics": [
+          "History of Medicine",
+          "Evaluation of Marketed Drugs",
+          "Law and Legal Framework for Pharmaceutical Products",
+          "Benefit-Risk Concept",
+          "Prescription Rules",
+          "Responsibility"
         ]
       },
       {
-        "name": "Usage et sécurité",
+        "name": "Economics and Life Cycle",
+        "topics": ["Drug and Health Product Economics", "Drug Life Cycle"]
+      },
+      {
+        "name": "Use and Safety",
         "topics": [
-          "Bon usage du médicament",
-          "Iatrogénèse médicamenteuse",
-          "Pharmacodynamique et pharmacocinétique",
+          "Proper Drug Use",
+          "Drug-Induced Iatrogenesis",
+          "Pharmacodynamics and Pharmacokinetics",
           "Pharmacovigilance"
         ]
       }
@@ -257,111 +251,111 @@
   },
   {
     "semester": 1,
-    "category": "UE 7 - Sciences humaines et sociales",
+    "category": "UE 7 - Human and Social Sciences",
     "subcategories": [
       {
-        "name": "L'Homme : évolution et environnement",
+        "name": "Humans: Evolution and Environment",
         "topics": [
-          "Anthropologie et évolution de l'être humain",
-          "L'Homme dans son environnement",
-          "Risques liés à l'environnement du travail",
-          "Addictologie"
+          "Anthropology and Human Evolution",
+          "Humans in Their Environment",
+          "Work Environment Related Risks",
+          "Addictology"
         ]
       },
       {
-        "name": "L'Homme et sa santé",
+        "name": "Humans and Health",
         "topics": [
-          "Notion de normes en santé",
-          "Santé et violence",
-          "Relation de soins",
-          "Handicap"
+          "Health Standards Concept",
+          "Health and Violence",
+          "Care Relationship",
+          "Disability"
         ]
       },
       {
-        "name": "Ethique et déontologie",
+        "name": "Ethics and Deontology",
         "topics": [
-          "Réglementation des professions de santé",
-          "Déontologie et éthique des professionnels de santé",
-          "Histoire du droit des patients et usagers du système de santé"
+          "Health Profession Regulations",
+          "Ethics and Deontology of Health Professionals",
+          "History of Patient Rights and Health System Users"
         ]
       },
       {
-        "name": "Santé et sociale",
+        "name": "Health and Social",
         "topics": [
-          "Le système de santé Français",
-          "Indicateurs en Santé Publique",
-          "L'offre de soin ambulatoire et hospitalier",
-          "Aspects microéconomiques et macroéconomiques des dépenses de santé",
-          "Santé de la population en France",
-          "Les filières et réseaux de soin"
+          "French Health System",
+          "Public Health Indicators",
+          "Ambulatory and Hospital Care Provision",
+          "Microeconomic and Macroeconomic Aspects of Health Expenditure",
+          "Population Health in France",
+          "Care Networks and Pathways"
         ]
       },
       {
-        "name": "Psychologie",
+        "name": "Psychology",
         "topics": [
-          "Psychologie du développement",
-          "Psychométrie et instruments de mesure",
-          "Personnalité",
-          "Développement cognitif",
-          "Schéma corporel et image du corps"
+          "Developmental Psychology",
+          "Psychometrics and Measurement Tools",
+          "Personality",
+          "Cognitive Development",
+          "Body Schema and Body Image"
         ]
       },
       {
-        "name": "Histoire et épistémologie des sciences de la santé",
+        "name": "History and Epistemology of Health Sciences",
         "topics": [
-          "Histoire de la médecine",
-          "Histoire de la pharmacie",
-          "Histoire de la chirurgie",
-          "Histoire de l'anatomie",
-          "Histoire de la douleur",
-          "Histoire de la traumatologie et de l'orthopédie",
-          "Histoire de la gynécologie et de l'obstétrique",
-          "Histoire des épidémies",
-          "Histoire de la Tuberculose",
-          "Histoire de la pneumologie",
-          "Histoire du cancer",
-          "Histoire du sang en Occident et en Orient"
+          "History of Medicine",
+          "History of Pharmacy",
+          "History of Surgery",
+          "History of Anatomy",
+          "History of Pain",
+          "History of Traumatology and Orthopedics",
+          "History of Gynecology and Obstetrics",
+          "History of Epidemics",
+          "History of Tuberculosis",
+          "History of Pneumology",
+          "History of Cancer",
+          "History of Blood in West and East"
         ]
       }
     ]
   },
   {
     "semester": 2,
-    "category": "UE 8 - Matière spécifique",
+    "category": "UE 8 - Specific Subject",
     "subcategories": [
       {
-        "name": "Spécialité Médecine",
+        "name": "Medicine Specialty",
         "topics": [
-          "Anatomie tête et cou",
-          "Histologie de l'appareil reproducteur et du sein",
-          "Anatomie du petit bassin et de l'appareil reproducteur",
-          "Méthodes d'étude et d'analyse du génome"
+          "Head and Neck Anatomy",
+          "Histology of Reproductive System and Breast",
+          "Pelvic and Reproductive System Anatomy",
+          "Genome Study and Analysis Methods"
         ]
       },
       {
-        "name": "Spécialité Maïeutique",
+        "name": "Midwifery Specialty",
         "topics": [
-          "Histologie de l'appareil reproducteur et du sein",
-          "Anatomie du petit bassin et de l'appareil reproducteur",
-          "Méthodes d'étude et d'analyse du génome",
-          "Unité foeto-placentaire"
+          "Histology of Reproductive System and Breast",
+          "Pelvic and Reproductive System Anatomy",
+          "Genome Study and Analysis Methods",
+          "Feto-Placental Unit"
         ]
       },
       {
-        "name": "Spécialité Odontologie",
+        "name": "Dentistry Specialty",
         "topics": [
-          "Anatomie tête et cou",
-          "Morphogenèse cranio-faciale et odontogenèse",
-          "Méthodes d'étude et d'analyse du génome",
-          "Médicaments et autres produits de santé"
+          "Head and Neck Anatomy",
+          "Cranio-Facial Morphogenesis and Odontogenesis",
+          "Genome Study and Analysis Methods",
+          "Drugs and Other Health Products"
         ]
       },
       {
-        "name": "Spécialité Pharmacie",
+        "name": "Pharmacy Specialty",
         "topics": [
-          "Bases chimiques du médicament",
-          "Sources actuelles et futures des médicaments",
-          "Les médicaments et autres produits de santé"
+          "Chemical Basis of Drugs",
+          "Current and Future Sources of Drugs",
+          "Drugs and Other Health Products"
         ]
       }
     ]

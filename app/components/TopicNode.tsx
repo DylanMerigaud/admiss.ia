@@ -31,14 +31,14 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
 
   const getMasteryLevel = (level: number) => {
     if (level >= 90)
-      return { name: "Maître", icon: Trophy, color: "text-yellow-400" };
+      return { name: "Master", icon: Trophy, color: "text-yellow-400" };
     if (level >= 70)
       return { name: "Expert", icon: Star, color: "text-purple-400" };
     if (level >= 50)
-      return { name: "Avancé", icon: Zap, color: "text-blue-400" };
+      return { name: "Advanced", icon: Zap, color: "text-blue-400" };
     if (level >= 25)
-      return { name: "Intermédiaire", icon: Clock, color: "text-orange-400" };
-    return { name: "Débutant", icon: Circle, color: "text-gray-400" };
+      return { name: "Intermediate", icon: Clock, color: "text-orange-400" };
+    return { name: "Beginner", icon: Circle, color: "text-gray-400" };
   };
 
   const mastery = getMasteryLevel(progress.level);

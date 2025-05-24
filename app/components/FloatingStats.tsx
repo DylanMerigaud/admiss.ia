@@ -37,7 +37,7 @@ export const FloatingStats: React.FC = () => {
   const statItems = [
     {
       icon: Trophy,
-      label: "Maîtrisées",
+      label: "Mastered",
       value: stats.masteredSkills,
       color: "text-yellow-400",
       bgColor: "bg-yellow-400/20",
@@ -51,14 +51,14 @@ export const FloatingStats: React.FC = () => {
     },
     {
       icon: BookOpen,
-      label: "En cours",
+      label: "In Progress",
       value: stats.inProgressSkills,
       color: "text-blue-400",
       bgColor: "bg-blue-400/20",
     },
     {
       icon: Target,
-      label: "Moyenne",
+      label: "Average",
       value: `${stats.averageProgress}%`,
       color: "text-emerald-400",
       bgColor: "bg-emerald-400/20",
@@ -75,7 +75,7 @@ export const FloatingStats: React.FC = () => {
       <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 min-w-[280px]">
         <div className="flex items-center space-x-2 mb-4">
           <Zap className="w-5 h-5 text-yellow-400" />
-          <h3 className="text-white font-bold">Progression</h3>
+          <h3 className="text-white font-bold">Progress</h3>
         </div>
 
         <div className="grid grid-cols-2 gap-3">
@@ -107,7 +107,7 @@ export const FloatingStats: React.FC = () => {
         <div className="mt-4 pt-4 border-t border-white/10">
           <div className="flex items-center justify-between mb-2">
             <span className="text-white text-sm font-medium">
-              Progression globale
+              Overall Progress
             </span>
             <span className="text-emerald-400 text-sm font-bold">
               {stats.averageProgress}%
@@ -150,12 +150,12 @@ export const FloatingStats: React.FC = () => {
             )}
             <span className="text-xs font-medium">
               {stats.averageProgress >= 80
-                ? "Maître PASS"
+                ? "PASS Master"
                 : stats.averageProgress >= 60
-                ? "Expert médical"
+                ? "Medical Expert"
                 : stats.averageProgress >= 40
-                ? "Étudiant avancé"
-                : "Étudiant débutant"}
+                ? "Advanced Student"
+                : "Beginner Student"}
             </span>
           </motion.div>
         </div>

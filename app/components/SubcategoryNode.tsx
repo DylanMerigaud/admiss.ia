@@ -95,7 +95,7 @@ export const SubcategoryNode: React.FC<SubcategoryNodeProps> = ({ data }) => {
           </motion.div>
         </div>
 
-        <div className="text-cyan-200 text-xs mb-3">{topics.length} sujets</div>
+        <div className="text-cyan-200 text-xs mb-3">{topics.length} topics</div>
 
         {/* Mini progress bar */}
         <div className="w-full bg-gray-700/50 rounded-full h-1.5 mb-2">
@@ -110,7 +110,7 @@ export const SubcategoryNode: React.FC<SubcategoryNodeProps> = ({ data }) => {
         </div>
 
         <div className="flex justify-between items-center text-[10px] text-cyan-300">
-          <span>Maîtrise</span>
+          <span>Mastery</span>
           <span className="flex items-center space-x-1">
             {progress.level >= 80 && <Target className="w-2 h-2" />}
             <span>{progress.level}%</span>

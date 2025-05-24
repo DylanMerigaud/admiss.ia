@@ -104,7 +104,7 @@ export const CategoryNode: React.FC<CategoryNodeProps> = ({ data }) => {
             {getStatusIcon(progress.level)}
             <div>
               <h3 className="text-white font-bold text-lg">{category}</h3>
-              <p className="text-purple-300 text-sm">Semestre {semester}</p>
+              <p className="text-purple-300 text-sm">Semester {semester}</p>
             </div>
           </div>
           <motion.div
@@ -116,7 +116,7 @@ export const CategoryNode: React.FC<CategoryNodeProps> = ({ data }) => {
         </div>
 
         <div className="text-purple-200 text-sm mb-4">
-          {subcategories.length} sous-catégories
+          {subcategories.length} subcategories
         </div>
 
         {/* Progress bar */}
@@ -132,7 +132,7 @@ export const CategoryNode: React.FC<CategoryNodeProps> = ({ data }) => {
         </div>
 
         <div className="flex justify-between items-center text-xs text-purple-300">
-          <span>Progression</span>
+          <span>Progress</span>
           <span>{progress.status}</span>
         </div>
       </motion.div>
