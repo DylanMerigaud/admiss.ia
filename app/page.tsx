@@ -57,7 +57,7 @@ export default function HomePage() {
     };
 
     // Consistent gaps between node levels
-    const horizontalGap = 250; // Gap between levels
+    const horizontalGap = 100; // Gap between levels
     const verticalGap = 20; // Gap between sibling nodes
     const categoryGap = 75; // Minimal gap between root categories
 

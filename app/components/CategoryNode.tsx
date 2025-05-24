@@ -138,21 +138,19 @@ export const CategoryNode: React.FC<CategoryNodeProps> = ({ data }) => {
       </motion.div>
 
       {/* Only show handle when expanded */}
-      {expanded && (
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0, opacity: 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Handle
-            id="source"
-            type="source"
-            position={Position.Right}
-            className="!bg-purple-500 !border-purple-300 !w-3 !h-3"
-          />
-        </motion.div>
-      )}
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0, opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
+        <Handle
+          id="source"
+          type="source"
+          position={Position.Right}
+          className="!bg-purple-500 !border-purple-300 !w-3 !h-3"
+        />
+      </motion.div>
     </motion.div>
   );
 };

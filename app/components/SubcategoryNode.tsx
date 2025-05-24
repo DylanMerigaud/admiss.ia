@@ -126,21 +126,19 @@ export const SubcategoryNode: React.FC<SubcategoryNodeProps> = ({ data }) => {
       />
 
       {/* Only show source handle when expanded */}
-      {expanded && (
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0, opacity: 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Handle
-            id="source"
-            type="source"
-            position={Position.Right}
-            className="!bg-cyan-500 !border-cyan-300 !w-2 !h-2"
-          />
-        </motion.div>
-      )}
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0, opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
+        <Handle
+          id="source"
+          type="source"
+          position={Position.Right}
+          className="!bg-cyan-500 !border-cyan-300 !w-2 !h-2"
+        />
+      </motion.div>
     </motion.div>
   );
 };
