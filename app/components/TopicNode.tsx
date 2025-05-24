@@ -16,6 +16,7 @@ import {
 
 interface TopicNodeProps {
   data: {
+    id: string;
     name: string;
     progress: {
       level: number;
@@ -26,7 +27,7 @@ interface TopicNodeProps {
 }
 
 export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
-  const { name, progress } = data;
+  const { id, name, progress } = data;
   const router = useRouter();
 
   const getMasteryLevel = (level: number) => {
@@ -62,7 +63,7 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
   };
 
   return (
-    <motion.div
+    <div
       initial={{ scale: 0, opacity: 0, x: -50 }}
       animate={{ scale: 1, opacity: 1, x: 0 }}
       transition={{
@@ -73,16 +74,13 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
       }}
       className="relative"
     >
-      <motion.div
+      <div
         className="bg-gradient-to-br from-slate-800/90 to-gray-900/90 backdrop-blur-md border border-slate-500/30 rounded-md p-3 min-w-[200px] cursor-pointer transition-all duration-150 shadow-md"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ duration: 0.1 }}
         onClick={handleNodeClick}
       >
         {/* Mastery badge */}
         <div className="absolute -top-2 -left-2">
-          <motion.div
+          <div
             className={`w-6 h-6 rounded-full bg-slate-800 border-2 flex items-center justify-center ${
               progress.level >= 90
                 ? "border-yellow-400"
@@ -94,15 +92,9 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
                 ? "border-orange-400"
                 : "border-gray-500"
             }`}
-            animate={{
-              rotate: progress.level >= 90 ? [0, 360] : 0,
-            }}
-            transition={{
-              rotate: { duration: 2, repeat: Infinity, ease: "linear" },
-            }}
           >
             <MasteryIcon className={`w-3 h-3 ${mastery.color}`} />
-          </motion.div>
+          </div>
         </div>
 
         <div className="flex items-start justify-between mb-2">
@@ -110,26 +102,20 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
             {name}
           </h5>
           {progress.level === 100 && (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", stiffness: 300, duration: 0.3 }}
-            >
+            <div>
               <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-            </motion.div>
+            </div>
           )}
         </div>
 
         {/* Progress visualization */}
         <div className="mb-2">
           <div className="w-full bg-gray-700/50 rounded-full h-1">
-            <motion.div
+            <div
               className={`h-1 rounded-full bg-gradient-to-r ${getProgressColor(
                 progress.level
               )}`}
-              initial={{ width: 0 }}
-              animate={{ width: `${progress.level}%` }}
-              transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+              style={{ width: `${progress.level}%` }}
             />
           </div>
         </div>
@@ -155,20 +141,16 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
 
         {/* Subtle glow effect for high progress */}
         {progress.level >= 80 && (
-          <motion.div
-            className="absolute inset-0 rounded-md bg-gradient-to-r from-emerald-400/20 to-teal-400/20 pointer-events-none"
-            animate={{ opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          />
+          <div className="absolute inset-0 rounded-md bg-gradient-to-r from-emerald-400/20 to-teal-400/20 pointer-events-none" />
         )}
-      </motion.div>
+      </div>
 
       <Handle
-        id="target"
+        id={`target`}
         type="target"
         position={Position.Left}
         className="!bg-slate-500 !border-slate-300 !w-1.5 !h-1.5"
       />
-    </motion.div>
+    </div>
   );
 };

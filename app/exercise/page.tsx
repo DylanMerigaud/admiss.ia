@@ -229,7 +229,7 @@ export default function ExercisePage() {
                 transition={{ delay: 0.2 }}
                 className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-emerald-400 to-blue-500 rounded-full flex items-center justify-center"
               >
-                <Trophy className="w-10 h-10 text-white" />
+                <div className="text-4xl">🏆</div>
               </motion.div>
               <h1 className="text-3xl font-bold text-white mb-2">
                 Exercise Complete!

@@ -74,6 +74,7 @@ export default function HomePage() {
         position: categoryPosition,
         data: {
           ...ue,
+          id: categoryId,
           expanded: expandedNodes.has(categoryId),
           onToggle: () => toggleNode(categoryId),
           progress: skillProgress[categoryId] || {
@@ -88,12 +89,6 @@ export default function HomePage() {
         const subcategories = ue.subcategories;
         const subcategoryCount = subcategories.length;
 
-        // Calculate the exact center point of the parent category
-        const categoryCenterY =
-          categoryPosition.y + nodeDimensions.category.height / 2;
-
-        console.log(categoryCenterY);
-
         // For proper centering: position children so the middle child (or middle of group) aligns with parent center
         const subcategoryYPositions: number[] = [];
 
@@ -107,7 +102,7 @@ export default function HomePage() {
           const yPosition =
             startOffset +
             (i + 1) * nodeDimensions.subcategory.height +
-            i * verticalGap;
+            (i - 1) * verticalGap;
           subcategoryYPositions.push(yPosition);
         }
 
@@ -120,7 +115,7 @@ export default function HomePage() {
               categoryPosition.x +
               nodeDimensions.category.width +
               horizontalGap,
-            y: subcategoryY,
+            y: subcategoryY - 5,
           };
 
           newNodes.push({
@@ -129,6 +124,7 @@ export default function HomePage() {
             position: subcategoryPosition,
             data: {
               ...subcategory,
+              id: subcategoryId,
               expanded: expandedNodes.has(subcategoryId),
               onToggle: () => toggleNode(subcategoryId),
               progress: skillProgress[subcategoryId] || {
@@ -146,9 +142,7 @@ export default function HomePage() {
             source: categoryId,
             target: subcategoryId,
             animated: true,
-            sourceHandle: "source",
-            targetHandle: "target",
-            type: "smoothstep",
+            type: "straight",
             style: { stroke: "#8b5cf6", strokeWidth: 2 },
           });
 
@@ -172,9 +166,8 @@ export default function HomePage() {
             for (let i = 0; i < topicCount; i++) {
               const yPosition =
                 startOffset +
-                (i + 1) * nodeDimensions.topic.height +
-                i * verticalGap -
-                nodeDimensions.topic.height;
+                (i + 1) * nodeDimensions.subcategory.height +
+                (i - 1) * verticalGap;
               topicYPositions.push(yPosition);
             }
 
@@ -187,7 +180,7 @@ export default function HomePage() {
                   subcategoryPosition.x +
                   nodeDimensions.subcategory.width -
                   horizontalGap,
-                y: topicY,
+                y: topicY - 45,
               };
 
               newNodes.push({
@@ -195,6 +188,7 @@ export default function HomePage() {
                 type: "topic",
                 position: topicPosition,
                 data: {
+                  id: topicId,
                   name: topic,
                   progress: skillProgress[topicId] || {
                     level: 0,
@@ -212,10 +206,8 @@ export default function HomePage() {
                 id: `${subcategoryId}-${topicId}`,
                 source: subcategoryId,
                 target: topicId,
-                type: "smoothstep",
+                type: "straight",
                 animated: true,
-                sourceHandle: "source",
-                targetHandle: "target",
                 style: { stroke: "#06b6d4", strokeWidth: 1.5 },
               });
             });
@@ -241,8 +233,6 @@ export default function HomePage() {
               const topicCount = subcategory.topics.length;
               if (topicCount > 0) {
                 const subcategoryY = subcategoryYPositions[subIndex];
-                const subcategoryCenterY =
-                  subcategoryY + nodeDimensions.subcategory.height / 2;
 
                 // Calculate topic positions for this subcategory
                 const topicYPositions: number[] = [];
@@ -255,7 +245,6 @@ export default function HomePage() {
 
                 for (let i = 0; i < topicCount; i++) {
                   const yPosition =
-                    subcategoryCenterY +
                     startOffset +
                     (i + 1) * nodeDimensions.topic.height +
                     i * verticalGap -
@@ -275,9 +264,10 @@ export default function HomePage() {
       // Next category position
       categoryYOffset += nodeDimensions.category.height + categoryGap;
     });
-    console.log(newNodes);
     setNodes(newNodes);
     setEdges(newEdges);
+    console.log(newEdges);
+    console.log(newNodes);
   }, [expandedNodes, skillProgress]);
 
   const toggleNode = useCallback((nodeId: string) => {
@@ -431,7 +421,6 @@ export default function HomePage() {
             padding: 0.1,
             includeHiddenNodes: false,
           }}
-          proOptions={proOptions}
           className="react-flow-dark-theme"
           nodesDraggable={false}
           nodesConnectable={false}

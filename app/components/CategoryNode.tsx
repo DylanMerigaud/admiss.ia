@@ -7,6 +7,7 @@ import { ChevronRight, ChevronDown, BookOpen, Award } from "lucide-react";
 
 interface CategoryNodeProps {
   data: {
+    id: string;
     category: string;
     semester: number;
     subcategories: any[];
@@ -20,8 +21,15 @@ interface CategoryNodeProps {
 }
 
 export const CategoryNode: React.FC<CategoryNodeProps> = ({ data }) => {
-  const { category, semester, subcategories, expanded, onToggle, progress } =
-    data;
+  const {
+    id,
+    category,
+    semester,
+    subcategories,
+    expanded,
+    onToggle,
+    progress,
+  } = data;
 
   const getProgressColor = (level: number) => {
     if (level >= 80) return "from-emerald-500 to-teal-600";
@@ -145,7 +153,7 @@ export const CategoryNode: React.FC<CategoryNodeProps> = ({ data }) => {
         transition={{ duration: 0.2 }}
       >
         <Handle
-          id="source"
+          id={`source`}
           type="source"
           position={Position.Right}
           className="!bg-purple-500 !border-purple-300 !w-3 !h-3"

@@ -7,6 +7,7 @@ import { ChevronRight, Layers, Target } from "lucide-react";
 
 interface SubcategoryNodeProps {
   data: {
+    id: string;
     name: string;
     topics: string[];
     expanded: boolean;
@@ -19,7 +20,7 @@ interface SubcategoryNodeProps {
 }
 
 export const SubcategoryNode: React.FC<SubcategoryNodeProps> = ({ data }) => {
-  const { name, topics, expanded, onToggle, progress } = data;
+  const { id, name, topics, expanded, onToggle, progress } = data;
 
   const getProgressColor = (level: number) => {
     if (level >= 80) return "from-emerald-400 to-teal-500";
@@ -30,23 +31,10 @@ export const SubcategoryNode: React.FC<SubcategoryNodeProps> = ({ data }) => {
   };
 
   return (
-    <motion.div
-      initial={{ scale: 0, opacity: 0, x: -30 }}
-      animate={{ scale: 1, opacity: 1, x: 0 }}
-      transition={{
-        duration: 0.25,
-        type: "spring",
-        stiffness: 350,
-        damping: 30,
-      }}
-      className="relative"
-    >
-      <motion.div
+    <div className="relative">
+      <div
         onClick={onToggle}
         className="bg-gradient-to-br from-cyan-900/90 to-blue-900/90 backdrop-blur-md border border-cyan-500/30 rounded-lg p-4 min-w-[250px] cursor-pointer transition-all duration-200 shadow-lg hover:shadow-cyan-500/25"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ duration: 0.15 }}
       >
         {/* Mini progress indicator */}
         <div className="absolute -top-1 -right-1 w-8 h-8">
@@ -87,25 +75,20 @@ export const SubcategoryNode: React.FC<SubcategoryNodeProps> = ({ data }) => {
             <Layers className="w-4 h-4 text-cyan-400" />
             <h4 className="text-white font-semibold text-sm">{name}</h4>
           </div>
-          <motion.div
-            animate={{ rotate: expanded ? 90 : 0 }}
-            transition={{ duration: 0.15, ease: "easeInOut" }}
-          >
+          <div>
             <ChevronRight className="w-4 h-4 text-cyan-300" />
-          </motion.div>
+          </div>
         </div>
 
         <div className="text-cyan-200 text-xs mb-3">{topics.length} topics</div>
 
         {/* Mini progress bar */}
         <div className="w-full bg-gray-700/50 rounded-full h-1.5 mb-2">
-          <motion.div
+          <div
             className={`h-1.5 rounded-full bg-gradient-to-r ${getProgressColor(
               progress.level
             )}`}
-            initial={{ width: 0 }}
-            animate={{ width: `${progress.level}%` }}
-            transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
+            style={{ width: `${progress.level}%` }}
           />
         </div>
 
@@ -116,29 +99,25 @@ export const SubcategoryNode: React.FC<SubcategoryNodeProps> = ({ data }) => {
             <span>{progress.level}%</span>
           </span>
         </div>
-      </motion.div>
+      </div>
 
       <Handle
-        id="target"
+        id={`target`}
         type="target"
+        isConnectableStart={false}
         position={Position.Left}
         className="!bg-cyan-500 !border-cyan-300 !w-2 !h-2"
       />
 
       {/* Only show source handle when expanded */}
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0, opacity: 0 }}
-        transition={{ duration: 0.2 }}
-      >
-        <Handle
-          id="source"
-          type="source"
-          position={Position.Right}
-          className="!bg-cyan-500 !border-cyan-300 !w-2 !h-2"
-        />
-      </motion.div>
-    </motion.div>
+
+      <Handle
+        isConnectableStart={false}
+        id={`source`}
+        type="source"
+        position={Position.Right}
+        className="!bg-cyan-500 !border-cyan-300 !w-2 !h-2"
+      />
+    </div>
   );
 };
