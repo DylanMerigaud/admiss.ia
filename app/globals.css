@@ -91,3 +91,162 @@
         @apply bg-foreground/20 animate-pulse;
     }
 }
+
+/* React Flow Dark Theme Enhancements */
+.react-flow-dark-theme .react-flow__node {
+  font-family: inherit;
+}
+
+.react-flow-dark-theme .react-flow__edge-path {
+  stroke: #8b5cf6;
+  stroke-width: 2px;
+}
+
+.react-flow-dark-theme .react-flow__edge.animated path {
+  stroke-dasharray: 5;
+  animation: dashdraw 0.8s linear infinite;
+}
+
+@keyframes dashdraw {
+  to {
+    stroke-dashoffset: -10;
+  }
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.7);
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced glow effects */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+/* React Flow controls styling */
+.react-flow__controls {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+}
+
+.react-flow__controls button {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  transition: all 0.15s ease !important;
+}
+
+.react-flow__controls button:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* React Flow minimap styling */
+.react-flow__minimap {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+}
+
+/* Custom progress ring animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+/* Particle animation enhancement */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* React Flow viewport smooth transitions */
+.react-flow__viewport {
+  transition: transform 0.2s ease-out !important;
+}
+
+/* Disable global transitions for better performance */
+.react-flow__node {
+  transition: none !important;
+}
+
+/* Custom focus outlines */
+button:focus,
+div:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.4);
+}
+
+/* Custom pulse animation for active elements */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.7);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Smooth hover effects for interactive elements */
+.hover-lift {
+  transition: transform 0.15s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}

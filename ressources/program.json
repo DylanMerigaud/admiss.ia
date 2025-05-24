@@ -1,0 +1,369 @@
+[
+  {
+    "semester": 1,
+    "category": "UE 1 - Biochimie",
+    "subcategories": [
+      {
+        "name": "Chimie générale",
+        "topics": [
+          "L'atome",
+          "La liaison covalente et les liaisons non covalentes",
+          "Les orbitales moléculaires",
+          "La thermodynamique",
+          "L'équilibre chimique"
+        ]
+      },
+      {
+        "name": "Chimie organique",
+        "topics": [
+          "Représentation des molécules organiques",
+          "Isomérie",
+          "Alcanes, alcènes, alcools, amines, aldéhydes, cétones, acides"
+        ]
+      },
+      {
+        "name": "Structure, fonction et diversité des biomolécules",
+        "topics": [
+          "Acides aminés",
+          "Peptides et protéines",
+          "Enzymes",
+          "Glucides et lipides"
+        ]
+      },
+      {
+        "name": "Organisation du génome humain",
+        "topics": [
+          "Chromatine et ADN",
+          "Réplication et mécanisme de réparation",
+          "Code génétique",
+          "Traduction du génome"
+        ]
+      },
+      {
+        "name": "Vue d'ensemble du métabolisme",
+        "topics": ["Oxydation des acides gras", "Glycolyse, cycle de Krebs"]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 2 - Biologie cellulaire",
+    "subcategories": [
+      {
+        "name": "Introduction à la biologie cellulaire",
+        "topics": [
+          "Composition et structure des protéines",
+          "Membranes cellulaires"
+        ]
+      },
+      {
+        "name": "Structure générale de la cellule",
+        "topics": [
+          "Composition, structure et fonction du cytosquelette",
+          "Filaments",
+          "Molécules d'adhérence"
+        ]
+      },
+      {
+        "name": "Organites et compartiments cellulaires",
+        "topics": ["Noyau cellulaire", "Mitochondries", "Lysosomes"]
+      },
+      {
+        "name": "Vie cellulaire",
+        "topics": [
+          "Origine de la vie",
+          "Cycle cellulaire",
+          "Trafic intracellulaire",
+          "Communication entre cellules",
+          "Mort cellulaire"
+        ]
+      },
+      {
+        "name": "Méthodes d'étude des cellules et tissus",
+        "topics": [
+          "Fractionnement cellulaire et tissulaire",
+          "Culture cellulaire",
+          "Microscope optique",
+          "Cellules souches et thérapie cellulaire"
+        ]
+      },
+      {
+        "name": "Biologie de la reproduction",
+        "topics": ["Gamétogénèse", "Fécondation", "Embryologie"]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 3 - Biophysique",
+    "subcategories": [
+      {
+        "name": "Électrostatique et électrophysiologie",
+        "topics": [
+          "Représentation des molécules organiques, isomérie",
+          "Forces, énergie potentiel",
+          "Techniques de mesure"
+        ]
+      },
+      {
+        "name": "Spectre électromagnétique et focus sur les très basses fréquences",
+        "topics": [
+          "Équations de Maxwell",
+          "Onde et polarisation",
+          "Dualité onde corpuscule, spin",
+          "Principe de la RMN (Résonance magnétique nucléaire)"
+        ]
+      },
+      {
+        "name": "Optique géométrique",
+        "topics": [
+          "Diffraction et interférence",
+          "Laser émission stimulée",
+          "Spectroscopie moléculaire"
+        ]
+      },
+      {
+        "name": "États de la matière et caractérisation",
+        "topics": [
+          "L'état gazeux, énergie interne, pression",
+          "L'état liquide, mouvement Brownien, mécanique des fluides",
+          "L'état solide, le réseau cristallin",
+          "Échanges de chaleur et capacité calorifique",
+          "pH et équilibre acido-basique"
+        ]
+      },
+      {
+        "name": "Rayonnements ionisants",
+        "topics": [
+          "Fermions, bosons",
+          "Accélérateurs, fission et fusion, radioactivité",
+          "Fluorescence et effet Auger",
+          "Tube à rayons X",
+          "Interactions des rayonnements avec la matière",
+          "Dosimétrie et radioprotection"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 4 - Mathématiques et Statistiques",
+    "subcategories": [
+      {
+        "name": "Statistique descriptive",
+        "topics": [
+          "Moyenne, médiane et dispersion",
+          "Ecart-type, quantiles et variance",
+          "Loi binomiale, loi normale"
+        ]
+      },
+      {
+        "name": "Équations différentielles",
+        "topics": [
+          "Système d'équation différentielles",
+          "Applications en pharmacologie, bactériologie et physique"
+        ]
+      },
+      {
+        "name": "Probabilités et statistiques",
+        "topics": [
+          "Événements, expérience aléatoire",
+          "Fluctuations d'échantillonnage, intervalle de confiance",
+          "Test du Chi-deux, loi de Student, test de Wilcoxon, corrélation et régression",
+          "Conduite d'un essai clinique",
+          "Survie et protocoles",
+          "Analyse statistique des résultats"
+        ]
+      },
+      {
+        "name": "Statistiques pour l'épidémiologie",
+        "topics": [
+          "Prévalence d'une maladie",
+          "Épidémiologie descriptive",
+          "Études des cohortes, taux d'incidence d'une maladie",
+          "Risques relatifs, ration d'Odds"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 5 - Anatomie",
+    "subcategories": [
+      {
+        "name": "Anatomie générale",
+        "topics": [
+          "Morphologie comparée et évolutive",
+          "Ostéologie",
+          "Arthrologie",
+          "Myologie",
+          "Rachis et Colonne vertébrale",
+          "Pelvis Osseux",
+          "Ostéologie du crâne"
+        ]
+      },
+      {
+        "name": "Système nerveux",
+        "topics": ["Système nerveux central", "Système nerveux périphérique"]
+      },
+      {
+        "name": "Membres",
+        "topics": ["Membres supérieurs et inférieurs"]
+      },
+      {
+        "name": "Appareils et systèmes",
+        "topics": [
+          "Appareil digestif",
+          "Appareil cardio vasculaire",
+          "Appareil respiratoire",
+          "Appareils urinaires et génitaux",
+          "Organes sensoriels"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 6 - Initiation à la connaissance du médicament",
+    "subcategories": [
+      {
+        "name": "Fondamentaux du médicament",
+        "topics": [
+          "Histoire du médicament",
+          "Évaluation des médicaments commercialisés",
+          "Droit et cadre juridique autour des produits pharmaceutiques",
+          "Notion de bénéfice – risque",
+          "Règles de prescription",
+          "Responsabilité"
+        ]
+      },
+      {
+        "name": "Économie et cycle de vie",
+        "topics": [
+          "Économie du médicament et des produits de santé",
+          "Cycle de vie du médicament"
+        ]
+      },
+      {
+        "name": "Usage et sécurité",
+        "topics": [
+          "Bon usage du médicament",
+          "Iatrogénèse médicamenteuse",
+          "Pharmacodynamique et pharmacocinétique",
+          "Pharmacovigilance"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 1,
+    "category": "UE 7 - Sciences humaines et sociales et Santé Publique",
+    "subcategories": [
+      {
+        "name": "L'Homme : évolution et environnement",
+        "topics": [
+          "Anthropologie et évolution de l'être humain",
+          "L'Homme dans son environnement",
+          "Risques liés à l'environnement du travail",
+          "Addictologie"
+        ]
+      },
+      {
+        "name": "L'Homme et sa santé",
+        "topics": [
+          "Notion de normes en santé",
+          "Santé et violence",
+          "Relation de soins",
+          "Handicap"
+        ]
+      },
+      {
+        "name": "Ethique et déontologie",
+        "topics": [
+          "Réglementation des professions de santé",
+          "Déontologie et éthique des professionnels de santé",
+          "Histoire du droit des patients et usagers du système de santé"
+        ]
+      },
+      {
+        "name": "Santé et sociale",
+        "topics": [
+          "Le système de santé Français",
+          "Indicateurs en Santé Publique",
+          "L'offre de soin ambulatoire et hospitalier",
+          "Aspects microéconomiques et macroéconomiques des dépenses de santé",
+          "Santé de la population en France",
+          "Les filières et réseaux de soin"
+        ]
+      },
+      {
+        "name": "Psychologie",
+        "topics": [
+          "Psychologie du développement",
+          "Psychométrie et instruments de mesure",
+          "Personnalité",
+          "Développement cognitif",
+          "Schéma corporel et image du corps"
+        ]
+      },
+      {
+        "name": "Histoire et épistémologie des sciences de la santé",
+        "topics": [
+          "Histoire de la médecine",
+          "Histoire de la pharmacie",
+          "Histoire de la chirurgie",
+          "Histoire de l'anatomie",
+          "Histoire de la douleur",
+          "Histoire de la traumatologie et de l'orthopédie",
+          "Histoire de la gynécologie et de l'obstétrique",
+          "Histoire des épidémies",
+          "Histoire de la Tuberculose",
+          "Histoire de la pneumologie",
+          "Histoire du cancer",
+          "Histoire du sang en Occident et en Orient"
+        ]
+      }
+    ]
+  },
+  {
+    "semester": 2,
+    "category": "UE 8 - Matière spécifique",
+    "subcategories": [
+      {
+        "name": "Spécialité Médecine",
+        "topics": [
+          "Anatomie tête et cou",
+          "Histologie de l'appareil reproducteur et du sein",
+          "Anatomie du petit bassin et de l'appareil reproducteur",
+          "Méthodes d'étude et d'analyse du génome"
+        ]
+      },
+      {
+        "name": "Spécialité Maïeutique",
+        "topics": [
+          "Histologie de l'appareil reproducteur et du sein",
+          "Anatomie du petit bassin et de l'appareil reproducteur",
+          "Méthodes d'étude et d'analyse du génome",
+          "Unité foeto-placentaire"
+        ]
+      },
+      {
+        "name": "Spécialité Odontologie",
+        "topics": [
+          "Anatomie tête et cou",
+          "Morphogenèse cranio-faciale et odontogenèse",
+          "Méthodes d'étude et d'analyse du génome",
+          "Médicaments et autres produits de santé"
+        ]
+      },
+      {
+        "name": "Spécialité Pharmacie",
+        "topics": [
+          "Bases chimiques du médicament",
+          "Sources actuelles et futures des médicaments",
+          "Les médicaments et autres produits de santé"
+        ]
+      }
+    ]
+  }
+]
