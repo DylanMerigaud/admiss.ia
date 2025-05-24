@@ -57,7 +57,7 @@ export default function HomePage() {
     };
 
     // Consistent gaps between node levels
-    const horizontalGap = 100; // Gap between levels
+    const horizontalGap = 150; // Gap between levels
     const verticalGap = 20; // Gap between sibling nodes
     const categoryGap = 75; // Minimal gap between root categories
 
@@ -101,7 +101,7 @@ export default function HomePage() {
         const totalSpaceNeeded =
           (subcategoryCount - 1) * verticalGap +
           subcategoryCount * nodeDimensions.subcategory.height;
-        const startOffset = -(totalSpaceNeeded / 2);
+        const startOffset = -(totalSpaceNeeded / 2) - 22;
 
         for (let i = 0; i < subcategoryCount; i++) {
           const yPosition =
@@ -426,7 +426,6 @@ export default function HomePage() {
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           nodeTypes={nodeTypes}
-          connectionMode={ConnectionMode.Loose}
           fitView
           fitViewOptions={{
             padding: 0.1,
