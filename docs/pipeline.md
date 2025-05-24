@@ -488,6 +488,290 @@ skill_tree_update = {
 
   
 
+## 🎯 **CREATE_LESSON Pipeline with Weaviate Integration**
+
+### **Pipeline Overview**
+```
+create_lesson(topic) → Weaviate RAG Search → LLM Processing → Structured JSON Output → Exercise Generation → User Adaptation
+```
+
+### **Weaviate Components Used**
+- **Vector Database**: Medical knowledge base storage
+- **RAG Engine**: Semantic search for relevant content
+- **Query Agent**: Automated content retrieval
+- **Transformation Agent**: LLM-powered content processing
+- **Personalization Agent**: User-context aware adaptations
+
+### **Step-by-Step Pipeline**
+
+#### **Step 1: Content Discovery**
+```python
+def create_lesson(topic: str, user_context: dict):
+    """
+    Create adaptive lesson using Weaviate RAG + LLM pipeline
+    References: https://weaviate.io/developers/weaviate/quickstart
+    """
+    
+    # Weaviate Query Agent - Semantic search
+    search_context = {
+        "topic": topic,
+        "user_weak_concepts": user_context["weak_concepts"],
+        "difficulty_level": user_context["current_level"],
+        "learning_velocity": user_context["learning_velocity"]
+    }
+    
+    # RAG retrieval from medical knowledge base
+    relevant_docs = weaviate_client.query.get(
+        "MedicalContent",
+        ["title", "content", "concept", "difficulty", "prerequisites"]
+    ).with_near_text({
+        "concepts": [topic],
+        "certainty": 0.7
+    }).with_where({
+        "path": ["difficulty"],
+        "operator": "Equal",
+        "valueString": user_context["current_level"]
+    }).with_limit(10).do()
+```
+
+#### **Step 2: LLM Content Generation**
+```python
+    # Weaviate Transformation Agent - LLM processing
+    generation_prompt = f"""
+    Create an adaptive medical lesson for: {topic}
+    
+    User Context:
+    - Weak concepts: {user_context['weak_concepts']}
+    - Mastery level: {user_context['concept_mastery']}
+    - Learning velocity: {user_context['learning_velocity']}
+    
+    Retrieved Content: {relevant_docs}
+    
+    Generate JSON output matching this structure:
+    {{
+        "lesson_content": "structured lesson text",
+        "target_concepts": ["concept1", "concept2"],
+        "difficulty_level": "intermediate",
+        "questions": [{{
+            "question_id": "q1",
+            "text": "Question text?",
+            "concept": "concept_name",
+            "difficulty": "basic",
+            "options": [{{"id": "a", "text": "Option A"}}],
+            "correct_answer": "a",
+            "explanation": "Why A is correct..."
+        }}],
+        "learning_objectives": ["identify", "apply", "analyze"],
+        "prerequisite_check": true
+    }}
+    """
+    
+    # LLM generation with Weaviate integration
+    lesson_output = weaviate_client.query.get(
+        "MedicalContent"
+    ).with_generate(
+        single_prompt=generation_prompt
+    ).with_near_text({
+        "concepts": [topic]
+    }).do()
+```
+
+#### **Step 3: Personalization Processing**
+```python
+    # Weaviate Personalization Agent - User adaptation
+    personalized_lesson = weaviate_client.personalize_content(
+        content=lesson_output,
+        user_profile={
+            "user_id": user_context["user_id"],
+            "weak_concepts": user_context["weak_concepts"],
+            "learning_style": user_context.get("learning_style", "mixed"),
+            "error_patterns": user_context.get("error_patterns", []),
+            "confidence_levels": user_context.get("confidence_levels", [])
+        },
+        adaptation_rules={
+            "increase_difficulty": user_context["learning_velocity"] > 0.8,
+            "focus_weak_areas": len(user_context["weak_concepts"]) > 0,
+            "add_remedial_content": any(score < 0.6 for score in user_context["concept_mastery"].values())
+        }
+    )
+```
+
+#### **Step 4: Exercise Creation**
+```python
+    # Generate Exercise entity from lesson content
+    exercise = {
+        "exercise_id": f"ex_{generate_uuid()}",
+        "target_concepts": personalized_lesson["target_concepts"],
+        "difficulty_level": personalized_lesson["difficulty_level"],
+        "question_ids": [q["question_id"] for q in personalized_lesson["questions"]],
+        "generated_by": "weaviate_rag_pipeline",
+        "created_at": datetime.utcnow().isoformat(),
+        "user_context": user_context["user_id"]
+    }
+    
+    # Store questions in database
+    for question in personalized_lesson["questions"]:
+        db.questions.insert(question)
+    
+    # Store exercise
+    db.exercises.insert(exercise)
+    
+    return {
+        "lesson": personalized_lesson,
+        "exercise": exercise,
+        "ready_for_user": True
+    }
+```
+
+### **Integration with Existing Data Models**
+
+#### **Enhanced User Context Input**
+```python
+user_context = {
+    "user_id": "user_123",
+    "current_level": "intermediate",
+    "concept_mastery": {"tooth_anatomy": 0.75, "periodontal_disease": 0.45},
+    "weak_concepts": ["periodontal_disease", "endodontics"],
+    "learning_velocity": 0.8,
+    "error_patterns": ["confuses_symptoms", "medication_dosages"],
+    "recent_sessions": ["s_455", "s_454"],  # For context
+    "preferred_difficulty": "adaptive",
+    "learning_style": "case_based"
+}
+```
+
+#### **Weaviate Medical Knowledge Schema**
+```python
+medical_content_class = {
+    "class": "MedicalContent",
+    "description": "Medical education content for RAG pipeline",
+    "vectorizer": "text2vec-weaviate",  # For semantic search
+    "moduleConfig": {
+        "text2vec-weaviate": {
+            "model": "medical-domain-optimized"  # Domain-specific embeddings
+        },
+        "generative-cohere": {  # LLM for content generation
+            "model": "command-xlarge"
+        }
+    },
+    "properties": [
+        {"name": "title", "dataType": ["text"]},
+        {"name": "content", "dataType": ["text"]},
+        {"name": "concept", "dataType": ["string"]},
+        {"name": "difficulty", "dataType": ["string"]},
+        {"name": "medical_domain", "dataType": ["string"]},
+        {"name": "prerequisites", "dataType": ["string[]"]},
+        {"name": "learning_objectives", "dataType": ["string[]"]},
+        {"name": "source_type", "dataType": ["string"]}  # ACC/DEV sources
+    ]
+}
+```
+
+### **Pipeline Performance Tracking**
+
+#### **Analytics Integration**
+```python
+pipeline_metrics = {
+    "lesson_generation_time": "< 5 seconds",
+    "content_relevance_score": 0.85,  # Based on user feedback
+    "question_difficulty_accuracy": 0.92,  # Matches user level
+    "knowledge_gap_targeting": 0.88,  # Addresses weak concepts
+    "user_engagement_improvement": 0.34  # Post-lesson performance boost
+}
+```
+
+#### **Continuous Improvement Loop**
+```python
+def update_rag_pipeline(session_results):
+    """
+    Update Weaviate knowledge base based on user performance
+    References: Weaviate learning optimization patterns
+    """
+    
+    # Analyze which generated content was effective
+    effective_content = analyze_session_success(session_results)
+    
+    # Update vector weights for better future retrieval
+    weaviate_client.update_content_weights(
+        content_ids=effective_content["successful_content"],
+        boost_factor=1.2
+    )
+    
+    # Flag content that caused confusion for review
+    problematic_content = effective_content["caused_errors"]
+    weaviate_client.flag_for_review(problematic_content)
+    
+    # Update user embeddings for better personalization
+    weaviate_client.update_user_profile(
+        user_id=session_results["user_id"],
+        performance_data=session_results["concept_scores"]
+    )
+```
+
+### **Error Handling & Fallbacks**
+
+```python
+def create_lesson_with_fallbacks(topic: str, user_context: dict):
+    try:
+        # Primary: Weaviate RAG pipeline
+        return create_lesson(topic, user_context)
+    
+    except WeaviateConnectionError:
+        # Fallback 1: Local content generation
+        return generate_lesson_locally(topic, user_context)
+    
+    except InsufficientContentError:
+        # Fallback 2: Broader search with lower threshold
+        return create_lesson_broad_search(topic, user_context)
+    
+    except Exception as e:
+        # Fallback 3: Static content with personalization
+        logger.error(f"Lesson generation failed: {e}")
+        return get_static_lesson_with_adaptation(topic, user_context)
+```
+
+### **API Integration Example**
+
+```python
+# FastAPI endpoint
+@app.post("/api/lessons/create")
+async def create_adaptive_lesson(
+    topic: str,
+    user_id: str,
+    additional_context: Optional[dict] = None
+):
+    """
+    Create personalized lesson using Weaviate RAG pipeline
+    
+    References:
+    - Weaviate RAG: https://weaviate.io/developers/weaviate
+    - Weaviate Agents: https://weaviate.io/developers/weaviate
+    """
+    
+    # Get user context from database
+    user_context = get_user_context(user_id)
+    if additional_context:
+        user_context.update(additional_context)
+    
+    # Generate lesson using Weaviate pipeline
+    lesson_result = await create_lesson_with_fallbacks(topic, user_context)
+    
+    # Log for analytics
+    log_lesson_generation(user_id, topic, lesson_result)
+    
+    return {
+        "lesson": lesson_result["lesson"],
+        "exercise_id": lesson_result["exercise"]["exercise_id"],
+        "target_concepts": lesson_result["exercise"]["target_concepts"],
+        "estimated_duration": calculate_duration(lesson_result),
+        "personalization_applied": True
+    }
+```
+
+This pipeline leverages Weaviate's RAG capabilities to automatically transform your medical knowledge base into personalized, adaptive learning experiences matching your exact data structure requirements.
+
+---
+
 ## 📈 Success Metrics
 
   
