@@ -186,6 +186,7 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
       </motion.div>
 
       <Handle
+        id="target"
         type="target"
         position={Position.Left}
         className="!bg-slate-500 !border-slate-300 !w-1.5 !h-1.5"

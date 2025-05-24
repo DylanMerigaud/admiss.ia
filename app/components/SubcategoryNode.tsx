@@ -119,6 +119,7 @@ export const SubcategoryNode: React.FC<SubcategoryNodeProps> = ({ data }) => {
       </motion.div>
 
       <Handle
+        id="target"
         type="target"
         position={Position.Left}
         className="!bg-cyan-500 !border-cyan-300 !w-2 !h-2"
@@ -133,6 +134,7 @@ export const SubcategoryNode: React.FC<SubcategoryNodeProps> = ({ data }) => {
           transition={{ duration: 0.2 }}
         >
           <Handle
+            id="source"
             type="source"
             position={Position.Right}
             className="!bg-cyan-500 !border-cyan-300 !w-2 !h-2"

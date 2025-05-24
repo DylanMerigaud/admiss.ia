@@ -146,6 +146,7 @@ export const CategoryNode: React.FC<CategoryNodeProps> = ({ data }) => {
           transition={{ duration: 0.2 }}
         >
           <Handle
+            id="source"
             type="source"
             position={Position.Right}
             className="!bg-purple-500 !border-purple-300 !w-3 !h-3"

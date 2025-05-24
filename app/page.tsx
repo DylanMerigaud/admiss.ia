@@ -57,7 +57,7 @@ export default function HomePage() {
     };
 
     // Consistent gaps between node levels
-    const horizontalGap = 150; // Gap between levels
+    const horizontalGap = 250; // Gap between levels
     const verticalGap = 20; // Gap between sibling nodes
     const categoryGap = 75; // Minimal gap between root categories
 
@@ -145,8 +145,10 @@ export default function HomePage() {
             id: `${categoryId}-${subcategoryId}`,
             source: categoryId,
             target: subcategoryId,
-            type: "smoothstep",
             animated: true,
+            sourceHandle: "source",
+            targetHandle: "target",
+            type: "smoothstep",
             style: { stroke: "#8b5cf6", strokeWidth: 2 },
           });
 
@@ -161,25 +163,20 @@ export default function HomePage() {
             // For proper centering: position children so the middle child (or middle of group) aligns with parent center
             const topicYPositions: number[] = [];
 
-            if (topicCount === 1) {
-              // Single child: center it exactly on parent center
-              topicYPositions.push(
-                subcategoryCenterY - nodeDimensions.topic.height / 2
-              );
-            } else {
-              // Multiple children: distribute them symmetrically around parent center
-              const totalSpaceNeeded =
-                (topicCount - 1) * (nodeDimensions.topic.height + verticalGap);
-              const startOffset = -(totalSpaceNeeded / 2);
+            // Use the same logic as above for consistency
+            const totalSpaceNeeded =
+              (topicCount - 1) * verticalGap +
+              topicCount * nodeDimensions.topic.height;
+            const startOffset = -(totalSpaceNeeded / 2);
 
-              for (let i = 0; i < topicCount; i++) {
-                const yPosition =
-                  subcategoryCenterY +
-                  startOffset +
-                  i * (nodeDimensions.topic.height + verticalGap) -
-                  nodeDimensions.topic.height / 2;
-                topicYPositions.push(yPosition);
-              }
+            for (let i = 0; i < topicCount; i++) {
+              const yPosition =
+                subcategoryCenterY +
+                startOffset +
+                (i + 1) * nodeDimensions.topic.height +
+                i * verticalGap -
+                nodeDimensions.topic.height;
+              topicYPositions.push(yPosition);
             }
 
             // Position each topic
@@ -218,6 +215,8 @@ export default function HomePage() {
                 target: topicId,
                 type: "smoothstep",
                 animated: true,
+                sourceHandle: "source",
+                targetHandle: "target",
                 style: { stroke: "#06b6d4", strokeWidth: 1.5 },
               });
             });
@@ -248,23 +247,21 @@ export default function HomePage() {
 
                 // Calculate topic positions for this subcategory
                 const topicYPositions: number[] = [];
-                if (topicCount === 1) {
-                  topicYPositions.push(
-                    subcategoryCenterY - nodeDimensions.topic.height / 2
-                  );
-                } else {
-                  const totalSpaceNeeded =
-                    (topicCount - 1) *
-                    (nodeDimensions.topic.height + verticalGap);
-                  const startOffset = -(totalSpaceNeeded / 2);
-                  for (let i = 0; i < topicCount; i++) {
-                    const yPosition =
-                      subcategoryCenterY +
-                      startOffset +
-                      i * (nodeDimensions.topic.height + verticalGap) -
-                      nodeDimensions.topic.height / 2;
-                    topicYPositions.push(yPosition);
-                  }
+
+                // Use the same logic as above for consistency
+                const totalSpaceNeeded =
+                  (topicCount - 1) * verticalGap +
+                  topicCount * nodeDimensions.topic.height;
+                const startOffset = -(totalSpaceNeeded / 2);
+
+                for (let i = 0; i < topicCount; i++) {
+                  const yPosition =
+                    subcategoryCenterY +
+                    startOffset +
+                    (i + 1) * nodeDimensions.topic.height +
+                    i * verticalGap -
+                    nodeDimensions.topic.height;
+                  topicYPositions.push(yPosition);
                 }
 
                 const maxTopicBottom = Math.max(
@@ -437,7 +434,6 @@ export default function HomePage() {
           nodesDraggable={false}
           nodesConnectable={false}
           elementsSelectable={true}
-          panOnDrag={true}
           zoomOnScroll={true}
           zoomOnPinch={true}
           panOnScroll={false}
