@@ -1,0 +1,131 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:08:03.549340",
+    "topic": "Peptides and Proteins",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Structure, Function and Diversity of Biomolecules",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_90863",
+    "topic": "Peptides and Proteins",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Structure, Function and Diversity of Biomolecules",
+    "lesson_content": "Detailed educational content covering Peptides and Proteins. Peptides and proteins are fundamental biomolecules essential for various biological functions. Peptides are short chains of amino acids, while proteins are larger and more complex, often performing structural, enzymatic, and regulatory roles. Understanding their structure, function, and diversity is crucial for medical students. This lesson will cover the basic concepts of peptides and proteins, their synthesis, structure, and clinical relevance. We will also explore how peptides and proteins interact with other biomolecules such as carbohydrates and lipids, and their role in enzymatic reactions. Address weak areas: ['general concepts'] by providing clear definitions, examples, and practical applications.",
+    "learning_objectives": [
+      "Understand the basic structure and function of peptides and proteins",
+      "Apply knowledge of peptide and protein synthesis to clinical scenarios",
+      "Analyze the role of peptides and proteins in enzymatic reactions",
+      "Evaluate the clinical relevance of peptides and proteins in medical practice"
+    ],
+    "exercise_id": "ex_34387",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:08:03.547960"
+  },
+  "exercise": {
+    "exercise_id": "ex_34387",
+    "lesson_id": "lesson_90863",
+    "topic": "Peptides and Proteins",
+    "question_ids": [
+      "q1_Peptides_and_Proteins",
+      "q2_Peptides_and_Proteins",
+      "q3_Peptides_and_Proteins"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Peptides and Proteins",
+      "Amino Acids",
+      "Enzymes"
+    ],
+    "created_at": "2025-05-24T22:08:03.548036"
+  },
+  "questions": [
+    {
+      "question_id": "q1_Peptides_and_Proteins",
+      "text": "Which of the following is a primary function of proteins in the human body?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Peptides and Proteins",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Energy storage"
+        },
+        {
+          "id": "b",
+          "text": "Structural support"
+        },
+        {
+          "id": "c",
+          "text": "Genetic information storage"
+        },
+        {
+          "id": "d",
+          "text": "Hormone regulation"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Proteins play a crucial role in providing structural support to cells and tissues. While they can also act as enzymes, hormones, and transporters, their primary function in terms of structure is to provide support and form the basis of many cellular components."
+    },
+    {
+      "question_id": "q2_Peptides_and_Proteins",
+      "text": "What is the primary difference between peptides and proteins?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Peptides and Proteins",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Peptides are larger than proteins"
+        },
+        {
+          "id": "b",
+          "text": "Proteins are composed of nucleic acids"
+        },
+        {
+          "id": "c",
+          "text": "Peptides are shorter chains of amino acids compared to proteins"
+        },
+        {
+          "id": "d",
+          "text": "Proteins are always enzymes"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Peptides are shorter chains of amino acids, typically less than 50 amino acids, while proteins are larger and more complex, often composed of hundreds or thousands of amino acids."
+    },
+    {
+      "question_id": "q3_Peptides_and_Proteins",
+      "text": "Which of the following is an example of a peptide hormone?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Peptides and Proteins",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Insulin"
+        },
+        {
+          "id": "b",
+          "text": "Thyroxine"
+        },
+        {
+          "id": "c",
+          "text": "Cortisol"
+        },
+        {
+          "id": "d",
+          "text": "Epinephrine"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Insulin is a peptide hormone that plays a key role in regulating glucose metabolism. Thyroxine, cortisol, and epinephrine are examples of steroid and amine hormones, not peptide hormones."
+    }
+  ]
+}

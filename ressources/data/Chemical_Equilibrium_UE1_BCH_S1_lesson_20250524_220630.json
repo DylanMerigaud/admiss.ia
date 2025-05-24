@@ -1,0 +1,133 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:06:30.467533",
+    "topic": "Chemical Equilibrium",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_58402",
+    "topic": "Chemical Equilibrium",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "Detailed educational content covering Chemical Equilibrium. This lesson will provide a comprehensive understanding of chemical equilibrium, including definitions, clinical relevance, practical applications, and connections to General Chemistry. We will address weak areas such as general concepts by ensuring a solid foundation in the fundamental principles of chemical equilibrium. The lesson will also connect to related topics such as The Atom, Covalent Bonds and Non-Covalent Bonds, Molecular Orbitals, and Thermodynamics to provide a holistic understanding of the subject matter. The content will be tailored to an intermediate level, ensuring that it is accessible and challenging enough for students at this stage of their medical education.",
+    "learning_objectives": [
+      "Understand the fundamental principles of chemical equilibrium.",
+      "Apply Le Chatelier's Principle to predict the effects of changes in concentration, pressure, and temperature on chemical equilibrium.",
+      "Analyze the role of Gibbs Free Energy in determining the spontaneity and equilibrium position of chemical reactions.",
+      "Evaluate the clinical relevance of chemical equilibrium in biological systems."
+    ],
+    "exercise_id": "ex_90762",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:06:30.466137"
+  },
+  "exercise": {
+    "exercise_id": "ex_90762",
+    "lesson_id": "lesson_58402",
+    "topic": "Chemical Equilibrium",
+    "question_ids": [
+      "q1_Chemical_Equilibrium",
+      "q2_Le_Chatelier's_Principle",
+      "q3_Thermodynamics"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Chemical Equilibrium",
+      "The Atom",
+      "Covalent Bonds and Non-Covalent Bonds",
+      "Molecular Orbitals",
+      "Thermodynamics"
+    ],
+    "created_at": "2025-05-24T22:06:30.466209"
+  },
+  "questions": [
+    {
+      "question_id": "q1_Chemical_Equilibrium",
+      "text": "What is the definition of chemical equilibrium in the context of General Chemistry?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Chemical Equilibrium",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "The state where the rates of the forward and reverse reactions are equal."
+        },
+        {
+          "id": "b",
+          "text": "The state where all reactants are completely converted to products."
+        },
+        {
+          "id": "c",
+          "text": "The state where the concentration of reactants is zero."
+        },
+        {
+          "id": "d",
+          "text": "The state where the reaction stops completely."
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Chemical equilibrium is the state in a reversible chemical reaction where the rates of the forward and reverse reactions are equal. This means that the concentrations of reactants and products remain constant over time, even though the reactions are still occurring. This concept is fundamental in understanding how chemical reactions behave in biological systems."
+    },
+    {
+      "question_id": "q2_Le_Chatelier's_Principle",
+      "text": "According to Le Chatelier's Principle, what happens to the equilibrium position of a reaction if the concentration of a reactant is increased?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Chemical Equilibrium",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "The equilibrium shifts to the right, favoring the formation of products."
+        },
+        {
+          "id": "b",
+          "text": "The equilibrium shifts to the left, favoring the formation of reactants."
+        },
+        {
+          "id": "c",
+          "text": "The equilibrium remains unchanged."
+        },
+        {
+          "id": "d",
+          "text": "The reaction stops completely."
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Le Chatelier's Principle states that if a dynamic equilibrium is disturbed by changing the conditions, the position of equilibrium moves to counteract the change. If the concentration of a reactant is increased, the equilibrium shifts to the right, favoring the formation of products to consume the excess reactant. This principle is crucial in understanding how biological systems respond to changes in concentration."
+    },
+    {
+      "question_id": "q3_Thermodynamics",
+      "text": "How does the concept of Gibbs Free Energy relate to chemical equilibrium?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Chemical Equilibrium",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Gibbs Free Energy determines the spontaneity of a reaction and its equilibrium position."
+        },
+        {
+          "id": "b",
+          "text": "Gibbs Free Energy only affects the rate of the reaction."
+        },
+        {
+          "id": "c",
+          "text": "Gibbs Free Energy is unrelated to chemical equilibrium."
+        },
+        {
+          "id": "d",
+          "text": "Gibbs Free Energy only applies to non-reversible reactions."
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "Gibbs Free Energy (ΔG) is a crucial concept in thermodynamics that determines the spontaneity of a reaction. At equilibrium, ΔG = 0, indicating that the reaction is at a state of minimum free energy. This concept is essential in understanding the energetics of chemical reactions in biological systems."
+    }
+  ]
+}

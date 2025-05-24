@@ -1,0 +1,131 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:05:58.619054",
+    "topic": "Covalent Bonds and Non-Covalent Bonds",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_65061",
+    "topic": "Covalent Bonds and Non-Covalent Bonds",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "Detailed educational content covering Covalent Bonds and Non-Covalent Bonds. This lesson will provide a comprehensive overview of the fundamental concepts, definitions, and clinical relevance of covalent and non-covalent bonds. It will also include practical applications and connections to General Chemistry, focusing on the student's weak areas in general concepts. The lesson will cover the structure of atoms, the formation of covalent and non-covalent bonds, molecular orbitals, thermodynamics, and chemical equilibrium, ensuring alignment with the French medical education curriculum.",
+    "learning_objectives": [
+      "Understand the fundamental concepts of covalent and non-covalent bonds",
+      "Apply knowledge of molecular orbitals to predict molecular behavior",
+      "Analyze the role of thermodynamics in chemical equilibrium",
+      "Evaluate the clinical relevance of covalent and non-covalent bonds in biological systems"
+    ],
+    "exercise_id": "ex_65131",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:05:58.617776"
+  },
+  "exercise": {
+    "exercise_id": "ex_65131",
+    "lesson_id": "lesson_65061",
+    "topic": "Covalent Bonds and Non-Covalent Bonds",
+    "question_ids": [
+      "q1_Covalent_Bonds_and_Non-Covalent_Bonds",
+      "q2_Non-Covalent_Bonds",
+      "q3_Molecular_Orbitals"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Covalent Bonds and Non-Covalent Bonds",
+      "The Atom",
+      "Molecular Orbitals"
+    ],
+    "created_at": "2025-05-24T22:05:58.617855"
+  },
+  "questions": [
+    {
+      "question_id": "q1_Covalent_Bonds_and_Non-Covalent_Bonds",
+      "text": "Which of the following is an example of a covalent bond?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Covalent Bonds and Non-Covalent Bonds",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "A bond formed by the sharing of electrons between two atoms"
+        },
+        {
+          "id": "b",
+          "text": "A bond formed by the transfer of electrons from one atom to another"
+        },
+        {
+          "id": "c",
+          "text": "A bond formed by the attraction between oppositely charged ions"
+        },
+        {
+          "id": "d",
+          "text": "A bond formed by the attraction between a metal ion and a non-metal ion"
+        }
+      ],
+      "correct_answer": "a",
+      "explanation": "A covalent bond is formed when two atoms share electrons to achieve a stable electron configuration. This is a fundamental concept in General Chemistry and is crucial for understanding molecular structures and reactions."
+    },
+    {
+      "question_id": "q2_Non-Covalent_Bonds",
+      "text": "Which of the following is an example of a non-covalent bond?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Covalent Bonds and Non-Covalent Bonds",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "A bond formed by the sharing of electrons between two atoms"
+        },
+        {
+          "id": "b",
+          "text": "A bond formed by the attraction between oppositely charged ions"
+        },
+        {
+          "id": "c",
+          "text": "A bond formed by the attraction between a hydrogen atom and an electronegative atom"
+        },
+        {
+          "id": "d",
+          "text": "A bond formed by the transfer of electrons from one atom to another"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Non-covalent bonds, such as hydrogen bonds, are formed by the attraction between a hydrogen atom and an electronegative atom. These bonds are crucial in biological systems, such as DNA and protein structures."
+    },
+    {
+      "question_id": "q3_Molecular_Orbitals",
+      "text": "What is the significance of molecular orbitals in covalent bonding?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Covalent Bonds and Non-Covalent Bonds",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "They determine the shape of the molecule"
+        },
+        {
+          "id": "b",
+          "text": "They determine the energy levels of the electrons in the molecule"
+        },
+        {
+          "id": "c",
+          "text": "They determine the reactivity of the molecule"
+        },
+        {
+          "id": "d",
+          "text": "All of the above"
+        }
+      ],
+      "correct_answer": "d",
+      "explanation": "Molecular orbitals are formed by the combination of atomic orbitals and determine the energy levels, shape, and reactivity of the molecule. Understanding molecular orbitals is essential for predicting the behavior of molecules in chemical reactions."
+    }
+  ]
+}

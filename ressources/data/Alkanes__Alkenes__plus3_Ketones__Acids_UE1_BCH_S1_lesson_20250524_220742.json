@@ -1,0 +1,131 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:07:42.094164",
+    "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_8041",
+    "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "lesson_content": "Detailed educational content covering Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids. This lesson will include definitions, clinical relevance, practical applications, and connections to Organic Chemistry. We will address weak areas such as general concepts to ensure a solid foundation. The content will be structured to align with the French medical education standards, focusing on the intermediate level of understanding required for first-semester students.\n\n**Alkanes**: Saturated hydrocarbons with the general formula CnH2n+2. They are non-polar and hydrophobic, making them important in biological membranes and as energy sources.\n\n**Alkenes**: Unsaturated hydrocarbons containing at least one carbon-carbon double bond. They are more reactive than alkanes and play roles in biological signaling and synthesis.\n\n**Alcohols**: Organic compounds with a hydroxyl group (-OH) attached to a carbon atom. They are crucial in metabolism and as solvents in biological systems.\n\n**Amines**: Organic derivatives of ammonia with one or more hydrogen atoms replaced by organic groups. They are essential in the structure of amino acids and neurotransmitters.\n\n**Aldehydes**: Organic compounds containing a formyl group (-CHO). They are important in metabolic pathways and as intermediates in biosynthesis.\n\n**Ketones**: Organic compounds with a carbonyl group (C=O) attached to two carbon atoms. They are key in energy metabolism and as intermediates in various biochemical reactions.\n\n**Acids**: Organic compounds with a carboxyl group (-COOH). They are vital in metabolic processes, signaling, and as components of biological molecules.\n\n**Connections to Related Topics**:\n- **Representation of Organic Molecules**: Understanding structural formulas, condensed formulas, and 3D representations.\n- **Isomerism**: Differentiating between structural and stereoisomerism, and their biological implications.\n\n**Clinical Relevance**: Discussing the role of these compounds in pharmacology, metabolism, and disease mechanisms.",
+    "learning_objectives": [
+      "Understand the basic structures and properties of alkanes, alkenes, alcohols, amines, aldehydes, ketones, and acids.",
+      "Apply knowledge of organic chemistry to identify and differentiate between these compounds.",
+      "Analyze the clinical relevance and biological roles of these compounds.",
+      "Evaluate the importance of isomerism in the context of organic molecules."
+    ],
+    "exercise_id": "ex_74629",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:07:42.093524"
+  },
+  "exercise": {
+    "exercise_id": "ex_74629",
+    "lesson_id": "lesson_8041",
+    "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+    "question_ids": [
+      "q1_Alkanes,_Alkenes,_Alcohols,_Amines,_Aldehydes,_Ketones,_Acids",
+      "q2_Alkanes,_Alkenes,_Alcohols,_Amines,_Aldehydes,_Ketones,_Acids",
+      "q3_Alkanes,_Alkenes,_Alcohols,_Amines,_Aldehydes,_Ketones,_Acids"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+      "Representation of Organic Molecules",
+      "Isomerism"
+    ],
+    "created_at": "2025-05-24T22:07:42.093546"
+  },
+  "questions": [
+    {
+      "question_id": "q1_Alkanes,_Alkenes,_Alcohols,_Amines,_Aldehydes,_Ketones,_Acids",
+      "text": "Which of the following is a characteristic property of alkanes?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "They contain at least one carbon-carbon double bond."
+        },
+        {
+          "id": "b",
+          "text": "They are highly reactive due to the presence of a hydroxyl group."
+        },
+        {
+          "id": "c",
+          "text": "They are saturated hydrocarbons with the general formula CnH2n+2."
+        },
+        {
+          "id": "d",
+          "text": "They contain a carbonyl group attached to two carbon atoms."
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Alkanes are saturated hydrocarbons, meaning they contain only single bonds between carbon atoms and have the general formula CnH2n+2. This makes them non-polar and hydrophobic, which is crucial for their roles in biological membranes and as energy sources."
+    },
+    {
+      "question_id": "q2_Alkanes,_Alkenes,_Alcohols,_Amines,_Aldehydes,_Ketones,_Acids",
+      "text": "What is the functional group present in aldehydes?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Amino group (-NH2)"
+        },
+        {
+          "id": "b",
+          "text": "Carboxyl group (-COOH)"
+        },
+        {
+          "id": "c",
+          "text": "Hydroxyl group (-OH)"
+        },
+        {
+          "id": "d",
+          "text": "Formyl group (-CHO)"
+        }
+      ],
+      "correct_answer": "d",
+      "explanation": "Aldehydes contain a formyl group (-CHO), which is a carbonyl group (C=O) attached to a hydrogen atom. This functional group is crucial in metabolic pathways and as intermediates in biosynthesis."
+    },
+    {
+      "question_id": "q3_Alkanes,_Alkenes,_Alcohols,_Amines,_Aldehydes,_Ketones,_Acids",
+      "text": "Which of the following is an example of an amine?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ethanol"
+        },
+        {
+          "id": "b",
+          "text": "Methane"
+        },
+        {
+          "id": "c",
+          "text": "Ethylamine"
+        },
+        {
+          "id": "d",
+          "text": "Acetone"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Ethylamine is an example of an amine, which is an organic derivative of ammonia with one or more hydrogen atoms replaced by organic groups. Amines are essential in the structure of amino acids and neurotransmitters."
+    }
+  ]
+}
