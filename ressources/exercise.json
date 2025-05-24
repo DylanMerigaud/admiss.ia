@@ -1,0 +1,174 @@
+{
+  "exercises": [
+    {
+      "exercise_id": "ex_001",
+      "lesson_id": "lesson_001",
+      "topic": "atomic_structure",
+      "question_ids": [
+        "q1_atomic_structure",
+        "q2_electron_config",
+        "q3_periodic_trends"
+      ],
+      "difficulty_level": "intermediate",
+      "target_concepts": ["atomic_structure", "electron_configuration"],
+      "created_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "exercise_id": "ex_002",
+      "lesson_id": "lesson_002",
+      "topic": "chemical_bonding",
+      "question_ids": [
+        "q4_ionic_bonds",
+        "q5_covalent_bonds",
+        "q6_molecular_geometry"
+      ],
+      "difficulty_level": "advanced",
+      "target_concepts": ["chemical_bonding", "molecular_geometry"],
+      "created_at": "2024-01-16T10:30:00Z"
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_atomic_structure",
+      "text": "Which structure provides the atomic number?",
+      "category": "Basic Sciences",
+      "subcategory": "General Chemistry",
+      "topic": "atomic_structure",
+      "difficulty": "intermediate",
+      "options": [
+        { "id": "a", "text": "Number of protons" },
+        { "id": "b", "text": "Number of electrons" },
+        { "id": "c", "text": "Number of neutrons" },
+        { "id": "d", "text": "Atomic mass" }
+      ],
+      "correct_answer": "a",
+      "explanation": "The atomic number is defined by the number of protons in the nucleus of an atom. This number determines the element's identity and position on the periodic table."
+    },
+    {
+      "question_id": "q2_electron_config",
+      "text": "What is the electron configuration of carbon (C)?",
+      "category": "Basic Sciences",
+      "subcategory": "General Chemistry",
+      "topic": "atomic_structure",
+      "difficulty": "intermediate",
+      "options": [
+        { "id": "a", "text": "1s² 2s² 2p²" },
+        { "id": "b", "text": "1s² 2s² 2p⁴" },
+        { "id": "c", "text": "1s² 2s¹ 2p³" },
+        { "id": "d", "text": "1s² 2s³" }
+      ],
+      "correct_answer": "a",
+      "explanation": "Carbon has 6 electrons. Following the aufbau principle, the configuration is 1s² 2s² 2p², filling orbitals in order of increasing energy."
+    },
+    {
+      "question_id": "q3_periodic_trends",
+      "text": "As you move from left to right across a period, what happens to atomic radius?",
+      "category": "Basic Sciences",
+      "subcategory": "General Chemistry",
+      "topic": "atomic_structure",
+      "difficulty": "intermediate",
+      "options": [
+        { "id": "a", "text": "Increases" },
+        { "id": "b", "text": "Decreases" },
+        { "id": "c", "text": "Stays the same" },
+        { "id": "d", "text": "Increases then decreases" }
+      ],
+      "correct_answer": "b",
+      "explanation": "Atomic radius decreases across a period due to increasing nuclear charge, which pulls electrons closer to the nucleus despite being in the same energy level."
+    },
+    {
+      "question_id": "q4_ionic_bonds",
+      "text": "What type of bond is formed between sodium (Na) and chlorine (Cl)?",
+      "category": "Basic Sciences",
+      "subcategory": "General Chemistry",
+      "topic": "chemical_bonding",
+      "difficulty": "advanced",
+      "options": [
+        { "id": "a", "text": "Covalent bond" },
+        { "id": "b", "text": "Ionic bond" },
+        { "id": "c", "text": "Metallic bond" },
+        { "id": "d", "text": "Hydrogen bond" }
+      ],
+      "correct_answer": "b",
+      "explanation": "Sodium and chlorine form an ionic bond because sodium (metal) transfers its electron to chlorine (nonmetal), creating oppositely charged ions that attract each other."
+    },
+    {
+      "question_id": "q5_covalent_bonds",
+      "text": "How many covalent bonds can carbon typically form?",
+      "category": "Basic Sciences",
+      "subcategory": "General Chemistry",
+      "topic": "chemical_bonding",
+      "difficulty": "advanced",
+      "options": [
+        { "id": "a", "text": "2" },
+        { "id": "b", "text": "3" },
+        { "id": "c", "text": "4" },
+        { "id": "d", "text": "6" }
+      ],
+      "correct_answer": "c",
+      "explanation": "Carbon has 4 valence electrons and can form 4 covalent bonds to achieve a stable octet configuration."
+    },
+    {
+      "question_id": "q6_molecular_geometry",
+      "text": "What is the molecular geometry of methane (CH₄)?",
+      "category": "Basic Sciences",
+      "subcategory": "General Chemistry",
+      "topic": "chemical_bonding",
+      "difficulty": "advanced",
+      "options": [
+        { "id": "a", "text": "Linear" },
+        { "id": "b", "text": "Trigonal planar" },
+        { "id": "c", "text": "Tetrahedral" },
+        { "id": "d", "text": "Octahedral" }
+      ],
+      "correct_answer": "c",
+      "explanation": "Methane has a tetrahedral geometry with bond angles of approximately 109.5°, as predicted by VSEPR theory for molecules with 4 bonding pairs and no lone pairs."
+    }
+  ],
+  "lessons": [
+    {
+      "lesson_id": "lesson_001",
+      "topic": "atomic_structure",
+      "category": "Basic Sciences",
+      "subcategory": "General Chemistry",
+      "lesson_content": "Atoms are the fundamental building blocks of matter. Understanding atomic structure involves learning about protons, neutrons, and electrons, their arrangement, and how they determine an element's properties. The atomic number identifies each element uniquely.",
+      "learning_objectives": [
+        "understand atomic composition",
+        "apply electron configuration rules",
+        "analyze periodic trends"
+      ],
+      "exercise_id": "ex_001",
+      "difficulty_level": "intermediate",
+      "generated_by": "weaviate_rag_pipeline",
+      "created_at": "2024-01-15T10:30:00Z"
+    },
+    {
+      "lesson_id": "lesson_002",
+      "topic": "chemical_bonding",
+      "category": "Basic Sciences",
+      "subcategory": "General Chemistry",
+      "lesson_content": "Chemical bonds form when atoms interact to achieve stable electron configurations. Understanding ionic, covalent, and metallic bonds is crucial for predicting molecular properties and behavior.",
+      "learning_objectives": [
+        "understand bond types",
+        "apply VSEPR theory",
+        "analyze molecular geometry"
+      ],
+      "exercise_id": "ex_002",
+      "difficulty_level": "advanced",
+      "generated_by": "weaviate_rag_pipeline",
+      "created_at": "2024-01-16T10:30:00Z"
+    }
+  ],
+  "progressHints": {
+    "timeImprovement": {
+      "fast": "Great speed! Focus on accuracy to maintain efficiency.",
+      "average": "Good timing. Practice more questions to build confidence and speed.",
+      "slow": "Take time to understand concepts. Consider reviewing the lesson material."
+    },
+    "accuracyImprovement": {
+      "high": "Excellent accuracy! You're mastering this topic well.",
+      "medium": "Good understanding. Review explanations for missed questions.",
+      "low": "Consider studying the lesson content more thoroughly before attempting exercises."
+    }
+  }
+}

@@ -403,16 +403,20 @@ export default function HomePage() {
       <div className="h-screen w-full relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <AnimatedBackground />
 
-        <div className="absolute top-4 left-4 z-10">
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-            <h1 className="text-2xl font-bold text-white mb-2">
-              PASS Program Skill Tree
-            </h1>
-            <p className="text-gray-300 text-sm">
-              Master your medical studies journey
-            </p>
+        {/* Transparent Navbar */}
+        <nav className="absolute top-0 left-0 right-0 z-20">
+          <div className="flex items-center justify-between px-6 py-4">
+            <div className="flex items-center space-x-3">
+              <div className="text-3xl">🧠</div>
+              <h1 className="text-2xl font-bold text-white tracking-tight">
+                AdmissAI
+              </h1>
+            </div>
+            <div className="flex items-center space-x-4">
+              {/* Optional navigation items can be added here */}
+            </div>
           </div>
-        </div>
+        </nav>
 
         <FloatingStats />
 
