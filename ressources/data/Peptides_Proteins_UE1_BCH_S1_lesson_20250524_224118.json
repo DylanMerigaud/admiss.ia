@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:41:18.593976",
+    "topic": "Peptides and Proteins",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Structure, Function and Diversity of Biomolecules",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_84344",
+    "topic": "Peptides and Proteins",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Structure, Function and Diversity of Biomolecules",
+    "lesson_content": "**Peptides and Proteins**\n\n**Definition:** Peptides and proteins are biomolecules composed of amino acid chains. Peptides are short chains, while proteins are longer and more complex, often exhibiting specific three-dimensional structures.\n\n**Key Notions:**\n• **Primary Structure:** Sequence of amino acids in a peptide or protein.\n• **Secondary Structure:** Local spatial arrangement of the polypeptide backbone, such as alpha-helices and beta-sheets.\n• **Tertiary Structure:** Overall three-dimensional shape of a protein, determined by interactions between amino acid side chains.\n\n**Clinical Relevance:** Proteins are crucial for various biological functions, including enzymatic activity, structural support, and signaling. Dysfunction or misfolding of proteins can lead to diseases like Alzheimer's and cystic fibrosis.\n\n**Related Concepts:** Amino Acids, Peptides and Proteins, Enzymes",
+    "learning_objectives": [
+      "Define Peptides and Proteins",
+      "Identify key mechanisms",
+      "Apply to clinical scenarios"
+    ],
+    "exercise_id": "ex_52195",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:41:18.592476"
+  },
+  "exercise": {
+    "exercise_id": "ex_52195",
+    "lesson_id": "lesson_84344",
+    "topic": "Peptides and Proteins",
+    "question_ids": [
+      "q1_peptides_and_proteins",
+      "q2_peptides_and_proteins"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Peptides and Proteins",
+      "general concepts",
+      "Amino Acids"
+    ],
+    "created_at": "2025-05-24T22:41:18.592567"
+  },
+  "questions": [
+    {
+      "question_id": "q1_peptides_and_proteins",
+      "text": "What is the primary mechanism of Peptides and Proteins?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Peptides and Proteins",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Formation of nucleic acids"
+        },
+        {
+          "id": "b",
+          "text": "Synthesis of lipids"
+        },
+        {
+          "id": "c",
+          "text": "Sequencing of amino acids"
+        },
+        {
+          "id": "d",
+          "text": "Assembly of carbohydrates"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "The primary mechanism of peptides and proteins involves the sequencing of amino acids to form specific structures that determine their function."
+    },
+    {
+      "question_id": "q2_peptides_and_proteins",
+      "text": "In clinical practice, Peptides and Proteins is most important for:",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Peptides and Proteins",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Energy production"
+        },
+        {
+          "id": "b",
+          "text": "Enzymatic activity and structural support"
+        },
+        {
+          "id": "c",
+          "text": "DNA replication"
+        },
+        {
+          "id": "d",
+          "text": "Lipid metabolism"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Proteins are essential for enzymatic activity, structural support, and signaling, making them crucial in various clinical scenarios."
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:40:52.375612",
+    "topic": "Isomerism",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_51051",
+    "topic": "Isomerism",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "lesson_content": "**Isomerism**\n\n**Definition:** Isomerism is the phenomenon where molecules have the same molecular formula but different structural arrangements, leading to distinct chemical and physical properties.\n\n**Key Notions:**\n• **Structural Isomerism:** Different connectivity of atoms.\n• **Stereoisomerism:** Same connectivity but different spatial arrangement.\n• **Geometric Isomerism:** Differences in the arrangement around a double bond or ring.\n\n**Clinical Relevance:** Understanding isomerism is crucial for drug design and pharmacology, as isomers can have vastly different biological activities and toxicities.\n\n**Related Concepts:** Representation of Organic Molecules, Isomerism, Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+    "learning_objectives": [
+      "Define Isomerism",
+      "Identify key mechanisms",
+      "Apply to clinical scenarios"
+    ],
+    "exercise_id": "ex_11519",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:40:52.374304"
+  },
+  "exercise": {
+    "exercise_id": "ex_11519",
+    "lesson_id": "lesson_51051",
+    "topic": "Isomerism",
+    "question_ids": [
+      "q1_isomerism",
+      "q2_isomerism"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Isomerism",
+      "general concepts",
+      "Representation of Organic Molecules"
+    ],
+    "created_at": "2025-05-24T22:40:52.374387"
+  },
+  "questions": [
+    {
+      "question_id": "q1_isomerism",
+      "text": "What is the primary mechanism of Isomerism?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Isomerism",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Different molecular formulas"
+        },
+        {
+          "id": "b",
+          "text": "Same molecular formula, different atomic masses"
+        },
+        {
+          "id": "c",
+          "text": "Same molecular formula, different structural arrangements"
+        },
+        {
+          "id": "d",
+          "text": "Different molecular formulas, same structural arrangements"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Isomerism occurs when molecules have the same molecular formula but different structural arrangements, leading to distinct chemical and physical properties."
+    },
+    {
+      "question_id": "q2_isomerism",
+      "text": "In clinical practice, Isomerism is most important for:",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Isomerism",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Identifying different molecular formulas"
+        },
+        {
+          "id": "b",
+          "text": "Designing drugs with specific biological activities"
+        },
+        {
+          "id": "c",
+          "text": "Understanding atomic masses"
+        },
+        {
+          "id": "d",
+          "text": "Analyzing different atomic structures"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Isomerism is crucial in clinical practice for designing drugs with specific biological activities, as isomers can have vastly different effects."
+    }
+  ]
+}

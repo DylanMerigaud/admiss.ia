@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:41:03.537096",
+    "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_77640",
+    "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "lesson_content": "**Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids**\n\n**Definition:**\nOrganic compounds classified based on their functional groups, essential for understanding biochemical processes and drug interactions.\n\n**Key Notions:**\n• **Alkanes:** Saturated hydrocarbons with single bonds, stable and non-reactive.\n• **Alkenes:** Unsaturated hydrocarbons with at least one double bond, more reactive than alkanes.\n• **Alcohols:** Contain hydroxyl groups (-OH), important in metabolism and drug design.\n• **Amines:** Contain amino groups (-NH2), crucial in protein synthesis and neurotransmission.\n• **Aldehydes and Ketones:** Contain carbonyl groups (C=O), aldehydes have at least one hydrogen attached to the carbonyl carbon, ketones do not.\n• **Acids:** Contain carboxyl groups (-COOH), essential in biochemical pathways and drug mechanisms.\n\n**Clinical Relevance:**\nUnderstanding these compounds is crucial for pharmacology, metabolism, and biochemical pathways.\n\n**Related Concepts:**\nRepresentation of Organic Molecules, Isomerism, Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+    "learning_objectives": [
+      "Define Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+      "Identify key structural differences",
+      "Apply knowledge to clinical scenarios"
+    ],
+    "exercise_id": "ex_8144",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:41:03.535785"
+  },
+  "exercise": {
+    "exercise_id": "ex_8144",
+    "lesson_id": "lesson_77640",
+    "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+    "question_ids": [
+      "q1_alkanes,_alkenes,_alcohols,_amines,_aldehydes,_ketones,_acids",
+      "q2_alkanes,_alkenes,_alcohols,_amines,_aldehydes,_ketones,_acids"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+      "general concepts",
+      "Representation of Organic Molecules"
+    ],
+    "created_at": "2025-05-24T22:41:03.535858"
+  },
+  "questions": [
+    {
+      "question_id": "q1_alkanes,_alkenes,_alcohols,_amines,_aldehydes,_ketones,_acids",
+      "text": "What is the primary structural difference between Alkanes and Alkenes?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Alkanes have double bonds, Alkenes have single bonds"
+        },
+        {
+          "id": "b",
+          "text": "Alkanes have triple bonds, Alkenes have double bonds"
+        },
+        {
+          "id": "c",
+          "text": "Alkanes have single bonds, Alkenes have double bonds"
+        },
+        {
+          "id": "d",
+          "text": "Alkanes and Alkenes have the same bond types"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Alkanes are saturated hydrocarbons with single bonds, while Alkenes are unsaturated hydrocarbons with at least one double bond."
+    },
+    {
+      "question_id": "q2_alkanes,_alkenes,_alcohols,_amines,_aldehydes,_ketones,_acids",
+      "text": "In clinical practice, which functional group is most important for drug metabolism?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Alkanes"
+        },
+        {
+          "id": "b",
+          "text": "Alcohols"
+        },
+        {
+          "id": "c",
+          "text": "Amines"
+        },
+        {
+          "id": "d",
+          "text": "Aldehydes"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Alcohols are crucial in drug metabolism due to their hydroxyl groups, which facilitate biochemical reactions."
+    }
+  ]
+}

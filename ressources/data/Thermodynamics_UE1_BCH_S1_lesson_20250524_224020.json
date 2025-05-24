@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:40:20.529087",
+    "topic": "Thermodynamics",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_13919",
+    "topic": "Thermodynamics",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "**Thermodynamics**\n\n**Definition:** Thermodynamics is the branch of physics that deals with heat, work, and temperature, and their relation to energy, entropy, and the physical properties of matter and radiation. It is primarily concerned with how these quantities relate to each other and how they change under various conditions.\n\n**Key Notions:**\n• **First Law of Thermodynamics:** Energy cannot be created or destroyed, only transformed from one form to another.\n• **Second Law of Thermodynamics:** The total entropy of an isolated system can never decrease over time, and is constant if and only if all processes are reversible.\n• **Gibbs Free Energy:** A thermodynamic potential that measures the process-initiating work obtainable from a thermodynamic system at a constant temperature and pressure.\n\n**Clinical Relevance:** Understanding thermodynamics is crucial in medical biochemistry for processes such as enzyme kinetics, metabolic pathways, and drug interactions.\n\n**Related Concepts:** The Atom, Covalent Bonds and Non-Covalent Bonds, Molecular Orbitals",
+    "learning_objectives": [
+      "Define Thermodynamics",
+      "Identify key mechanisms",
+      "Apply to clinical scenarios"
+    ],
+    "exercise_id": "ex_1845",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:40:20.527732"
+  },
+  "exercise": {
+    "exercise_id": "ex_1845",
+    "lesson_id": "lesson_13919",
+    "topic": "Thermodynamics",
+    "question_ids": [
+      "q1_thermodynamics",
+      "q2_thermodynamics"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Thermodynamics",
+      "general concepts",
+      "The Atom"
+    ],
+    "created_at": "2025-05-24T22:40:20.527810"
+  },
+  "questions": [
+    {
+      "question_id": "q1_thermodynamics",
+      "text": "What is the primary mechanism of Thermodynamics?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Thermodynamics",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "The creation of energy"
+        },
+        {
+          "id": "b",
+          "text": "The destruction of energy"
+        },
+        {
+          "id": "c",
+          "text": "The transformation of energy from one form to another"
+        },
+        {
+          "id": "d",
+          "text": "The constant level of entropy in reversible processes"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "The primary mechanism of thermodynamics is the transformation of energy from one form to another, as stated by the First Law of Thermodynamics. This is crucial in understanding various biochemical processes."
+    },
+    {
+      "question_id": "q2_thermodynamics",
+      "text": "In clinical practice, Thermodynamics is most important for:",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Thermodynamics",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Understanding genetic mutations"
+        },
+        {
+          "id": "b",
+          "text": "Analyzing metabolic pathways and enzyme kinetics"
+        },
+        {
+          "id": "c",
+          "text": "Diagnosing infectious diseases"
+        },
+        {
+          "id": "d",
+          "text": "Studying cellular structure"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Thermodynamics is essential in clinical practice for analyzing metabolic pathways and enzyme kinetics, which are fundamental to understanding biochemical processes in the body."
+    }
+  ]
+}

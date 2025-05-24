@@ -276,7 +276,7 @@ def main():
     print("=" * 50)
     
     # Find all JSON output files in tests directory
-    json_pattern = "ressources/data/*.json"
+    json_pattern = "tests/*.json"
     json_files = glob.glob(json_pattern)
     
     if not json_files:

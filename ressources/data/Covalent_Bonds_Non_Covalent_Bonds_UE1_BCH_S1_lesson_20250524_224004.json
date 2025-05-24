@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:40:04.658034",
+    "topic": "Covalent Bonds and Non-Covalent Bonds",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_54135",
+    "topic": "Covalent Bonds and Non-Covalent Bonds",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "**Covalent Bonds and Non-Covalent Bonds**\n\n**Definition:**\nCovalent bonds involve the sharing of electron pairs between atoms, forming stable molecules. Non-covalent bonds include interactions such as hydrogen bonds, ionic bonds, and van der Waals forces, which are weaker but crucial for molecular stability and interactions.\n\n**Key Notions:**\n• **Covalent Bonds:** Formed by sharing electrons, leading to strong, directional bonds.\n• **Non-Covalent Bonds:** Include hydrogen bonds, ionic interactions, and van der Waals forces, which are weaker and non-directional.\n• **Clinical Relevance:** Essential for understanding molecular interactions in biological systems, drug design, and protein folding.\n\n**Clinical Relevance:**\nUnderstanding these bonds is crucial for drug design, protein folding, and molecular interactions in biological systems.\n\n**Related Concepts:**\nThe Atom, Covalent Bonds and Non-Covalent Bonds, Molecular Orbitals",
+    "learning_objectives": [
+      "Define Covalent Bonds and Non-Covalent Bonds",
+      "Identify key mechanisms",
+      "Apply to clinical scenarios"
+    ],
+    "exercise_id": "ex_28781",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:40:04.656402"
+  },
+  "exercise": {
+    "exercise_id": "ex_28781",
+    "lesson_id": "lesson_54135",
+    "topic": "Covalent Bonds and Non-Covalent Bonds",
+    "question_ids": [
+      "q1_covalent_bonds_and_non-covalent_bonds",
+      "q2_covalent_bonds_and_non-covalent_bonds"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Covalent Bonds and Non-Covalent Bonds",
+      "general concepts",
+      "The Atom"
+    ],
+    "created_at": "2025-05-24T22:40:04.656476"
+  },
+  "questions": [
+    {
+      "question_id": "q1_covalent_bonds_and_non-covalent_bonds",
+      "text": "What is the primary mechanism of Covalent Bonds and Non-Covalent Bonds?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Covalent Bonds and Non-Covalent Bonds",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Electron transfer between atoms"
+        },
+        {
+          "id": "b",
+          "text": "Weak electrostatic interactions"
+        },
+        {
+          "id": "c",
+          "text": "Sharing of electron pairs between atoms"
+        },
+        {
+          "id": "d",
+          "text": "Formation of ionic compounds"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Covalent bonds are formed by the sharing of electron pairs between atoms, leading to strong, directional bonds. Non-covalent bonds involve weaker interactions like hydrogen bonds and van der Waals forces, which are crucial for molecular stability and interactions in biological systems."
+    },
+    {
+      "question_id": "q2_covalent_bonds_and_non-covalent_bonds",
+      "text": "In clinical practice, Covalent Bonds and Non-Covalent Bonds is most important for:",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Covalent Bonds and Non-Covalent Bonds",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Understanding genetic mutations"
+        },
+        {
+          "id": "b",
+          "text": "Drug design and protein folding"
+        },
+        {
+          "id": "c",
+          "text": "Nutrient absorption in the gut"
+        },
+        {
+          "id": "d",
+          "text": "Blood clotting mechanisms"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Understanding covalent and non-covalent bonds is crucial for drug design, as it helps in predicting how drugs will interact with target molecules. It is also essential for understanding protein folding and stability, which are critical in many biological processes."
+    }
+  ]
+}

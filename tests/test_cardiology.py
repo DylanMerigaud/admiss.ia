@@ -85,7 +85,7 @@ async def test_lesson_generation():
             "lesson": lesson_response.lesson.model_dump(),
             "exercise": lesson_response.exercise.model_dump(),
             "questions": [q.model_dump() for q in lesson_response.questions]
-        }
+            }
         
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_file = f"tests/cardiovascular_lesson_output_{timestamp}.json"

@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:40:30.563505",
+    "topic": "Chemical Equilibrium",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_28728",
+    "topic": "Chemical Equilibrium",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "**Chemical Equilibrium**\n\n**Definition:**\nThe state in which the rates of forward and reverse reactions are equal, resulting in constant concentrations of reactants and products.\n\n**Key Notions:**\n• **Equilibrium Constant (K):** A measure of the extent of a reaction at equilibrium.\n• **Le Chatelier's Principle:** The effect of changes in conditions (temperature, pressure, concentration) on a system at equilibrium.\n• **Dynamic Equilibrium:** The continuous forward and reverse reactions occurring at equal rates.\n\n**Clinical Relevance:**\nUnderstanding chemical equilibrium is crucial for drug interactions, enzyme kinetics, and maintaining homeostasis in biological systems.\n\n**Related Concepts:**\nThe Atom, Covalent Bonds and Non-Covalent Bonds, Molecular Orbitals",
+    "learning_objectives": [
+      "Define Chemical Equilibrium",
+      "Identify key mechanisms",
+      "Apply to clinical scenarios"
+    ],
+    "exercise_id": "ex_14621",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:40:30.562189"
+  },
+  "exercise": {
+    "exercise_id": "ex_14621",
+    "lesson_id": "lesson_28728",
+    "topic": "Chemical Equilibrium",
+    "question_ids": [
+      "q1_chemical_equilibrium",
+      "q2_chemical_equilibrium"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Chemical Equilibrium",
+      "general concepts",
+      "The Atom"
+    ],
+    "created_at": "2025-05-24T22:40:30.562270"
+  },
+  "questions": [
+    {
+      "question_id": "q1_chemical_equilibrium",
+      "text": "What is the primary mechanism of Chemical Equilibrium?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Chemical Equilibrium",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "The complete conversion of reactants to products"
+        },
+        {
+          "id": "b",
+          "text": "The cessation of all chemical reactions"
+        },
+        {
+          "id": "c",
+          "text": "The equal rates of forward and reverse reactions"
+        },
+        {
+          "id": "d",
+          "text": "The spontaneous decomposition of reactants"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "Chemical equilibrium is achieved when the rates of the forward and reverse reactions are equal, resulting in constant concentrations of reactants and products. This is crucial for understanding drug interactions and enzyme kinetics in clinical practice."
+    },
+    {
+      "question_id": "q2_chemical_equilibrium",
+      "text": "In clinical practice, Chemical Equilibrium is most important for:",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Chemical Equilibrium",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Predicting the exact time of reaction completion"
+        },
+        {
+          "id": "b",
+          "text": "Maintaining homeostasis and understanding drug interactions"
+        },
+        {
+          "id": "c",
+          "text": "Determining the initial concentrations of reactants"
+        },
+        {
+          "id": "d",
+          "text": "Identifying the physical state of reactants"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Chemical equilibrium is vital for maintaining homeostasis and understanding how drugs interact within the body, ensuring effective medical treatments."
+    }
+  ]
+}

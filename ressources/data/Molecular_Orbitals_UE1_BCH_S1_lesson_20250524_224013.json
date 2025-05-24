@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:40:13.169422",
+    "topic": "Molecular Orbitals",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_63037",
+    "topic": "Molecular Orbitals",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "**Molecular Orbitals**\n\n**Definition:**\nMolecular orbitals are mathematical functions that describe the wave-like behavior of an electron in a molecule. They are formed by the combination of atomic orbitals from different atoms in a molecule.\n\n**Key Notions:**\n• **Linear Combination of Atomic Orbitals (LCAO):** The process by which atomic orbitals combine to form molecular orbitals.\n• **Bonding and Antibonding Orbitals:** Bonding orbitals stabilize the molecule, while antibonding orbitals destabilize it.\n• **Molecular Orbital Energy Levels:** The energy levels of molecular orbitals determine the stability and reactivity of the molecule.\n\n**Clinical Relevance:**\nUnderstanding molecular orbitals is crucial for comprehending the behavior of drugs and biomolecules, such as enzyme-substrate interactions and drug-receptor binding.\n\n**Related Concepts:**\nThe Atom, Covalent Bonds and Non-Covalent Bonds, Molecular Orbitals",
+    "learning_objectives": [
+      "Define Molecular Orbitals",
+      "Identify key mechanisms",
+      "Apply to clinical scenarios"
+    ],
+    "exercise_id": "ex_26223",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:40:13.168106"
+  },
+  "exercise": {
+    "exercise_id": "ex_26223",
+    "lesson_id": "lesson_63037",
+    "topic": "Molecular Orbitals",
+    "question_ids": [
+      "q1_molecular_orbitals",
+      "q2_molecular_orbitals"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Molecular Orbitals",
+      "general concepts",
+      "The Atom"
+    ],
+    "created_at": "2025-05-24T22:40:13.168195"
+  },
+  "questions": [
+    {
+      "question_id": "q1_molecular_orbitals",
+      "text": "What is the primary mechanism of Molecular Orbitals?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Molecular Orbitals",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Formation of atomic nuclei"
+        },
+        {
+          "id": "b",
+          "text": "Electron spin resonance"
+        },
+        {
+          "id": "c",
+          "text": "Linear Combination of Atomic Orbitals (LCAO)"
+        },
+        {
+          "id": "d",
+          "text": "Nuclear magnetic resonance"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "The primary mechanism of Molecular Orbitals is the Linear Combination of Atomic Orbitals (LCAO), which describes how atomic orbitals combine to form molecular orbitals. This is crucial for understanding molecular stability and reactivity, which has clinical relevance in drug interactions and biomolecular behavior."
+    },
+    {
+      "question_id": "q2_molecular_orbitals",
+      "text": "In clinical practice, Molecular Orbitals is most important for:",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "Molecular Orbitals",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Understanding genetic mutations"
+        },
+        {
+          "id": "b",
+          "text": "Predicting drug-receptor interactions"
+        },
+        {
+          "id": "c",
+          "text": "Analyzing cellular metabolism"
+        },
+        {
+          "id": "d",
+          "text": "Diagnosing infectious diseases"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Molecular orbitals are essential for predicting how drugs interact with receptors, which is fundamental in pharmacology and drug design. This understanding helps in developing effective medications and therapies."
+    }
+  ]
+}
