@@ -1,19 +1,39 @@
+"""
+FastAPI application for AI-powered medical education
+Serves lessons generation via Weaviate RAG pipeline
+"""
+
 import os
 import json
 from typing import List
 from openai.types.chat.chat_completion_message_param import ChatCompletionMessageParam
 from pydantic import BaseModel
 from dotenv import load_dotenv
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, HTTPException
 from fastapi.responses import StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
 from openai import OpenAI
 from .utils.prompt import ClientMessage, convert_to_openai_messages
 from .utils.tools import get_current_weather
+from .utils.lesson_service import LessonRequest, LessonResponse, create_adaptive_lesson, UserContext
 
 
 load_dotenv(".env.local")
 
-app = FastAPI()
+app = FastAPI(
+    title="Medical AI Education API",
+    description="AI-powered adaptive learning for medical education using Weaviate RAG",
+    version="1.0.0"
+)
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Configure this properly for production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
@@ -151,3 +171,57 @@ async def handle_chat_data(request: Request, protocol: str = Query('data')):
     response = StreamingResponse(stream_text(openai_messages, protocol))
     response.headers['x-vercel-ai-data-stream'] = 'v1'
     return response
+
+@app.post("/api/lessons/create")
+async def create_lesson_endpoint(request: LessonRequest):
+    """
+    Create a new adaptive lesson using Weaviate RAG pipeline
+    
+    Returns the complete lesson with content, exercises, and questions
+    """
+    try:
+        lesson_response = await create_adaptive_lesson(
+            topic=request.topic,
+            user_context=request.user_context
+        )
+        
+        return {
+            "success": True,
+            "lesson": {
+                "lesson_id": lesson_response.lesson.lesson_id,
+                "topic": lesson_response.lesson.topic,
+                "category": lesson_response.lesson.category,
+                "subcategory": lesson_response.lesson.subcategory,
+                "lesson_content": lesson_response.lesson.lesson_content,
+                "learning_objectives": lesson_response.lesson.learning_objectives,
+                "difficulty_level": lesson_response.lesson.difficulty_level,
+                "created_at": lesson_response.lesson.created_at
+            },
+            "exercise": {
+                "exercise_id": lesson_response.exercise.exercise_id,
+                "topic": lesson_response.exercise.topic,
+                "difficulty_level": lesson_response.exercise.difficulty_level,
+                "target_concepts": lesson_response.exercise.target_concepts,
+                "created_at": lesson_response.exercise.created_at
+            },
+            "questions": [
+                {
+                    "question_id": q.question_id,
+                    "text": q.text,
+                    "category": q.category,
+                    "subcategory": q.subcategory,
+                    "topic": q.topic,
+                    "difficulty": q.difficulty,
+                    "options": q.options,
+                    "correct_answer": q.correct_answer,
+                    "explanation": q.explanation
+                }
+                for q in lesson_response.questions
+            ]
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Lesson generation failed: {str(e)}")
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "service": "medical-ai-education"}
