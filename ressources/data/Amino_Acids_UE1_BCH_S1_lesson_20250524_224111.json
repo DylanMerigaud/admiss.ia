@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:41:11.016245",
+    "topic": "Amino Acids",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Structure, Function and Diversity of Biomolecules",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_27148",
+    "topic": "Amino Acids",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Structure, Function and Diversity of Biomolecules",
+    "lesson_content": "**Amino Acids**\n\n**Definition:** Amino acids are organic compounds that combine to form proteins. They consist of an amino group, a carboxyl group, a hydrogen atom, and a distinctive side chain (R group), all attached to a central carbon atom.\n\n**Key Notions:**\n• **Structure:** Alpha-carbon with four substituents: amino group, carboxyl group, hydrogen, and R group.\n• **Classification:** Essential vs. non-essential amino acids based on the body's ability to synthesize them.\n• **Function:** Building blocks of proteins, involved in various biochemical processes including metabolism, enzyme function, and neurotransmission.\n\n**Clinical Relevance:** Essential for protein synthesis, enzyme function, and neurotransmission. Deficiencies can lead to various disorders such as kwashiorkor and marasmus.\n\n**Related Concepts:** Amino Acids, Peptides and Proteins, Enzymes",
+    "learning_objectives": [
+      "Define the structure of amino acids",
+      "Identify the classification and functions of amino acids",
+      "Apply knowledge of amino acids to clinical scenarios"
+    ],
+    "exercise_id": "ex_48349",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:41:11.014666"
+  },
+  "exercise": {
+    "exercise_id": "ex_48349",
+    "lesson_id": "lesson_27148",
+    "topic": "Amino Acids",
+    "question_ids": [
+      "q1_amino_acids",
+      "q2_amino_acids"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Amino Acids",
+      "general concepts",
+      "Amino Acids"
+    ],
+    "created_at": "2025-05-24T22:41:11.014755"
+  },
+  "questions": [
+    {
+      "question_id": "q1_amino_acids",
+      "text": "What is the primary structure of an amino acid?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Amino Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "A single amino group and a carboxyl group"
+        },
+        {
+          "id": "b",
+          "text": "A central carbon bonded to a hydrogen, an amino group, a carboxyl group, and an R group"
+        },
+        {
+          "id": "c",
+          "text": "A chain of amino acids"
+        },
+        {
+          "id": "d",
+          "text": "A ring structure with amino and carboxyl groups"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "The primary structure of an amino acid includes a central alpha-carbon bonded to a hydrogen, an amino group, a carboxyl group, and a distinctive side chain (R group)."
+    },
+    {
+      "question_id": "q2_amino_acids",
+      "text": "In clinical practice, amino acids are most important for:",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Structure, Function and Diversity of Biomolecules",
+      "topic": "Amino Acids",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Energy production"
+        },
+        {
+          "id": "b",
+          "text": "Protein synthesis and enzyme function"
+        },
+        {
+          "id": "c",
+          "text": "DNA replication"
+        },
+        {
+          "id": "d",
+          "text": "Lipid metabolism"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Amino acids are crucial for protein synthesis and enzyme function, which are essential for various biochemical processes in the body."
+    }
+  ]
+}

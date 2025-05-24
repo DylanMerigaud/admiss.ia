@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:39:55.134262",
+    "topic": "The Atom",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_96086",
+    "topic": "The Atom",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "General Chemistry",
+    "lesson_content": "**The Atom**\n\n**Definition:** The smallest unit of matter that retains the chemical properties of an element, consisting of a nucleus containing protons and neutrons, surrounded by electrons in orbitals.\n\n**Key Notions:**\n• **Subatomic Particles:** Protons, neutrons, and electrons, each with distinct charges and masses.\n• **Atomic Structure:** Nucleus containing protons and neutrons, with electrons orbiting in defined shells.\n• **Electron Configuration:** Determines the chemical behavior and reactivity of an atom.\n\n**Clinical Relevance:** Understanding atomic structure is crucial for comprehending molecular interactions in biochemical processes, such as enzyme-substrate binding and drug-receptor interactions.\n\n**Related Concepts:** The Atom, Covalent Bonds and Non-Covalent Bonds, Molecular Orbitals",
+    "learning_objectives": [
+      "Define The Atom",
+      "Identify key mechanisms",
+      "Apply to clinical scenarios"
+    ],
+    "exercise_id": "ex_60966",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:39:55.130012"
+  },
+  "exercise": {
+    "exercise_id": "ex_60966",
+    "lesson_id": "lesson_96086",
+    "topic": "The Atom",
+    "question_ids": [
+      "q1_the_atom",
+      "q2_the_atom"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "The Atom",
+      "general concepts",
+      "The Atom"
+    ],
+    "created_at": "2025-05-24T22:39:55.130080"
+  },
+  "questions": [
+    {
+      "question_id": "q1_the_atom",
+      "text": "What is the primary component of an atom's nucleus?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "The Atom",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Electrons"
+        },
+        {
+          "id": "b",
+          "text": "Neutrons and protons"
+        },
+        {
+          "id": "c",
+          "text": "Orbitals"
+        },
+        {
+          "id": "d",
+          "text": "Valence electrons"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "The nucleus of an atom primarily consists of protons and neutrons, which determine the atomic number and mass number, respectively."
+    },
+    {
+      "question_id": "q2_the_atom",
+      "text": "In clinical practice, understanding the atom is most important for:",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "General Chemistry",
+      "topic": "The Atom",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Diagnosing genetic disorders"
+        },
+        {
+          "id": "b",
+          "text": "Predicting drug interactions at the molecular level"
+        },
+        {
+          "id": "c",
+          "text": "Analyzing cellular metabolism"
+        },
+        {
+          "id": "d",
+          "text": "Monitoring blood pressure"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Understanding atomic structure and electron configuration is essential for predicting how molecules, including drugs, will interact with biological systems."
+    }
+  ]
+}

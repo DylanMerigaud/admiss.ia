@@ -1,0 +1,93 @@
+{
+  "lesson": {
+    "lesson_id": "lesson_51597",
+    "topic": "Cardiovascular System",
+    "category": "UE 5 - Anatomy",
+    "subcategory": "Systems and Apparatus",
+    "lesson_content": "**Cardiovascular System**\n\n**Definition:** The cardiovascular system is a network of organs and vessels responsible for circulating blood throughout the body, delivering oxygen and nutrients to tissues, and removing waste products.\n\n**Key Notions:**\n• **Heart Anatomy:** The heart consists of four chambers (two atria and two ventricles) and is responsible for pumping blood.\n• **Blood Circulation:** Blood flows through the heart, lungs, and systemic circulation in a continuous loop, facilitated by arteries, veins, and capillaries.\n• **Vascular System:** Arteries carry oxygenated blood away from the heart, while veins return deoxygenated blood to the heart.\n\n**Clinical Relevance:** Understanding the cardiovascular system is crucial for diagnosing and treating conditions such as hypertension, coronary artery disease, and heart failure.\n\n**Related Concepts:** Digestive System, Cardiovascular System, Respiratory System",
+    "learning_objectives": [
+      "Define the cardiovascular system",
+      "Identify key mechanisms of heart anatomy and blood circulation",
+      "Apply cardiovascular principles to clinical scenarios"
+    ],
+    "exercise_id": "ex_25763",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:37:55.328522"
+  },
+  "exercise": {
+    "exercise_id": "ex_25763",
+    "lesson_id": "lesson_51597",
+    "topic": "Cardiovascular System",
+    "question_ids": [
+      "q1_cardiovascular_system",
+      "q2_cardiovascular_system"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Cardiovascular System",
+      "heart anatomy",
+      "blood circulation"
+    ],
+    "created_at": "2025-05-24T22:37:55.328621"
+  },
+  "questions": [
+    {
+      "question_id": "q1_cardiovascular_system",
+      "text": "What is the primary mechanism of the cardiovascular system?",
+      "category": "UE 5 - Anatomy",
+      "subcategory": "Systems and Apparatus",
+      "topic": "Cardiovascular System",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Transport of nutrients through the digestive system"
+        },
+        {
+          "id": "b",
+          "text": "Gas exchange in the respiratory system"
+        },
+        {
+          "id": "c",
+          "text": "Circulation of blood to deliver oxygen and nutrients"
+        },
+        {
+          "id": "d",
+          "text": "Regulation of body temperature"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "The primary mechanism of the cardiovascular system is the circulation of blood to deliver oxygen and nutrients to tissues and remove waste products, which is essential for maintaining homeostasis and supporting clinical functions."
+    },
+    {
+      "question_id": "q2_cardiovascular_system",
+      "text": "In clinical practice, the cardiovascular system is most important for:",
+      "category": "UE 5 - Anatomy",
+      "subcategory": "Systems and Apparatus",
+      "topic": "Cardiovascular System",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Digestive processes"
+        },
+        {
+          "id": "b",
+          "text": "Maintaining blood pressure and circulation"
+        },
+        {
+          "id": "c",
+          "text": "Respiratory gas exchange"
+        },
+        {
+          "id": "d",
+          "text": "Nerve signal transmission"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "In clinical practice, the cardiovascular system is crucial for maintaining blood pressure and circulation, which are vital for delivering oxygen and nutrients to tissues and removing waste products."
+    }
+  ]
+}

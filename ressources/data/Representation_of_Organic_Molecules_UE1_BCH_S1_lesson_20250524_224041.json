@@ -1,0 +1,101 @@
+{
+  "generation_metadata": {
+    "generated_at": "2025-05-24T22:40:41.318620",
+    "topic": "Representation of Organic Molecules",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "generator": "batch_lesson_collection",
+    "academic_program": "French Medical Education"
+  },
+  "lesson": {
+    "lesson_id": "lesson_10555",
+    "topic": "Representation of Organic Molecules",
+    "category": "UE 1 - Biochemistry",
+    "subcategory": "Organic Chemistry",
+    "lesson_content": "**Representation of Organic Molecules**\n\n**Definition:** The depiction of organic molecules using structural formulas, Lewis structures, and molecular models to illustrate their chemical composition and spatial arrangement.\n\n**Key Notions:**\n• Structural formulas: Represent the arrangement of atoms and bonds in a molecule.\n• Lewis structures: Show the distribution of valence electrons around atoms in a molecule.\n• Molecular models: 3D representations to visualize the spatial configuration of molecules.\n\n**Clinical Relevance:** Understanding the representation of organic molecules is crucial for drug design, pharmacokinetics, and the study of biochemical pathways.\n\n**Related Concepts:** Representation of Organic Molecules, Isomerism, Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids",
+    "learning_objectives": [
+      "Define Representation of Organic Molecules",
+      "Identify key mechanisms",
+      "Apply to clinical scenarios"
+    ],
+    "exercise_id": "ex_65572",
+    "difficulty_level": "intermediate",
+    "semester": 1,
+    "generated_by": "weaviate_rag_pipeline",
+    "created_at": "2025-05-24T22:40:41.317207"
+  },
+  "exercise": {
+    "exercise_id": "ex_65572",
+    "lesson_id": "lesson_10555",
+    "topic": "Representation of Organic Molecules",
+    "question_ids": [
+      "q1_representation_of_organic_molecules",
+      "q2_representation_of_organic_molecules"
+    ],
+    "difficulty_level": "intermediate",
+    "target_concepts": [
+      "Representation of Organic Molecules",
+      "general concepts",
+      "Representation of Organic Molecules"
+    ],
+    "created_at": "2025-05-24T22:40:41.317286"
+  },
+  "questions": [
+    {
+      "question_id": "q1_representation_of_organic_molecules",
+      "text": "What is the primary mechanism of Representation of Organic Molecules?",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Representation of Organic Molecules",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Using only molecular formulas"
+        },
+        {
+          "id": "b",
+          "text": "Depicting only the 3D structure"
+        },
+        {
+          "id": "c",
+          "text": "Illustrating the arrangement of atoms and bonds"
+        },
+        {
+          "id": "d",
+          "text": "Focusing solely on electron distribution"
+        }
+      ],
+      "correct_answer": "c",
+      "explanation": "The primary mechanism involves illustrating the arrangement of atoms and bonds, which is essential for understanding molecular structure and clinical relevance."
+    },
+    {
+      "question_id": "q2_representation_of_organic_molecules",
+      "text": "In clinical practice, Representation of Organic Molecules is most important for:",
+      "category": "UE 1 - Biochemistry",
+      "subcategory": "Organic Chemistry",
+      "topic": "Representation of Organic Molecules",
+      "difficulty": "intermediate",
+      "options": [
+        {
+          "id": "a",
+          "text": "Identifying inorganic compounds"
+        },
+        {
+          "id": "b",
+          "text": "Designing and understanding drug molecules"
+        },
+        {
+          "id": "c",
+          "text": "Analyzing mineral compositions"
+        },
+        {
+          "id": "d",
+          "text": "Studying physical properties of metals"
+        }
+      ],
+      "correct_answer": "b",
+      "explanation": "Representation of organic molecules is crucial for designing and understanding drug molecules, which is fundamental in pharmacology and clinical practice."
+    }
+  ]
+}

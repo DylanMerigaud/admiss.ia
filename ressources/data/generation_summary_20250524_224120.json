@@ -1,0 +1,14 @@
+{
+  "generation_summary": {
+    "total_topics_processed": 10,
+    "successful_generations": 10,
+    "failed_generations": 0,
+    "success_rate": "100.0%",
+    "generated_at": "2025-05-24T22:41:20.597301",
+    "output_directory": "ressources/data"
+  },
+  "failed_topics": [],
+  "categories_processed": {
+    "UE 1 - Biochemistry": 10
+  }
+}
