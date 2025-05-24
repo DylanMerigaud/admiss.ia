@@ -63,17 +63,7 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
   };
 
   return (
-    <div
-      initial={{ scale: 0, opacity: 0, x: -50 }}
-      animate={{ scale: 1, opacity: 1, x: 0 }}
-      transition={{
-        duration: 0.2,
-        type: "spring",
-        stiffness: 400,
-        damping: 35,
-      }}
-      className="relative"
-    >
+    <div className="relative">
       <div
         className="bg-gradient-to-br from-slate-800/90 to-gray-900/90 backdrop-blur-md border border-slate-500/30 rounded-md p-3 min-w-[200px] cursor-pointer transition-all duration-150 shadow-md"
         onClick={handleNodeClick}
