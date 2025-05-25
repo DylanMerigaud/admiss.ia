@@ -21,12 +21,15 @@ class WeaviateService:
     
     def __init__(self):
         """Initialize Weaviate client connection and Mistral service"""
+        
         self.client = self._connect_to_weaviate()
         self.mistral_service = MistralService()
         self._ensure_medical_schema()
     
     def _connect_to_weaviate(self):
-        """Connect to Weaviate Cloud instance"""
+        import weaviate  # Add this line to be safe
+
+        """Connect to Weaviate Cloud instance - robust v4 compatibility"""
         weaviate_url = os.environ.get("WEAVIATE_URL")
         weaviate_api_key = os.environ.get("WEAVIATE_API_KEY")
         
@@ -35,19 +38,84 @@ class WeaviateService:
                 "Missing Weaviate credentials. Please set WEAVIATE_URL and WEAVIATE_API_KEY environment variables."
             )
         
+        print(f"🔗 Connecting to Weaviate: {weaviate_url}")
+        print(f"📦 Weaviate version: {weaviate.__version__}")
+        
         try:
-            client = weaviate.connect_to_weaviate_cloud(
-                cluster_url=weaviate_url,
-                auth_credentials=Auth.api_key(weaviate_api_key)
-            )
+            # Method 1: Try the standard v4 cloud connection
+            if hasattr(weaviate, 'connect_to_weaviate_cloud'):
+                print("🔄 Trying connect_to_weaviate_cloud...")
+                try:
+                    from weaviate.classes.init import Auth
+                    client = weaviate.connect_to_weaviate_cloud(
+                        cluster_url=weaviate_url,
+                        auth_credentials=Auth.api_key(weaviate_api_key)
+                    )
+                    if client.is_ready():
+                        print("✅ Connected using connect_to_weaviate_cloud")
+                        return client
+                except Exception as e:
+                    print(f"❌ connect_to_weaviate_cloud failed: {e}")
             
-            if not client.is_ready():
-                raise ConnectionError("Failed to connect to Weaviate instance")
+            # Method 2: Try WeaviateClient direct instantiation (v4.4.0 style)
+            if hasattr(weaviate, 'WeaviateClient'):
+                print("🔄 Trying WeaviateClient...")
+                try:
+                    from weaviate.classes.init import Auth
+                    client = weaviate.WeaviateClient(
+                        connection_params=weaviate.connect.ConnectionParams.from_url(
+                            url=weaviate_url,
+                            auth_credentials=Auth.api_key(weaviate_api_key)
+                        )
+                    )
+                    client.connect()
+                    print("✅ Connected using WeaviateClient")
+                    return client
+                except Exception as e:
+                    print(f"❌ WeaviateClient failed: {e}")
+            
+            # Method 3: Try weaviate.connect with URL (newer v4)
+            print("🔄 Trying weaviate.connect...")
+            try:
+                client = weaviate.connect(
+                    connection_params={
+                        "url": weaviate_url,
+                        "auth_credentials": {"api_key": weaviate_api_key}
+                    }
+                )
+                print("✅ Connected using weaviate.connect")
+                return client
+            except Exception as e:
+                print(f"❌ weaviate.connect failed: {e}")
+            
+            # Method 4: Try importing connection helpers differently
+            print("🔄 Trying alternative v4 import...")
+            try:
+                import weaviate
+                from weaviate.auth import AuthApiKey
                 
-            print(f"✅ Connected to Weaviate Cloud: {weaviate_url}")
-            return client
+                # Try different v4 connection patterns
+                if hasattr(weaviate, 'connect_to_cloud'):
+                    client = weaviate.connect_to_cloud(
+                        cluster_url=weaviate_url,
+                        auth_credentials=AuthApiKey(weaviate_api_key)
+                    )
+                else:
+                    # Generic connection
+                    client = weaviate.Client(
+                        url=weaviate_url,
+                        auth_client_secret=AuthApiKey(weaviate_api_key)
+                    )
+                
+                print("✅ Connected using alternative method")
+                return client
+            except Exception as e:
+                print(f"❌ Alternative method failed: {e}")
+                
+            raise ConnectionError("All Weaviate v4 connection methods failed")
             
         except Exception as e:
+            print(f"❌ Critical connection error: {e}")
             raise ConnectionError(f"Weaviate connection failed: {e}")
     
     def _ensure_medical_schema(self):
@@ -196,4 +264,15 @@ class WeaviateService:
     def close(self):
         """Close Weaviate client connection"""
         if self.client:
-            self.client.close() 
+            try:
+                # Try different close methods for v4
+                if hasattr(self.client, 'close'):
+                    self.client.close()
+                elif hasattr(self.client, 'disconnect'):
+                    self.client.disconnect()
+                elif hasattr(self.client, '__exit__'):
+                    self.client.__exit__(None, None, None)
+                else:
+                    print("ℹ️ No close method needed for this client")
+            except Exception as e:
+                print(f"ℹ️ Client close warning: {e}")

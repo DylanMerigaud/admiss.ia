@@ -36,10 +36,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Fix the OpenAI API key (there was a typo - extra comma and parentheses)
-openai_api_key = os.environ.get("OPENAI_API_KEY")
-if openai_api_key:
-    client = OpenAI(api_key=openai_api_key)
 
 # Chat request model
 class ChatRequest(BaseModel):
@@ -193,11 +189,100 @@ async def create_lesson_endpoint(request: LessonRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Lesson generation failed: {str(e)}")
 
+try:
+    from api.utils.lesson_service import create_adaptive_lesson
+    print("✅ Using real Weaviate lesson service")
+except Exception as e:
+    print(f"⚠️ Weaviate service error ({e}), check connection")
+    # You can add a mock fallback here if needed
 
 @app.get("/api/health")
 async def health_check():
+    """Health check endpoint"""
     return {"status": "healthy", "service": "medical-ai-education"}
+
+@app.get("/api/lessons/{topic}")
+async def get_lesson_by_topic(topic: str):
+    """
+    Get a lesson by topic - returns the complete lesson data in the standard format
+    
+    Args:
+        topic: The lesson topic (e.g., "Heart Anatomy")
+        
+    Returns:
+        Complete lesson data with generation_metadata, lesson, exercise, and questions
+    """
+    try:
+        # Create a default user context for topic-based requests
+        default_user_context = UserContext(
+            user_id="topic_request",
+            current_level="intermediate",
+            concept_mastery={},
+            weak_concepts=[],
+            learning_velocity=0.8,
+            error_patterns=[],
+            learning_style="mixed"
+        )
+        
+        # Generate the lesson using your existing service
+        lesson_response = await create_adaptive_lesson(
+            topic=topic.replace('_', ' '),  # Handle URL encoding
+            user_context=default_user_context
+        )
+        
+        # Format the response in the exact format you want
+        formatted_response = {
+            "generation_metadata": {
+                "generated_at": lesson_response.lesson.created_at,
+                "topic": topic,
+                "category": lesson_response.lesson.category,
+                "subcategory": lesson_response.lesson.subcategory,
+                "generator": "weaviate_rag_pipeline",
+                "academic_program": "French Medical Education"
+            },
+            "lesson": {
+                "lesson_id": lesson_response.lesson.lesson_id,
+                "topic": lesson_response.lesson.topic,
+                "category": lesson_response.lesson.category,
+                "subcategory": lesson_response.lesson.subcategory,
+                "lesson_content": lesson_response.lesson.lesson_content,
+                "learning_objectives": lesson_response.lesson.learning_objectives,
+                "exercise_id": lesson_response.exercise.exercise_id,
+                "difficulty_level": lesson_response.lesson.difficulty_level,
+                "semester": lesson_response.lesson.semester,
+                "generated_by": lesson_response.lesson.generated_by,
+                "created_at": lesson_response.lesson.created_at
+            },
+            "exercise": {
+                "exercise_id": lesson_response.exercise.exercise_id,
+                "lesson_id": lesson_response.lesson.lesson_id,
+                "topic": lesson_response.exercise.topic,
+                "question_ids": [q.question_id for q in lesson_response.questions],
+                "difficulty_level": lesson_response.exercise.difficulty_level,
+                "target_concepts": lesson_response.exercise.target_concepts,
+                "created_at": lesson_response.exercise.created_at
+            },
+            "questions": [
+                {
+                    "question_id": q.question_id,
+                    "text": q.text,
+                    "category": q.category,
+                    "subcategory": q.subcategory,
+                    "topic": q.topic,
+                    "difficulty": q.difficulty,
+                    "options": q.options,
+                    "correct_answer": q.correct_answer,
+                    "explanation": q.explanation
+                }
+                for q in lesson_response.questions
+            ]
+        }
+        
+        return formatted_response
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to generate lesson for topic '{topic}': {str(e)}")
 
 @app.get("/")
 async def root():
-    return {"message": "Medical AI Education API", "version": "1.0.0", "endpoints": ["/health", "/api/lessons/create", "/api/chat"]}
+    return {"message": "Medical AI Education API", "version": "1.0.0", "endpoints": ["/health", "/api/lessons/create", "/api/lessons/{topic}", "/api/chat"]}
