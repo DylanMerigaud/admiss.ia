@@ -193,7 +193,8 @@ async def create_lesson_endpoint(request: LessonRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Lesson generation failed: {str(e)}")
 
-@app.get("/health")
+
+@app.get("/api/health")
 async def health_check():
     return {"status": "healthy", "service": "medical-ai-education"}
 
