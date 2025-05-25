@@ -284,38 +284,59 @@ export default function LessonPage() {
 
             {/* Content Footer with Key Takeaways */}
             <div className="mt-8 pt-6 border-t border-slate-700/50">
-              <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 rounded-lg p-4">
-                <h4 className="text-white font-semibold flex items-center gap-2 mb-3">
-                  <Star className="w-5 h-5 text-emerald-400" />
-                  Key Takeaways
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-300">
-                      Understanding the fundamental concepts of{" "}
-                      {lesson.topic.toLowerCase()}
-                    </span>
+              {/* Functional Groups Overview Image */}
+              <div className="mb-8">
+                <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-lg p-6">
+                  <h4 className="text-white font-semibold flex items-center gap-2 mb-4">
+                    <BookOpen className="w-5 h-5 text-indigo-400" />
+                    Functional Groups Overview
+                  </h4>
+                  <div className="flex justify-center bg-white/5 rounded-lg">
+                    <img
+                      src="/functional-groups-overview.gif"
+                      alt="Functional Groups Overview - Visual guide showing the main functional groups including alkanes, alkenes, alcohols, amines, aldehydes, ketones, and acids with their chemical structures"
+                      className="max-w-full h-auto rounded-lg shadow-xl border border-slate-600/30 transition-transform duration-300 "
+                      style={{ maxHeight: "600px" }}
+                      loading="lazy"
+                    />
                   </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-300">
-                      Clinical applications and real-world relevance
-                    </span>
+                  <p className="text-gray-400 text-sm mt-4 text-center leading-relaxed">
+                    📚 <strong>Visual Reference Guide:</strong> This
+                    comprehensive diagram shows the main functional groups
+                    covered in this lesson, including their chemical structures
+                    and naming conventions. Each functional group has distinct
+                    properties that determine molecular behavior and reactivity.
+                  </p>
+                  <div className="mt-3 text-center">
+                    <a
+                      href="https://www.masterorganicchemistry.com/2010/10/06/functional-groups-organic-chemistry/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-indigo-400 hover:text-indigo-300 transition-colors duration-200 underline decoration-dotted underline-offset-2"
+                    >
+                      <ScrollText className="w-3 h-3" />
+                      Source: Master Organic Chemistry
+                    </a>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-300">
-                      Preparation for {exercise?.difficulty_level} level
-                      assessments
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-300">
-                      Foundation for advanced {lesson.subcategory.toLowerCase()}{" "}
-                      topics
-                    </span>
+                </div>
+              </div>
+
+              {/* Lesson Source Attribution */}
+              <div className="mb-6">
+                <div className="bg-gradient-to-r from-slate-500/10 to-gray-500/10 border border-slate-500/20 rounded-lg p-4">
+                  <div className="text-center">
+                    <p className="text-gray-400 text-sm mb-2">
+                      📖 <strong>Lesson Content Sources:</strong>
+                    </p>
+                    <a
+                      href="https://www.masterorganicchemistry.com/2010/10/06/functional-groups-organic-chemistry/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-slate-200 transition-colors duration-200 underline decoration-dotted underline-offset-2"
+                    >
+                      <ScrollText className="w-4 h-4" />
+                      Master Organic Chemistry - Functional Groups Guide
+                    </a>
                   </div>
                 </div>
               </div>
