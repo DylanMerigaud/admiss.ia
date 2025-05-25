@@ -95,3 +95,6 @@ The platform uses a sophisticated **Retrieval-Augmented Generation (RAG) + LLM q
 - Dylan Mérigaud
 - Matthieu Marchal
 - Mikhail Biriuchinskii
+
+## Hackathon sponsors 
+![Hackathon Sponsors](/ressources/sponsors.png)
