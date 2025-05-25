@@ -54,7 +54,7 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
   };
 
   const handleNodeClick = () => {
-    router.push("/exercise");
+    router.push("/lesson");
   };
 
   const handlePlayClick = (e: React.MouseEvent) => {
