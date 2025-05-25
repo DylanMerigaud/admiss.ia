@@ -54,12 +54,7 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
   };
 
   const handleNodeClick = () => {
-    router.push("/lesson");
-  };
-
-  const handlePlayClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    router.push("/exercise");
+    router.push(`/lesson?topic=${name}`);
   };
 
   return (
@@ -119,7 +114,6 @@ export const TopicNode: React.FC<TopicNodeProps> = ({ data }) => {
           </div>
 
           <motion.button
-            onClick={handlePlayClick}
             className="p-1 rounded-full transition-colors duration-150 bg-green-500/20 text-green-400 hover:bg-green-500/30"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
