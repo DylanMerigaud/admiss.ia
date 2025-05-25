@@ -13,10 +13,11 @@ from fastapi import FastAPI, Query, HTTPException
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from openai import OpenAI
-from .utils.prompt import ClientMessage, convert_to_openai_messages
-from .utils.tools import get_current_weather
-from .utils.lesson_service import LessonRequest, LessonResponse, create_adaptive_lesson, UserContext
 
+# Import your custom modules (make sure these imports work)
+from api.utils.prompt import ClientMessage, convert_to_openai_messages
+from api.utils.tools import get_current_weather
+from api.utils.lesson_service import LessonRequest, LessonResponse, create_adaptive_lesson, UserContext
 
 load_dotenv(".env.local")
 
@@ -34,189 +35,168 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-pi_key = (os.environ.get("OPENAI_API_KEY"),)
 
+# Fix the OpenAI API key (there was a typo - extra comma and parentheses)
+openai_api_key = os.environ.get("OPENAI_API_KEY")
+if openai_api_key:
+    client = OpenAI(api_key=openai_api_key)
 
-# class Request(BaseModel):
-#     messages: List[ClientMessage]
+# Chat request model
+class ChatRequest(BaseModel):
+    messages: List[ClientMessage]
 
+# Available tools for chat
+available_tools = {
+    "get_current_weather": get_current_weather,
+}
 
-# available_tools = {
-#     "get_current_weather": get_current_weather,
-# }
+def stream_text(messages: List[ChatCompletionMessageParam], protocol: str = 'data'):
+    """Stream chat completions"""
+    draft_tool_calls = []
+    draft_tool_calls_index = -1
 
-# def do_stream(messages: List[ChatCompletionMessageParam]):
-#     stream = client.chat.completions.create(
-#         messages=messages,
-#         model="gpt-4o",
-#         stream=True,
-#         tools=[{
-#             "type": "function",
-#             "function": {
-#                 "name": "get_current_weather",
-#                 "description": "Get the current weather at a location",
-#                 "parameters": {
-#                     "type": "object",
-#                     "properties": {
-#                         "latitude": {
-#                             "type": "number",
-#                             "description": "The latitude of the location",
-#                         },
-#                         "longitude": {
-#                             "type": "number",
-#                             "description": "The longitude of the location",
-#                         },
-#                     },
-#                     "required": ["latitude", "longitude"],
-#                 },
-#             },
-#         }]
-#     )
+    stream = client.chat.completions.create(
+        messages=messages,
+        model="gpt-4o",
+        stream=True,
+        tools=[{
+            "type": "function",
+            "function": {
+                "name": "get_current_weather",
+                "description": "Get the current weather at a location",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "latitude": {
+                            "type": "number",
+                            "description": "The latitude of the location",
+                        },
+                        "longitude": {
+                            "type": "number",
+                            "description": "The longitude of the location",
+                        },
+                    },
+                    "required": ["latitude", "longitude"],
+                },
+            },
+        }]
+    )
 
-#     return stream
+    for chunk in stream:
+        for choice in chunk.choices:
+            if choice.finish_reason == "stop":
+                continue
 
-# def stream_text(messages: List[ChatCompletionMessageParam], protocol: str = 'data'):
-#     draft_tool_calls = []
-#     draft_tool_calls_index = -1
+            elif choice.finish_reason == "tool_calls":
+                for tool_call in draft_tool_calls:
+                    yield '9:{{"toolCallId":"{id}","toolName":"{name}","args":{args}}}\n'.format(
+                        id=tool_call["id"],
+                        name=tool_call["name"],
+                        args=tool_call["arguments"])
 
-#     stream = client.chat.completions.create(
-#         messages=messages,
-#         model="gpt-4o",
-#         stream=True,
-#         tools=[{
-#             "type": "function",
-#             "function": {
-#                 "name": "get_current_weather",
-#                 "description": "Get the current weather at a location",
-#                 "parameters": {
-#                     "type": "object",
-#                     "properties": {
-#                         "latitude": {
-#                             "type": "number",
-#                             "description": "The latitude of the location",
-#                         },
-#                         "longitude": {
-#                             "type": "number",
-#                             "description": "The longitude of the location",
-#                         },
-#                     },
-#                     "required": ["latitude", "longitude"],
-#                 },
-#             },
-#         }]
-#     )
+                for tool_call in draft_tool_calls:
+                    tool_result = available_tools[tool_call["name"]](
+                        **json.loads(tool_call["arguments"]))
 
-#     for chunk in stream:
-#         for choice in chunk.choices:
-#             if choice.finish_reason == "stop":
-#                 continue
+                    yield 'a:{{"toolCallId":"{id}","toolName":"{name}","args":{args},"result":{result}}}\n'.format(
+                        id=tool_call["id"],
+                        name=tool_call["name"],
+                        args=tool_call["arguments"],
+                        result=json.dumps(tool_result))
 
-#             elif choice.finish_reason == "tool_calls":
-#                 for tool_call in draft_tool_calls:
-#                     yield '9:{{"toolCallId":"{id}","toolName":"{name}","args":{args}}}\n'.format(
-#                         id=tool_call["id"],
-#                         name=tool_call["name"],
-#                         args=tool_call["arguments"])
+            elif choice.delta.tool_calls:
+                for tool_call in choice.delta.tool_calls:
+                    id = tool_call.id
+                    name = tool_call.function.name
+                    arguments = tool_call.function.arguments
 
-#                 for tool_call in draft_tool_calls:
-#                     tool_result = available_tools[tool_call["name"]](
-#                         **json.loads(tool_call["arguments"]))
+                    if (id is not None):
+                        draft_tool_calls_index += 1
+                        draft_tool_calls.append(
+                            {"id": id, "name": name, "arguments": ""})
 
-#                     yield 'a:{{"toolCallId":"{id}","toolName":"{name}","args":{args},"result":{result}}}\n'.format(
-#                         id=tool_call["id"],
-#                         name=tool_call["name"],
-#                         args=tool_call["arguments"],
-#                         result=json.dumps(tool_result))
+                    else:
+                        draft_tool_calls[draft_tool_calls_index]["arguments"] += arguments
 
-#             elif choice.delta.tool_calls:
-#                 for tool_call in choice.delta.tool_calls:
-#                     id = tool_call.id
-#                     name = tool_call.function.name
-#                     arguments = tool_call.function.arguments
+            else:
+                yield '0:{text}\n'.format(text=json.dumps(choice.delta.content))
 
-#                     if (id is not None):
-#                         draft_tool_calls_index += 1
-#                         draft_tool_calls.append(
-#                             {"id": id, "name": name, "arguments": ""})
+        if chunk.choices == []:
+            usage = chunk.usage
+            prompt_tokens = usage.prompt_tokens
+            completion_tokens = usage.completion_tokens
 
-#                     else:
-#                         draft_tool_calls[draft_tool_calls_index]["arguments"] += arguments
+            yield 'e:{{"finishReason":"{reason}","usage":{{"promptTokens":{prompt},"completionTokens":{completion}}},"isContinued":false}}\n'.format(
+                reason="tool-calls" if len(
+                    draft_tool_calls) > 0 else "stop",
+                prompt=prompt_tokens,
+                completion=completion_tokens
+            )
 
-#             else:
-#                 yield '0:{text}\n'.format(text=json.dumps(choice.delta.content))
+@app.post("/api/chat")
+async def handle_chat_data(request: ChatRequest, protocol: str = Query('data')):
+    """Handle chat requests with streaming"""
+    messages = request.messages
+    openai_messages = convert_to_openai_messages(messages)
 
-#         if chunk.choices == []:
-#             usage = chunk.usage
-#             prompt_tokens = usage.prompt_tokens
-#             completion_tokens = usage.completion_tokens
+    response = StreamingResponse(stream_text(openai_messages, protocol))
+    response.headers['x-vercel-ai-data-stream'] = 'v1'
+    return response
 
-#             yield 'e:{{"finishReason":"{reason}","usage":{{"promptTokens":{prompt},"completionTokens":{completion}}},"isContinued":false}}\n'.format(
-#                 reason="tool-calls" if len(
-#                     draft_tool_calls) > 0 else "stop",
-#                 prompt=prompt_tokens,
-#                 completion=completion_tokens
-#             )
+@app.post("/api/lessons/create")
+async def create_lesson_endpoint(request: LessonRequest):
+    """
+    Create a new adaptive lesson using Weaviate RAG pipeline
 
+    Returns the complete lesson with content, exercises, and questions
+    """
+    try:
+        lesson_response = await create_adaptive_lesson(
+            topic=request.topic,
+            user_context=request.user_context
+        )
 
-# @app.post("/api/chat")
-# async def handle_chat_data(request: Request, protocol: str = Query('data')):
-#     messages = request.messages
-#     openai_messages = convert_to_openai_messages(messages)
-
-#     response = StreamingResponse(stream_text(openai_messages, protocol))
-#     response.headers['x-vercel-ai-data-stream'] = 'v1'
-#     return response
-
-# @app.post("/api/lessons/create")
-# async def create_lesson_endpoint(request: LessonRequest):
-#     """
-#     Create a new adaptive lesson using Weaviate RAG pipeline
-
-#     Returns the complete lesson with content, exercises, and questions
-#     """
-#     try:
-#         lesson_response = await create_adaptive_lesson(
-#             topic=request.topic,
-#             user_context=request.user_context
-#         )
-
-#         return {
-#             "success": True,
-#             "lesson": {
-#                 "lesson_id": lesson_response.lesson.lesson_id,
-#                 "topic": lesson_response.lesson.topic,
-#                 "category": lesson_response.lesson.category,
-#                 "subcategory": lesson_response.lesson.subcategory,
-#                 "lesson_content": lesson_response.lesson.lesson_content,
-#                 "learning_objectives": lesson_response.lesson.learning_objectives,
-#                 "difficulty_level": lesson_response.lesson.difficulty_level,
-#                 "created_at": lesson_response.lesson.created_at
-#             },
-#             "exercise": {
-#                 "exercise_id": lesson_response.exercise.exercise_id,
-#                 "topic": lesson_response.exercise.topic,
-#                 "difficulty_level": lesson_response.exercise.difficulty_level,
-#                 "target_concepts": lesson_response.exercise.target_concepts,
-#                 "created_at": lesson_response.exercise.created_at
-#             },
-#             "questions": [
-#                 {
-#                     "question_id": q.question_id,
-#                     "text": q.text,
-#                     "category": q.category,
-#                     "subcategory": q.subcategory,
-#                     "topic": q.topic,
-#                     "difficulty": q.difficulty,
-#                     "options": q.options,
-#                     "correct_answer": q.correct_answer,
-#                     "explanation": q.explanation
-#                 }
-#                 for q in lesson_response.questions
-#             ]
-#         }
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=f"Lesson generation failed: {str(e)}")
+        return {
+            "success": True,
+            "lesson": {
+                "lesson_id": lesson_response.lesson.lesson_id,
+                "topic": lesson_response.lesson.topic,
+                "category": lesson_response.lesson.category,
+                "subcategory": lesson_response.lesson.subcategory,
+                "lesson_content": lesson_response.lesson.lesson_content,
+                "learning_objectives": lesson_response.lesson.learning_objectives,
+                "difficulty_level": lesson_response.lesson.difficulty_level,
+                "created_at": lesson_response.lesson.created_at
+            },
+            "exercise": {
+                "exercise_id": lesson_response.exercise.exercise_id,
+                "topic": lesson_response.exercise.topic,
+                "difficulty_level": lesson_response.exercise.difficulty_level,
+                "target_concepts": lesson_response.exercise.target_concepts,
+                "created_at": lesson_response.exercise.created_at
+            },
+            "questions": [
+                {
+                    "question_id": q.question_id,
+                    "text": q.text,
+                    "category": q.category,
+                    "subcategory": q.subcategory,
+                    "topic": q.topic,
+                    "difficulty": q.difficulty,
+                    "options": q.options,
+                    "correct_answer": q.correct_answer,
+                    "explanation": q.explanation
+                }
+                for q in lesson_response.questions
+            ]
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Lesson generation failed: {str(e)}")
 
 @app.get("/health")
 async def health_check():
     return {"status": "healthy", "service": "medical-ai-education"}
+
+@app.get("/")
+async def root():
+    return {"message": "Medical AI Education API", "version": "1.0.0", "endpoints": ["/health", "/api/lessons/create", "/api/chat"]}
