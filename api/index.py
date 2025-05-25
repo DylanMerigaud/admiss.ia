@@ -283,6 +283,111 @@ async def get_lesson_by_topic(topic: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to generate lesson for topic '{topic}': {str(e)}")
 
+@app.get("/api/lessons/generate")
+async def generate_precise_lesson(topic: str, category: str, subcategory: str):
+    """
+    Generate a precise lesson using topic, category, and subcategory
+    
+    Args:
+        topic: Specific topic (e.g., "Alkanes, Alkenes, Alcohols, Amines, Aldehydes, Ketones, Acids")
+        category: Academic category (e.g., "UE 1 - Biochemistry") 
+        subcategory: Academic subcategory (e.g., "Organic Chemistry")
+        
+    Returns:
+        Complete lesson data with generation_metadata, lesson, exercise, and questions
+    """
+    try:
+        # Create enhanced user context with category/subcategory info
+        enhanced_user_context = UserContext(
+            user_id="precise_request",
+            current_level="intermediate",
+            concept_mastery={},
+            weak_concepts=[],
+            learning_velocity=0.8,
+            error_patterns=[],
+            learning_style="mixed"
+        )
+        
+        # Generate the lesson - the service will use the precise mapping
+        lesson_response = await create_adaptive_lesson(
+            topic=topic,
+            user_context=enhanced_user_context
+        )
+        
+        # Override the category/subcategory with precise values
+        lesson_response.lesson.category = category
+        lesson_response.lesson.subcategory = subcategory
+        
+        # Update questions with precise categorization
+        for question in lesson_response.questions:
+            question.category = category
+            question.subcategory = subcategory
+        
+        # Format the response in your exact format
+        formatted_response = {
+            "generation_metadata": {
+                "generated_at": lesson_response.lesson.created_at,
+                "topic": topic,
+                "category": category,
+                "subcategory": subcategory,
+                "generator": "precise_weaviate_rag_pipeline",
+                "academic_program": "French Medical Education",
+                "precision_mode": True
+            },
+            "lesson": {
+                "lesson_id": lesson_response.lesson.lesson_id,
+                "topic": topic,
+                "category": category,
+                "subcategory": subcategory,
+                "lesson_content": lesson_response.lesson.lesson_content,
+                "learning_objectives": lesson_response.lesson.learning_objectives,
+                "exercise_id": lesson_response.exercise.exercise_id,
+                "difficulty_level": lesson_response.lesson.difficulty_level,
+                "semester": lesson_response.lesson.semester,
+                "generated_by": lesson_response.lesson.generated_by,
+                "created_at": lesson_response.lesson.created_at
+            },
+            "exercise": {
+                "exercise_id": lesson_response.exercise.exercise_id,
+                "lesson_id": lesson_response.lesson.lesson_id,
+                "topic": topic,
+                "question_ids": [q.question_id for q in lesson_response.questions],
+                "difficulty_level": lesson_response.exercise.difficulty_level,
+                "target_concepts": lesson_response.exercise.target_concepts,
+                "created_at": lesson_response.exercise.created_at
+            },
+            "questions": [
+                {
+                    "question_id": q.question_id,
+                    "text": q.text,
+                    "category": category,
+                    "subcategory": subcategory,
+                    "topic": topic,
+                    "difficulty": q.difficulty,
+                    "options": q.options,
+                    "correct_answer": q.correct_answer,
+                    "explanation": q.explanation
+                }
+                for q in lesson_response.questions
+            ]
+        }
+        
+        return formatted_response
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to generate precise lesson: {str(e)}")
+
+# Also update your root endpoint to show the new endpoint
 @app.get("/")
 async def root():
-    return {"message": "Medical AI Education API", "version": "1.0.0", "endpoints": ["/health", "/api/lessons/create", "/api/lessons/{topic}", "/api/chat"]}
+    return {
+        "message": "Medical AI Education API", 
+        "version": "1.0.0", 
+        "endpoints": [
+            "/health", 
+            "/api/lessons/create", 
+            "/api/lessons/{topic}", 
+            "/api/lessons/generate?topic=...&category=...&subcategory=...",  # NEW!
+            "/api/chat"
+        ]
+    }
