@@ -1,4 +1,5 @@
 annotated-types==0.7.0
+aiohttp==3.11.10
 anyio==3.7.1
 certifi==2024.7.4
 charset-normalizer==3.4.0

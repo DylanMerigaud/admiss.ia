@@ -1,48 +1,97 @@
-# tech-paris-hackaton
+# Admiss.ia - Interactive Medical Education Platform
 
+An intelligent educational platform designed for medical and life sciences curriculum with interactive course visualization and exercises, and AI based adaptive learning paths.
 
-https://drive.google.com/drive/folders/1Az4pbYKAurVxn2NY3Fr5IP3S5AdioBMj?usp=drive_link
-
-Starter initial README.md
-
-# AI SDK Python Streaming Preview
-
-This template demonstrates the usage of [Data Stream Protocol](https://sdk.vercel.ai/docs/ai-sdk-ui/stream-protocol#data-stream-protocol) to stream chat completions from a Python endpoint ([FastAPI](https://fastapi.tiangolo.com)) and display them using the [useChat](https://sdk.vercel.ai/docs/ai-sdk-ui/chatbot#chatbot) hook in your Next.js application.
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-preview-python-streaming&env=OPENAI_API_KEY&envDescription=API%20keys%20needed%20for%20application&envLink=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-preview-python-streaming%2Fblob%2Fmain%2F.env.example)
-
-## How to use
-
-Run [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Quick Start
 
 ```bash
-npx create-next-app --example https://github.com/vercel-labs/ai-sdk-preview-python-streaming ai-sdk-preview-python-streaming-example
+# Install dependencies
+npx pnpm install
+
+# Start development server (Next.js + FastAPI)
+npx pnpm dev
 ```
 
-```bash
-yarn create next-app --example https://github.com/vercel-labs/ai-sdk-preview-python-streaming ai-sdk-preview-python-streaming-example
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Features
+
+- 🎯 **Interactive Curriculum Map** - Visual course progression with ReactFlow
+- 🤖 **AI Systems** - Mistral AI (mistral-small-latest) + Weaviate RAG Database  
+- 📱 **Responsive Design** - Modern UI with Tailwind CSS and smooth animations
+- 🔄 **Adaptive Learning** - Personalized lesson paths based on Weaviate semantic search
+- 📊 **Progress Tracking** - Iterative learning analytics and skill assessment
+
+## Tech Stack
+
+- **Frontend**: Next.js 13, React 18, TypeScript, Tailwind CSS
+- **Backend**: FastAPI (Python), Uvicorn
+- **AI Content**: Mistral AI (mistral-small-latest) + Weaviate Vector Database
+- **Visualization**: ReactFlow for interactive course maps
+- **UI Components**: Radix UI, Lucide React, Framer Motion
+- **Deployment**: Vercel
+- **Database**: Weaviate Cloud (Vector DB for semantic search)
+
+## RAG Architecture
+
+The platform uses a sophisticated **Retrieval-Augmented Generation (RAG)** pipeline for lesson content generation:
+
+### 🔍 **Semantic Search (Weaviate)**
+- **Vector Database**: Weaviate Cloud with `text2vec-weaviate` vectorizer
+- **Content Storage**: Medical education documents indexed by category, subcategory, and topic
+- **Smart Retrieval**: Semantic search based on user context and curriculum alignment
+
+### 🧠 **Content Generation (Mistral AI)**
+- **Model**: `mistral-small-latest` for focused, technical content
+- **Custom Prompts**: Academic program-aligned prompts for medical education
+- **Output Format**: Structured JSON with lessons, questions, and learning objectives
+
+### 🎯 **Adaptive Learning Flow**
+1. **Context Analysis**: User level, weak concepts, and curriculum position
+2. **Knowledge Retrieval**: Semantic search in Weaviate for relevant content  
+3. **Content Generation**: Mistral AI creates personalized lessons with questions
+4. **Progress Tracking**: Real-time adaptation based on learning outcomes
+
+### 📚 **Content Structure**
+- **Medical Collections**: Organized by UE (biochemistry, cell biology, biophysics, etc.)
+- **Academic Alignment**: Semester-based curriculum mapping with difficulty levels
+- **Quality Assurance**: Structured validation and fallback content generation
+
+
+## Pipeline Overview
+![RAG Pipeline Architecture](/ressources/pipeline_illustration.png)
+
+## Project Structure
+
+```
+├── app/                   # Next.js App Router
+│   ├── components/        # Custom React components
+│   ├── lesson/           # Lesson content pages (with pre-generated data)
+│   ├── exercise/         # Interactive exercise pages
+│   └── og/               # Open Graph image generation
+├── api/                   # FastAPI backend
+│   ├── models/           # Pydantic data models
+│   ├── utils/            # Backend utilities (Mistral, Weaviate services)
+│   └── index.py          # Main FastAPI application
+├── components/           # Shared UI components
+│   ├── ui/              # Base UI components (Radix UI)
+│   ├── chat.tsx         # Chat interface using Vercel AI SDK
+│   ├── markdown.tsx     # Markdown rendering
+│   └── multimodal-input.tsx  # Chat input with attachments
+├── ressources/          # Educational content & data
+│   ├── data/            # Pre-generated lesson JSON files
+│   ├── program.json     # Medical curriculum structure (UE system)
+│   └── exercise.json    # Exercise definitions
+├── __tests__/           # Jest test files
+├── scripts/             # Data generation and utility scripts
+├── lib/                 # Shared utilities and schemas
+├── hooks/               # Custom React hooks
+├── public/              # Static assets
+└── requirements.txt     # Python dependencies
 ```
 
-```bash
-pnpm create next-app --example https://github.com/vercel-labs/ai-sdk-preview-python-streaming ai-sdk-preview-python-streaming-example
-```
-
-To run the example locally you need to:
-
-1. Sign up for accounts with the AI providers you want to use (e.g., OpenAI, Anthropic).
-2. Obtain API keys for each provider.
-3. Set the required environment variables as shown in the `.env.example` file, but in a new file called `.env`.
-4. `pnpm install` to install the required Node dependencies.
-5. `virtualenv venv` to create a virtual environment.
-6. `source venv/bin/activate` to activate the virtual environment.
-7. `pip install -r requirements.txt` to install the required Python dependencies.
-8. `pnpm dev` to launch the development server.
-
-## Learn More
-
-To learn more about the AI SDK or Next.js by Vercel, take a look at the following resources:
-
-- [AI SDK Documentation](https://sdk.vercel.ai/docs)
-- [Next.js Documentation](https://nextjs.org/docs)
+## Contributors (team)
+- Clément Castellon
+- Dylan Mérigaud
+- Matthieu Marchal
+- Mikhail Biriuchinskii
