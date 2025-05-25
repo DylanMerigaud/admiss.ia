@@ -17,29 +17,13 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-import exerciseData from "../../ressources/exercise.json";
-
-interface Question {
-  question_id: string;
-  text: string;
-  category: string;
-  subcategory: string;
-  topic: string;
-  difficulty: string;
-  options: { id: string; text: string }[];
-  correct_answer: string;
-  explanation: string;
-}
-
-interface Exercise {
-  exercise_id: string;
-  lesson_id: string;
-  topic: string;
-  question_ids: string[];
-  difficulty_level: string;
-  target_concepts: string[];
-  created_at: string;
-}
+import lessonData from "../../ressources/data/Alkanes__Alkenes__plus3_Ketones__Acids_UE1_BCH_S1_lesson_20250524_224103.json";
+import {
+  LessonDataSchema,
+  type Question,
+  type Exercise,
+  type LessonData,
+} from "../../lib/schemas";
 
 interface UserAnswer {
   questionId: string;
@@ -58,9 +42,25 @@ interface ExerciseResult {
   answers: UserAnswer[];
 }
 
+// Hardcoded progress hints since they're not in the new JSON structure
+const progressHints = {
+  timeImprovement: {
+    fast: "Great speed! Focus on accuracy to maintain efficiency.",
+    average:
+      "Good timing. Practice more questions to build confidence and speed.",
+    slow: "Take time to understand concepts. Consider reviewing the lesson material.",
+  },
+  accuracyImprovement: {
+    high: "Excellent accuracy! You're mastering this topic well.",
+    medium: "Good understanding. Review explanations for missed questions.",
+    low: "Consider studying the lesson content more thoroughly before attempting exercises.",
+  },
+};
+
 export default function ExercisePage() {
   const router = useRouter();
-  const [currentExercise] = useState<Exercise>(exerciseData.exercises[0]);
+  const [validatedData, setValidatedData] = useState<LessonData | null>(null);
+  const [currentExercise, setCurrentExercise] = useState<Exercise | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
@@ -73,18 +73,25 @@ export default function ExercisePage() {
     null
   );
   const [isLoading, setIsLoading] = useState(true);
+  const [validationError, setValidationError] = useState<string | null>(null);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [elapsedTime, setElapsedTime] = useState(0);
 
   useEffect(() => {
-    // Load questions for the current exercise
-    const exerciseQuestions = exerciseData.questions.filter((q) =>
-      currentExercise.question_ids.includes(q.question_id)
-    );
-    setQuestions(exerciseQuestions);
-    setIsLoading(false);
-  }, [currentExercise]);
+    // Validate and load the lesson data
+    try {
+      const validated = LessonDataSchema.parse(lessonData);
+      setValidatedData(validated);
+      setCurrentExercise(validated.exercise);
+      setQuestions(validated.questions);
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Validation error:", error);
+      setValidationError("Failed to validate lesson data structure");
+      setIsLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     // Start timer for current question
@@ -210,6 +217,35 @@ export default function ExercisePage() {
     );
   }
 
+  if (validationError) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-red-400 text-xl text-center"
+        >
+          <p>Error loading exercise data:</p>
+          <p className="text-sm mt-2">{validationError}</p>
+        </motion.div>
+      </div>
+    );
+  }
+
+  if (!currentExercise || !validatedData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-white text-xl"
+        >
+          No exercise data available
+        </motion.div>
+      </div>
+    );
+  }
+
   if (isExerciseComplete && exerciseResult) {
     const timeCategory = getTimeCategory(exerciseResult.averageTime);
     const accuracyCategory = getAccuracyCategory(exerciseResult.accuracy);
@@ -235,7 +271,7 @@ export default function ExercisePage() {
                 Exercise Complete!
               </h1>
               <p className="text-gray-300">
-                {currentExercise.topic.replace("_", " ").toUpperCase()} •{" "}
+                {validatedData.lesson.topic} •{" "}
                 {currentExercise.difficulty_level}
               </p>
             </div>
@@ -377,7 +413,7 @@ export default function ExercisePage() {
                   <div>
                     <h4 className="text-white font-medium">Timing</h4>
                     <p className="text-gray-300 text-sm">
-                      {exerciseData.progressHints.timeImprovement[timeCategory]}
+                      {progressHints.timeImprovement[timeCategory]}
                     </p>
                   </div>
                 </div>
@@ -386,11 +422,7 @@ export default function ExercisePage() {
                   <div>
                     <h4 className="text-white font-medium">Accuracy</h4>
                     <p className="text-gray-300 text-sm">
-                      {
-                        exerciseData.progressHints.accuracyImprovement[
-                          accuracyCategory
-                        ]
-                      }
+                      {progressHints.accuracyImprovement[accuracyCategory]}
                     </p>
                   </div>
                 </div>
@@ -437,7 +469,7 @@ export default function ExercisePage() {
           <div className="flex items-center justify-between mb-4">
             <div>
               <h1 className="text-2xl font-bold text-white">
-                {currentExercise.topic.replace("_", " ").toUpperCase()}
+                {validatedData.lesson.topic}
               </h1>
               <p className="text-gray-300">
                 Question {currentQuestionIndex + 1} of {questions.length} •{" "}
