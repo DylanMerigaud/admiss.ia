@@ -329,13 +329,13 @@ export default function LessonPage() {
                       📖 <strong>Lesson Content Sources:</strong>
                     </p>
                     <a
-                      href="https://www.masterorganicchemistry.com/2010/10/06/functional-groups-organic-chemistry/"
+                      href="https://tech.chemistrydocs.com/Books/Organic/Fundamentals-of-Organic-Chemistry-by-John-McMurry-7th-Edition.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-slate-200 transition-colors duration-200 underline decoration-dotted underline-offset-2"
                     >
                       <ScrollText className="w-4 h-4" />
-                      Master Organic Chemistry - Functional Groups Guide
+                      Fundamentals of Organic Chemistry by John McMurry
                     </a>
                   </div>
                 </div>
