@@ -347,6 +347,17 @@ export default function HomePage() {
     generateNodesAndEdges();
   }, [generateNodesAndEdges]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        process.env.NEXT_PUBLIC_API_URL + "/api/health"
+      );
+      const data = await response.json();
+      console.log(data);
+    };
+    fetchData();
+  }, []);
+
   // Initialize progress for all skills
   useEffect(() => {
     const initialProgress: SkillProgress = {};
