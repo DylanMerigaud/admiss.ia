@@ -32,9 +32,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 - **Deployment**: Vercel
 - **Database**: Weaviate Cloud (Vector DB for semantic search)
 
-## RAG Architecture
+## Architecture
 
-The platform uses a sophisticated **Retrieval-Augmented Generation (RAG)** pipeline for lesson content generation:
+The platform uses a sophisticated **Retrieval-Augmented Generation (RAG) + LLM queries** pipeline for lesson content generation:
 
 ### 🔍 **Semantic Search (Weaviate)**
 - **Vector Database**: Weaviate Cloud with `text2vec-weaviate` vectorizer
